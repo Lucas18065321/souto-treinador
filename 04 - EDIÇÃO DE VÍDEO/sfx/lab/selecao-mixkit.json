@@ -1,0 +1,1290 @@
+[
+ {
+  "id": "2595",
+  "categoria": "glitch",
+  "essencial": true,
+  "titulo": "Small electric glitch",
+  "dur": 1
+ },
+ {
+  "id": "1457",
+  "categoria": "glitch",
+  "essencial": true,
+  "titulo": "Glitch static",
+  "dur": 1
+ },
+ {
+  "id": "2951",
+  "categoria": "glitch",
+  "essencial": true,
+  "titulo": "Digital glitch break",
+  "dur": 1
+ },
+ {
+  "id": "1030",
+  "categoria": "glitch",
+  "essencial": true,
+  "titulo": "Small sci fi glitch",
+  "dur": 1
+ },
+ {
+  "id": "2946",
+  "categoria": "glitch",
+  "essencial": true,
+  "titulo": "Virtual quick glitch",
+  "dur": 2
+ },
+ {
+  "id": "1022",
+  "categoria": "glitch",
+  "essencial": true,
+  "titulo": "Cinematic sci fi glitch",
+  "dur": 1
+ },
+ {
+  "id": "1093",
+  "categoria": "glitch",
+  "essencial": false,
+  "titulo": "Glitch sci fi rewind transition",
+  "dur": 3
+ },
+ {
+  "id": "2950",
+  "categoria": "glitch",
+  "essencial": false,
+  "titulo": "Intro text glitch",
+  "dur": 4
+ },
+ {
+  "id": "1044",
+  "categoria": "glitch",
+  "essencial": false,
+  "titulo": "Glitch crackles",
+  "dur": 2
+ },
+ {
+  "id": "1021",
+  "categoria": "glitch",
+  "essencial": false,
+  "titulo": "Cinematic glitch trailer",
+  "dur": 1
+ },
+ {
+  "id": "2548",
+  "categoria": "glitch",
+  "essencial": false,
+  "titulo": "Digital signal interference",
+  "dur": 2
+ },
+ {
+  "id": "1032",
+  "categoria": "glitch",
+  "essencial": false,
+  "titulo": "Sci fi glitch confirmation",
+  "dur": 2
+ },
+ {
+  "id": "2952",
+  "categoria": "glitch",
+  "essencial": false,
+  "titulo": "Break tech impact",
+  "dur": 1
+ },
+ {
+  "id": "1492",
+  "categoria": "whoosh",
+  "essencial": true,
+  "titulo": "Cinematic whoosh fast transition",
+  "dur": 1
+ },
+ {
+  "id": "1490",
+  "categoria": "whoosh",
+  "essencial": true,
+  "titulo": "Fast whoosh transition",
+  "dur": 1
+ },
+ {
+  "id": "1489",
+  "categoria": "whoosh",
+  "essencial": true,
+  "titulo": "Air woosh",
+  "dur": 2
+ },
+ {
+  "id": "166",
+  "categoria": "whoosh",
+  "essencial": true,
+  "titulo": "Fast small sweep transition",
+  "dur": 1
+ },
+ {
+  "id": "174",
+  "categoria": "whoosh",
+  "essencial": true,
+  "titulo": "Fast sweep transition",
+  "dur": 1
+ },
+ {
+  "id": "164",
+  "categoria": "whoosh",
+  "essencial": true,
+  "titulo": "Fast sweeping transition",
+  "dur": 1
+ },
+ {
+  "id": "1461",
+  "categoria": "whoosh",
+  "essencial": true,
+  "titulo": "Short wind swoosh",
+  "dur": 1
+ },
+ {
+  "id": "1471",
+  "categoria": "whoosh",
+  "essencial": true,
+  "titulo": "Cinematic wind swoosh",
+  "dur": 1
+ },
+ {
+  "id": "1464",
+  "categoria": "whoosh",
+  "essencial": true,
+  "titulo": "Quick swoosh accent",
+  "dur": 1
+ },
+ {
+  "id": "1462",
+  "categoria": "whoosh",
+  "essencial": true,
+  "titulo": "Quick swoosh",
+  "dur": 1
+ },
+ {
+  "id": "3115",
+  "categoria": "whoosh",
+  "essencial": true,
+  "titulo": "Fast transitions swoosh",
+  "dur": 1
+ },
+ {
+  "id": "1468",
+  "categoria": "whoosh",
+  "essencial": true,
+  "titulo": "Cinematic transition wind swoosh",
+  "dur": 1
+ },
+ {
+  "id": "175",
+  "categoria": "whoosh",
+  "essencial": true,
+  "titulo": "Short transition sweep",
+  "dur": 1
+ },
+ {
+  "id": "3114",
+  "categoria": "whoosh",
+  "essencial": true,
+  "titulo": "Fast sci fi transition sweep",
+  "dur": 1
+ },
+ {
+  "id": "1491",
+  "categoria": "whoosh",
+  "essencial": false,
+  "titulo": "Arrow whoosh",
+  "dur": 1
+ },
+ {
+  "id": "3005",
+  "categoria": "whoosh",
+  "essencial": false,
+  "titulo": "Explainer video pops whoosh light pop",
+  "dur": 1
+ },
+ {
+  "id": "787",
+  "categoria": "whoosh",
+  "essencial": false,
+  "titulo": "Cinematic whoosh stutter",
+  "dur": 2
+ },
+ {
+  "id": "1493",
+  "categoria": "whoosh",
+  "essencial": false,
+  "titulo": "Swirling whoosh",
+  "dur": 2
+ },
+ {
+  "id": "2903",
+  "categoria": "whoosh",
+  "essencial": false,
+  "titulo": "Movie whoosh impact presentation",
+  "dur": 3
+ },
+ {
+  "id": "1474",
+  "categoria": "whoosh",
+  "essencial": false,
+  "titulo": "Transition windy swoosh",
+  "dur": 3
+ },
+ {
+  "id": "1465",
+  "categoria": "whoosh",
+  "essencial": false,
+  "titulo": "Vacuum swoosh transition",
+  "dur": 2
+ },
+ {
+  "id": "1482",
+  "categoria": "whoosh",
+  "essencial": false,
+  "titulo": "Ending wind swoosh",
+  "dur": 2
+ },
+ {
+  "id": "168",
+  "categoria": "whoosh",
+  "essencial": false,
+  "titulo": "Fast air sweep transition",
+  "dur": 1
+ },
+ {
+  "id": "169",
+  "categoria": "whoosh",
+  "essencial": false,
+  "titulo": "Futuristic sweep pass by",
+  "dur": 3
+ },
+ {
+  "id": "3161",
+  "categoria": "whoosh",
+  "essencial": false,
+  "titulo": "Transition flying swoosh",
+  "dur": 2
+ },
+ {
+  "id": "163",
+  "categoria": "whoosh",
+  "essencial": false,
+  "titulo": "Slow sweeping swoosh",
+  "dur": 5
+ },
+ {
+  "id": "167",
+  "categoria": "whoosh",
+  "essencial": false,
+  "titulo": "Long sweeping air swoosh",
+  "dur": 4
+ },
+ {
+  "id": "1481",
+  "categoria": "whoosh",
+  "essencial": false,
+  "titulo": "Cinematic swoosh",
+  "dur": 2
+ },
+ {
+  "id": "1459",
+  "categoria": "whoosh",
+  "essencial": false,
+  "titulo": "Swirling short swoosh",
+  "dur": 3
+ },
+ {
+  "id": "1466",
+  "categoria": "whoosh",
+  "essencial": false,
+  "titulo": "Elevating swoosh",
+  "dur": 1
+ },
+ {
+  "id": "3120",
+  "categoria": "whoosh",
+  "essencial": false,
+  "titulo": "Technology transition slide",
+  "dur": 1
+ },
+ {
+  "id": "2639",
+  "categoria": "whoosh",
+  "essencial": false,
+  "titulo": "Quick metal transition sweep",
+  "dur": 1
+ },
+ {
+  "id": "2638",
+  "categoria": "whoosh",
+  "essencial": false,
+  "titulo": "Magic transition sweep presentation",
+  "dur": 3
+ },
+ {
+  "id": "1146",
+  "categoria": "whoosh",
+  "essencial": false,
+  "titulo": "Intro transition",
+  "dur": 7
+ },
+ {
+  "id": "2627",
+  "categoria": "warp-zoom",
+  "essencial": true,
+  "titulo": "Fast swipe zoom",
+  "dur": 1
+ },
+ {
+  "id": "2625",
+  "categoria": "warp-zoom",
+  "essencial": true,
+  "titulo": "Fast air zoom",
+  "dur": 1
+ },
+ {
+  "id": "2626",
+  "categoria": "warp-zoom",
+  "essencial": true,
+  "titulo": "Futuristic zoom move",
+  "dur": 2
+ },
+ {
+  "id": "2622",
+  "categoria": "warp-zoom",
+  "essencial": true,
+  "titulo": "In and out zoom sound",
+  "dur": 1
+ },
+ {
+  "id": "2608",
+  "categoria": "warp-zoom",
+  "essencial": true,
+  "titulo": "Air zoom vacuum",
+  "dur": 1
+ },
+ {
+  "id": "2687",
+  "categoria": "warp-zoom",
+  "essencial": true,
+  "titulo": "Time travel warp",
+  "dur": 3
+ },
+ {
+  "id": "3113",
+  "categoria": "warp-zoom",
+  "essencial": true,
+  "titulo": "Sci fi warp slide",
+  "dur": 2
+ },
+ {
+  "id": "2619",
+  "categoria": "warp-zoom",
+  "essencial": false,
+  "titulo": "UI zoom out",
+  "dur": 1
+ },
+ {
+  "id": "2621",
+  "categoria": "warp-zoom",
+  "essencial": false,
+  "titulo": "Ui zoom in, long sound",
+  "dur": 1
+ },
+ {
+  "id": "890",
+  "categoria": "warp-zoom",
+  "essencial": false,
+  "titulo": "Sci Fi interface zoom",
+  "dur": 1
+ },
+ {
+  "id": "913",
+  "categoria": "warp-zoom",
+  "essencial": false,
+  "titulo": "Interface sci fi expand or zoom",
+  "dur": 1
+ },
+ {
+  "id": "2616",
+  "categoria": "warp-zoom",
+  "essencial": false,
+  "titulo": "Interface classic zoom",
+  "dur": 1
+ },
+ {
+  "id": "772",
+  "categoria": "warp-zoom",
+  "essencial": false,
+  "titulo": "Quick zoom impact",
+  "dur": 1
+ },
+ {
+  "id": "2693",
+  "categoria": "warp-zoom",
+  "essencial": false,
+  "titulo": "Time machine working",
+  "dur": 3
+ },
+ {
+  "id": "2533",
+  "categoria": "teclas",
+  "essencial": true,
+  "titulo": "Single key type",
+  "dur": 1
+ },
+ {
+  "id": "2541",
+  "categoria": "teclas",
+  "essencial": true,
+  "titulo": "Single key press in a laptop",
+  "dur": 1
+ },
+ {
+  "id": "2534",
+  "categoria": "teclas",
+  "essencial": true,
+  "titulo": "Keyboard key presses",
+  "dur": 1
+ },
+ {
+  "id": "1397",
+  "categoria": "teclas",
+  "essencial": true,
+  "titulo": "Electronic typing",
+  "dur": 2
+ },
+ {
+  "id": "1125",
+  "categoria": "teclas",
+  "essencial": true,
+  "titulo": "Typewriter soft click",
+  "dur": 1
+ },
+ {
+  "id": "1381",
+  "categoria": "teclas",
+  "essencial": true,
+  "titulo": "Typewriter classic return",
+  "dur": 1
+ },
+ {
+  "id": "2537",
+  "categoria": "teclas",
+  "essencial": true,
+  "titulo": "Laptop keyboard typing sequence",
+  "dur": 13
+ },
+ {
+  "id": "1376",
+  "categoria": "teclas",
+  "essencial": false,
+  "titulo": "Typing on an electronic device",
+  "dur": 3
+ },
+ {
+  "id": "1393",
+  "categoria": "teclas",
+  "essencial": false,
+  "titulo": "Smartphone typing",
+  "dur": 4
+ },
+ {
+  "id": "2542",
+  "categoria": "teclas",
+  "essencial": false,
+  "titulo": "Hard single key press in a laptop",
+  "dur": 1
+ },
+ {
+  "id": "1365",
+  "categoria": "teclas",
+  "essencial": false,
+  "titulo": "Mechanical typewriter hit",
+  "dur": 1
+ },
+ {
+  "id": "1379",
+  "categoria": "teclas",
+  "essencial": false,
+  "titulo": "Data short input on typewriter",
+  "dur": 2
+ },
+ {
+  "id": "1368",
+  "categoria": "teclas",
+  "essencial": false,
+  "titulo": "Typewriter return bell",
+  "dur": 1
+ },
+ {
+  "id": "1385",
+  "categoria": "teclas",
+  "essencial": false,
+  "titulo": "Sci fi futuristic typewriter",
+  "dur": 1
+ },
+ {
+  "id": "1363",
+  "categoria": "teclas",
+  "essencial": false,
+  "titulo": "Digital typewriter",
+  "dur": 1
+ },
+ {
+  "id": "1396",
+  "categoria": "teclas",
+  "essencial": false,
+  "titulo": "Soft typing on a digital keyboard",
+  "dur": 26
+ },
+ {
+  "id": "2539",
+  "categoria": "teclas",
+  "essencial": false,
+  "titulo": "Laptop backspace typing sequence",
+  "dur": 10
+ },
+ {
+  "id": "2535",
+  "categoria": "teclas",
+  "essencial": false,
+  "titulo": "Phone keyboard bit",
+  "dur": 8
+ },
+ {
+  "id": "1395",
+  "categoria": "teclas",
+  "essencial": false,
+  "titulo": "Typing text on a smartphone",
+  "dur": 19
+ },
+ {
+  "id": "1130",
+  "categoria": "scroll-ui",
+  "essencial": true,
+  "titulo": "Slide click",
+  "dur": 1
+ },
+ {
+  "id": "2580",
+  "categoria": "scroll-ui",
+  "essencial": true,
+  "titulo": "Light button",
+  "dur": 1
+ },
+ {
+  "id": "2383",
+  "categoria": "scroll-ui",
+  "essencial": false,
+  "titulo": "Paper scroll in an office",
+  "dur": 1
+ },
+ {
+  "id": "1107",
+  "categoria": "ding",
+  "essencial": true,
+  "titulo": "Page forward single chime",
+  "dur": 1
+ },
+ {
+  "id": "766",
+  "categoria": "ding",
+  "essencial": true,
+  "titulo": "Alert quick chime",
+  "dur": 1
+ },
+ {
+  "id": "3108",
+  "categoria": "ding",
+  "essencial": true,
+  "titulo": "Crystal chime",
+  "dur": 2
+ },
+ {
+  "id": "2867",
+  "categoria": "ding",
+  "essencial": true,
+  "titulo": "Confirmation tone",
+  "dur": 1
+ },
+ {
+  "id": "2865",
+  "categoria": "ding",
+  "essencial": true,
+  "titulo": "Success software tone",
+  "dur": 1
+ },
+ {
+  "id": "2869",
+  "categoria": "ding",
+  "essencial": true,
+  "titulo": "Access allowed tone",
+  "dur": 1
+ },
+ {
+  "id": "951",
+  "categoria": "ding",
+  "essencial": true,
+  "titulo": "Positive notification",
+  "dur": 2
+ },
+ {
+  "id": "3116",
+  "categoria": "ding",
+  "essencial": true,
+  "titulo": "Cybernetic technology affirmation",
+  "dur": 2
+ },
+ {
+  "id": "1106",
+  "categoria": "ding",
+  "essencial": false,
+  "titulo": "Page turn chime",
+  "dur": 1
+ },
+ {
+  "id": "1108",
+  "categoria": "ding",
+  "essencial": false,
+  "titulo": "Page back chime",
+  "dur": 2
+ },
+ {
+  "id": "3109",
+  "categoria": "ding",
+  "essencial": false,
+  "titulo": "Relaxing bell chime",
+  "dur": 1
+ },
+ {
+  "id": "2870",
+  "categoria": "ding",
+  "essencial": false,
+  "titulo": "Correct answer tone",
+  "dur": 1
+ },
+ {
+  "id": "2354",
+  "categoria": "ding",
+  "essencial": false,
+  "titulo": "Message pop alert",
+  "dur": 1
+ },
+ {
+  "id": "2357",
+  "categoria": "ding",
+  "essencial": false,
+  "titulo": "Bubble pop up alert notification",
+  "dur": 1
+ },
+ {
+  "id": "2356",
+  "categoria": "ding",
+  "essencial": false,
+  "titulo": "Dry pop up notification alert",
+  "dur": 1
+ },
+ {
+  "id": "914",
+  "categoria": "ding",
+  "essencial": false,
+  "titulo": "Sci Fi confirmation",
+  "dur": 1
+ },
+ {
+  "id": "911",
+  "categoria": "ding",
+  "essencial": false,
+  "titulo": "Interface hint notification",
+  "dur": 1
+ },
+ {
+  "id": "2866",
+  "categoria": "ding",
+  "essencial": false,
+  "titulo": "Digital quick tone",
+  "dur": 1
+ },
+ {
+  "id": "3060",
+  "categoria": "ding",
+  "essencial": false,
+  "titulo": "Sparkle hybrid transition",
+  "dur": 1
+ },
+ {
+  "id": "901",
+  "categoria": "futurista",
+  "essencial": true,
+  "titulo": "Sci fi interface robot click",
+  "dur": 1
+ },
+ {
+  "id": "903",
+  "categoria": "futurista",
+  "essencial": true,
+  "titulo": "Fast sci fi bleep",
+  "dur": 1
+ },
+ {
+  "id": "3118",
+  "categoria": "futurista",
+  "essencial": true,
+  "titulo": "Alien technology button",
+  "dur": 1
+ },
+ {
+  "id": "3124",
+  "categoria": "futurista",
+  "essencial": true,
+  "titulo": "Modern technology select",
+  "dur": 1
+ },
+ {
+  "id": "2521",
+  "categoria": "futurista",
+  "essencial": true,
+  "titulo": "High tech bleep",
+  "dur": 1
+ },
+ {
+  "id": "2520",
+  "categoria": "futurista",
+  "essencial": true,
+  "titulo": "High tech bleep confirmation",
+  "dur": 1
+ },
+ {
+  "id": "3171",
+  "categoria": "futurista",
+  "essencial": true,
+  "titulo": "Hi-tech touch with magnet",
+  "dur": 2
+ },
+ {
+  "id": "899",
+  "categoria": "futurista",
+  "essencial": true,
+  "titulo": "Sci-Fi liquid bleep",
+  "dur": 1
+ },
+ {
+  "id": "2636",
+  "categoria": "futurista",
+  "essencial": true,
+  "titulo": "Futuristic metal transition sweep",
+  "dur": 1
+ },
+ {
+  "id": "2635",
+  "categoria": "futurista",
+  "essencial": true,
+  "titulo": "Futuristic cinematic sweep",
+  "dur": 1
+ },
+ {
+  "id": "1583",
+  "categoria": "futurista",
+  "essencial": true,
+  "titulo": "Futuristic radar ping",
+  "dur": 2
+ },
+ {
+  "id": "902",
+  "categoria": "futurista",
+  "essencial": false,
+  "titulo": "Water sci fi bleep",
+  "dur": 1
+ },
+ {
+  "id": "3180",
+  "categoria": "futurista",
+  "essencial": false,
+  "titulo": "Machine activation short",
+  "dur": 2
+ },
+ {
+  "id": "171",
+  "categoria": "futurista",
+  "essencial": false,
+  "titulo": "Futuristic robotic fast sweep",
+  "dur": 2
+ },
+ {
+  "id": "3176",
+  "categoria": "futurista",
+  "essencial": false,
+  "titulo": "Tech transitions",
+  "dur": 3
+ },
+ {
+  "id": "887",
+  "categoria": "futurista",
+  "essencial": false,
+  "titulo": "Sci-fi metallic reveal or shield",
+  "dur": 1
+ },
+ {
+  "id": "3160",
+  "categoria": "futurista",
+  "essencial": false,
+  "titulo": "Sci fi power up",
+  "dur": 2
+ },
+ {
+  "id": "2912",
+  "categoria": "futurista",
+  "essencial": false,
+  "titulo": "Futuristic movie accent",
+  "dur": 2
+ },
+ {
+  "id": "3212",
+  "categoria": "futurista",
+  "essencial": false,
+  "titulo": "Item chirp",
+  "dur": 1
+ },
+ {
+  "id": "3211",
+  "categoria": "futurista",
+  "essencial": false,
+  "titulo": "Space cargo touch",
+  "dur": 1
+ },
+ {
+  "id": "3123",
+  "categoria": "futurista",
+  "essencial": false,
+  "titulo": "Technology notification",
+  "dur": 2
+ },
+ {
+  "id": "2519",
+  "categoria": "futurista",
+  "essencial": false,
+  "titulo": "High tech notification bleep",
+  "dur": 1
+ },
+ {
+  "id": "2634",
+  "categoria": "futurista",
+  "essencial": false,
+  "titulo": "Futuristic transition sweep",
+  "dur": 2
+ },
+ {
+  "id": "2522",
+  "categoria": "futurista",
+  "essencial": false,
+  "titulo": "Sci fi sweep",
+  "dur": 1
+ },
+ {
+  "id": "2669",
+  "categoria": "futurista",
+  "essencial": false,
+  "titulo": "Short sci-fi swell",
+  "dur": 2
+ },
+ {
+  "id": "2529",
+  "categoria": "futurista",
+  "essencial": false,
+  "titulo": "Sci fi loading operative system",
+  "dur": 2
+ },
+ {
+  "id": "2847",
+  "categoria": "futurista",
+  "essencial": false,
+  "titulo": "Data scaner",
+  "dur": 2
+ },
+ {
+  "id": "3122",
+  "categoria": "futurista",
+  "essencial": false,
+  "titulo": "Technology computer calculations",
+  "dur": 4
+ },
+ {
+  "id": "2913",
+  "categoria": "futurista",
+  "essencial": false,
+  "titulo": "Epic futuristic movie accent",
+  "dur": 3
+ },
+ {
+  "id": "1117",
+  "categoria": "clique",
+  "essencial": true,
+  "titulo": "Classic click",
+  "dur": 1
+ },
+ {
+  "id": "1126",
+  "categoria": "clique",
+  "essencial": true,
+  "titulo": "Interface click",
+  "dur": 1
+ },
+ {
+  "id": "1140",
+  "categoria": "clique",
+  "essencial": true,
+  "titulo": "Tech click",
+  "dur": 1
+ },
+ {
+  "id": "1112",
+  "categoria": "clique",
+  "essencial": true,
+  "titulo": "Positive interface click",
+  "dur": 1
+ },
+ {
+  "id": "1127",
+  "categoria": "clique",
+  "essencial": true,
+  "titulo": "Interface click hover",
+  "dur": 1
+ },
+ {
+  "id": "2582",
+  "categoria": "clique",
+  "essencial": true,
+  "titulo": "Quick switch click",
+  "dur": 1
+ },
+ {
+  "id": "1116",
+  "categoria": "clique",
+  "essencial": false,
+  "titulo": "Single classic click",
+  "dur": 1
+ },
+ {
+  "id": "2997",
+  "categoria": "clique",
+  "essencial": false,
+  "titulo": "Clear mouse clicks",
+  "dur": 1
+ },
+ {
+  "id": "1120",
+  "categoria": "clique",
+  "essencial": false,
+  "titulo": "Modern click box check",
+  "dur": 1
+ },
+ {
+  "id": "1109",
+  "categoria": "clique",
+  "essencial": false,
+  "titulo": "Select click",
+  "dur": 1
+ },
+ {
+  "id": "2568",
+  "categoria": "clique",
+  "essencial": false,
+  "titulo": "Cool interface click tone",
+  "dur": 1
+ },
+ {
+  "id": "2577",
+  "categoria": "clique",
+  "essencial": false,
+  "titulo": "Interface device click",
+  "dur": 1
+ },
+ {
+  "id": "2585",
+  "categoria": "clique",
+  "essencial": false,
+  "titulo": "On or off light switch tap",
+  "dur": 1
+ },
+ {
+  "id": "1133",
+  "categoria": "clique",
+  "essencial": false,
+  "titulo": "Camera shutter click",
+  "dur": 1
+ },
+ {
+  "id": "1115",
+  "categoria": "caneta",
+  "essencial": true,
+  "titulo": "Pen click and release",
+  "dur": 1
+ },
+ {
+  "id": "2371",
+  "categoria": "caneta",
+  "essencial": true,
+  "titulo": "Pen clicking twice",
+  "dur": 1
+ },
+ {
+  "id": "2998",
+  "categoria": "caneta",
+  "essencial": true,
+  "titulo": "Pen marker line",
+  "dur": 1
+ },
+ {
+  "id": "3011",
+  "categoria": "caneta",
+  "essencial": true,
+  "titulo": "Explainer video writing pencil letters a",
+  "dur": 1
+ },
+ {
+  "id": "2376",
+  "categoria": "caneta",
+  "essencial": false,
+  "titulo": "Short pencil writing",
+  "dur": 1
+ },
+ {
+  "id": "2367",
+  "categoria": "caneta",
+  "essencial": false,
+  "titulo": "Writing with a pen on paper",
+  "dur": 1
+ },
+ {
+  "id": "3196",
+  "categoria": "caneta",
+  "essencial": false,
+  "titulo": "Fast writing",
+  "dur": 1
+ },
+ {
+  "id": "2369",
+  "categoria": "caneta",
+  "essencial": false,
+  "titulo": "Writing scribble on paper",
+  "dur": 1
+ },
+ {
+  "id": "3194",
+  "categoria": "caneta",
+  "essencial": false,
+  "titulo": "Writing pencil",
+  "dur": 1
+ },
+ {
+  "id": "2372",
+  "categoria": "caneta",
+  "essencial": false,
+  "titulo": "Chalk line sound",
+  "dur": 1
+ },
+ {
+  "id": "1104",
+  "categoria": "papel",
+  "essencial": true,
+  "titulo": "Page turn single",
+  "dur": 1
+ },
+ {
+  "id": "1105",
+  "categoria": "papel",
+  "essencial": true,
+  "titulo": "Big paper page turn",
+  "dur": 1
+ },
+ {
+  "id": "1101",
+  "categoria": "papel",
+  "essencial": true,
+  "titulo": "Single book paging",
+  "dur": 2
+ },
+ {
+  "id": "2386",
+  "categoria": "papel",
+  "essencial": true,
+  "titulo": "Pages of paper moving",
+  "dur": 1
+ },
+ {
+  "id": "1097",
+  "categoria": "papel",
+  "essencial": true,
+  "titulo": "Turning the newspaper big page",
+  "dur": 9
+ },
+ {
+  "id": "1530",
+  "categoria": "papel",
+  "essencial": true,
+  "titulo": "Paper slide",
+  "dur": 1
+ },
+ {
+  "id": "2380",
+  "categoria": "papel",
+  "essencial": true,
+  "titulo": "Paper quick movement",
+  "dur": 1
+ },
+ {
+  "id": "2385",
+  "categoria": "papel",
+  "essencial": true,
+  "titulo": "Paper crinkle",
+  "dur": 3
+ },
+ {
+  "id": "2996",
+  "categoria": "papel",
+  "essencial": true,
+  "titulo": "Quick paper crumple sound",
+  "dur": 1
+ },
+ {
+  "id": "2384",
+  "categoria": "papel",
+  "essencial": true,
+  "titulo": "Paper quick slice",
+  "dur": 1
+ },
+ {
+  "id": "3102",
+  "categoria": "papel",
+  "essencial": true,
+  "titulo": "Duct tape bandage",
+  "dur": 2
+ },
+ {
+  "id": "1102",
+  "categoria": "papel",
+  "essencial": false,
+  "titulo": "Fast browsing book paging",
+  "dur": 9
+ },
+ {
+  "id": "386",
+  "categoria": "papel",
+  "essencial": false,
+  "titulo": "Newspaper falling to the floor",
+  "dur": 1
+ },
+ {
+  "id": "2378",
+  "categoria": "papel",
+  "essencial": false,
+  "titulo": "Scissors cutting paper",
+  "dur": 2
+ },
+ {
+  "id": "2389",
+  "categoria": "papel",
+  "essencial": false,
+  "titulo": "Crumpled paper",
+  "dur": 1
+ },
+ {
+  "id": "2382",
+  "categoria": "papel",
+  "essencial": false,
+  "titulo": "Paper crumble",
+  "dur": 1
+ },
+ {
+  "id": "2070",
+  "categoria": "impacto",
+  "essencial": true,
+  "titulo": "Light impact on the ground",
+  "dur": 1
+ },
+ {
+  "id": "2655",
+  "categoria": "impacto",
+  "essencial": true,
+  "titulo": "Fast impact blow",
+  "dur": 1
+ },
+ {
+  "id": "2180",
+  "categoria": "impacto",
+  "essencial": true,
+  "titulo": "Exciting fast hit",
+  "dur": 2
+ },
+ {
+  "id": "498",
+  "categoria": "impacto",
+  "essencial": true,
+  "titulo": "Deep heartbeat impact",
+  "dur": 3
+ },
+ {
+  "id": "1143",
+  "categoria": "impacto",
+  "essencial": true,
+  "titulo": "Cinematic whoosh deep impact",
+  "dur": 4
+ },
+ {
+  "id": "2902",
+  "categoria": "impacto",
+  "essencial": false,
+  "titulo": "Movie impact intro presentation",
+  "dur": 5
+ },
+ {
+  "id": "2908",
+  "categoria": "impacto",
+  "essencial": false,
+  "titulo": "Movie trailer epic impact",
+  "dur": 4
+ },
+ {
+  "id": "2919",
+  "categoria": "impacto",
+  "essencial": false,
+  "titulo": "Movie trailer whoosh hit",
+  "dur": 4
+ },
+ {
+  "id": "2303",
+  "categoria": "impacto",
+  "essencial": false,
+  "titulo": "Futuristic bass hit",
+  "dur": 2
+ },
+ {
+  "id": "790",
+  "categoria": "riser",
+  "essencial": true,
+  "titulo": "Cinematic trailer riser",
+  "dur": 2
+ },
+ {
+  "id": "1144",
+  "categoria": "riser",
+  "essencial": true,
+  "titulo": "Short space stutter intro riser",
+  "dur": 6
+ },
+ {
+  "id": "645",
+  "categoria": "riser",
+  "essencial": false,
+  "titulo": "Cinematic synth riser",
+  "dur": 9
+ },
+ {
+  "id": "794",
+  "categoria": "riser",
+  "essencial": false,
+  "titulo": "Tech choir cinematic riser",
+  "dur": 17
+ }
+]

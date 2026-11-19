@@ -1,0 +1,1932 @@
+{
+ "aluno": {
+  "nome": "Rafael Exemplo (fictício)",
+  "sexo": "M",
+  "idade": 29,
+  "nivel": "intermediario",
+  "experiencia_anos": 2,
+  "objetivo": "hipertrofia",
+  "dias_semana": 4,
+  "local": "academia completa",
+  "restricoes": "nenhuma relatada (fictício)",
+  "nutricao": "dúvidas de dieta vão para o nutricionista RT"
+ },
+ "modelo": "linear",
+ "objetivo": "hipertrofia",
+ "nivel": "intermediario",
+ "semanas": [
+  {
+   "semana": 1,
+   "inicio": "2026-11-09",
+   "tipo": "normal",
+   "fase": "linear",
+   "series_por_grupo": {
+    "quadriceps": 10,
+    "posteriores": 10,
+    "panturrilha": 6,
+    "peitoral": 10,
+    "costas": 10,
+    "ombros": 10,
+    "biceps": 6,
+    "gluteos": 6,
+    "triceps": 6
+   },
+   "series_por_exercicio": {
+    "Agachamento livre": 4,
+    "Stiff com barra": 5,
+    "Cadeira extensora": 3,
+    "Panturrilha em pé": 3,
+    "Supino reto com barra": 5,
+    "Remada curvada com barra": 5,
+    "Desenvolvimento com halteres": 5,
+    "Rosca direta com barra": 6,
+    "Leg press 45°": 3,
+    "Cadeira flexora": 5,
+    "Elevação pélvica": 6,
+    "Panturrilha sentado": 3,
+    "Supino inclinado com halteres": 5,
+    "Puxada frontal": 5,
+    "Elevação lateral": 5,
+    "Tríceps na polia": 6
+   },
+   "sessoes": {
+    "A": [
+     {
+      "exercicio": "Agachamento livre",
+      "grupo": "quadriceps",
+      "series": 4,
+      "reps": "12 a 14",
+      "reps_min": 12,
+      "reps_max": 14,
+      "rir": 3,
+      "pct_1rm": 70.0,
+      "carga_kg": 90.0,
+      "descanso_s": 120,
+      "obs": "Descer até a coxa passar da paralela, se confortável; tronco firme.",
+      "extrapolado": false
+     },
+     {
+      "exercicio": "Stiff com barra",
+      "grupo": "posteriores",
+      "series": 5,
+      "reps": "12 a 14",
+      "reps_min": 12,
+      "reps_max": 14,
+      "rir": 3,
+      "pct_1rm": 70.0,
+      "carga_kg": 76.0,
+      "descanso_s": 120,
+      "obs": "Quadril para trás, coluna neutra; descer até sentir alongar atrás da coxa.",
+      "extrapolado": false
+     },
+     {
+      "exercicio": "Cadeira extensora",
+      "grupo": "quadriceps",
+      "series": 3,
+      "reps": "12 a 14",
+      "reps_min": 12,
+      "reps_max": 14,
+      "rir": 3,
+      "pct_1rm": 70.0,
+      "carga_kg": null,
+      "descanso_s": 90,
+      "obs": "Pausa de 1 s em cima.",
+      "extrapolado": false
+     },
+     {
+      "exercicio": "Panturrilha em pé",
+      "grupo": "panturrilha",
+      "series": 3,
+      "reps": "12 a 14",
+      "reps_min": 12,
+      "reps_max": 14,
+      "rir": 3,
+      "pct_1rm": 70.0,
+      "carga_kg": null,
+      "descanso_s": 90,
+      "obs": "Amplitude completa, pausa embaixo.",
+      "extrapolado": false
+     }
+    ],
+    "B": [
+     {
+      "exercicio": "Supino reto com barra",
+      "grupo": "peitoral",
+      "series": 5,
+      "reps": "12 a 14",
+      "reps_min": 12,
+      "reps_max": 14,
+      "rir": 3,
+      "pct_1rm": 68.7,
+      "carga_kg": 66.0,
+      "descanso_s": 120,
+      "obs": "Escápulas encaixadas; barra toca o peito sem quicar.",
+      "extrapolado": true
+     },
+     {
+      "exercicio": "Remada curvada com barra",
+      "grupo": "costas",
+      "series": 5,
+      "reps": "12 a 14",
+      "reps_min": 12,
+      "reps_max": 14,
+      "rir": 3,
+      "pct_1rm": 70.0,
+      "carga_kg": 66.0,
+      "descanso_s": 120,
+      "obs": "Tronco firme; puxar até a barriga.",
+      "extrapolado": false
+     },
+     {
+      "exercicio": "Desenvolvimento com halteres",
+      "grupo": "ombros",
+      "series": 5,
+      "reps": "12 a 14",
+      "reps_min": 12,
+      "reps_max": 14,
+      "rir": 3,
+      "pct_1rm": 70.0,
+      "carga_kg": 36.0,
+      "descanso_s": 90,
+      "obs": "Carga = soma dos dois halteres.",
+      "extrapolado": false
+     },
+     {
+      "exercicio": "Rosca direta com barra",
+      "grupo": "biceps",
+      "series": 6,
+      "reps": "12 a 14",
+      "reps_min": 12,
+      "reps_max": 14,
+      "rir": 3,
+      "pct_1rm": 70.0,
+      "carga_kg": null,
+      "descanso_s": 90,
+      "obs": "Sem balançar o tronco.",
+      "extrapolado": false
+     }
+    ],
+    "C": [
+     {
+      "exercicio": "Leg press 45°",
+      "grupo": "quadriceps",
+      "series": 3,
+      "reps": "12 a 14",
+      "reps_min": 12,
+      "reps_max": 14,
+      "rir": 3,
+      "pct_1rm": 76.4,
+      "carga_kg": 190.0,
+      "descanso_s": 120,
+      "obs": "Não tirar o quadril do banco no fundo.",
+      "extrapolado": false
+     },
+     {
+      "exercicio": "Cadeira flexora",
+      "grupo": "posteriores",
+      "series": 5,
+      "reps": "12 a 14",
+      "reps_min": 12,
+      "reps_max": 14,
+      "rir": 3,
+      "pct_1rm": 70.0,
+      "carga_kg": null,
+      "descanso_s": 90,
+      "obs": "Controle na volta (2 s).",
+      "extrapolado": false
+     },
+     {
+      "exercicio": "Elevação pélvica",
+      "grupo": "gluteos",
+      "series": 6,
+      "reps": "12 a 14",
+      "reps_min": 12,
+      "reps_max": 14,
+      "rir": 3,
+      "pct_1rm": 70.0,
+      "carga_kg": null,
+      "descanso_s": 90,
+      "obs": "Pausa de 1 s em cima.",
+      "extrapolado": false
+     },
+     {
+      "exercicio": "Panturrilha sentado",
+      "grupo": "panturrilha",
+      "series": 3,
+      "reps": "12 a 14",
+      "reps_min": 12,
+      "reps_max": 14,
+      "rir": 3,
+      "pct_1rm": 70.0,
+      "carga_kg": null,
+      "descanso_s": 90,
+      "obs": "",
+      "extrapolado": false
+     }
+    ],
+    "D": [
+     {
+      "exercicio": "Supino inclinado com halteres",
+      "grupo": "peitoral",
+      "series": 5,
+      "reps": "12 a 14",
+      "reps_min": 12,
+      "reps_max": 14,
+      "rir": 3,
+      "pct_1rm": 70.0,
+      "carga_kg": 48.0,
+      "descanso_s": 90,
+      "obs": "Carga = soma dos dois halteres.",
+      "extrapolado": false
+     },
+     {
+      "exercicio": "Puxada frontal",
+      "grupo": "costas",
+      "series": 5,
+      "reps": "12 a 14",
+      "reps_min": 12,
+      "reps_max": 14,
+      "rir": 3,
+      "pct_1rm": 70.0,
+      "carga_kg": 60.0,
+      "descanso_s": 120,
+      "obs": "Puxar até o queixo, peito aberto.",
+      "extrapolado": false
+     },
+     {
+      "exercicio": "Elevação lateral",
+      "grupo": "ombros",
+      "series": 5,
+      "reps": "12 a 14",
+      "reps_min": 12,
+      "reps_max": 14,
+      "rir": 3,
+      "pct_1rm": 70.0,
+      "carga_kg": null,
+      "descanso_s": 90,
+      "obs": "Até a linha do ombro.",
+      "extrapolado": false
+     },
+     {
+      "exercicio": "Tríceps na polia",
+      "grupo": "triceps",
+      "series": 6,
+      "reps": "12 a 14",
+      "reps_min": 12,
+      "reps_max": 14,
+      "rir": 3,
+      "pct_1rm": 70.0,
+      "carga_kg": null,
+      "descanso_s": 90,
+      "obs": "Cotovelos colados no corpo.",
+      "extrapolado": false
+     }
+    ]
+   }
+  },
+  {
+   "semana": 2,
+   "inicio": "2026-11-16",
+   "tipo": "normal",
+   "fase": "linear",
+   "series_por_grupo": {
+    "quadriceps": 11,
+    "posteriores": 11,
+    "panturrilha": 7,
+    "peitoral": 11,
+    "costas": 11,
+    "ombros": 11,
+    "biceps": 6,
+    "gluteos": 6,
+    "triceps": 6
+   },
+   "series_por_exercicio": {
+    "Agachamento livre": 4,
+    "Stiff com barra": 6,
+    "Cadeira extensora": 4,
+    "Panturrilha em pé": 4,
+    "Supino reto com barra": 6,
+    "Remada curvada com barra": 6,
+    "Desenvolvimento com halteres": 6,
+    "Rosca direta com barra": 6,
+    "Leg press 45°": 3,
+    "Cadeira flexora": 5,
+    "Elevação pélvica": 6,
+    "Panturrilha sentado": 3,
+    "Supino inclinado com halteres": 5,
+    "Puxada frontal": 5,
+    "Elevação lateral": 5,
+    "Tríceps na polia": 6
+   },
+   "sessoes": {
+    "A": [
+     {
+      "exercicio": "Agachamento livre",
+      "grupo": "quadriceps",
+      "series": 4,
+      "reps": "11 a 13",
+      "reps_min": 11,
+      "reps_max": 13,
+      "rir": 2,
+      "pct_1rm": 72.6,
+      "carga_kg": 92.0,
+      "descanso_s": 120,
+      "obs": "Descer até a coxa passar da paralela, se confortável; tronco firme.",
+      "extrapolado": false
+     },
+     {
+      "exercicio": "Stiff com barra",
+      "grupo": "posteriores",
+      "series": 6,
+      "reps": "11 a 13",
+      "reps_min": 11,
+      "reps_max": 13,
+      "rir": 2,
+      "pct_1rm": 72.6,
+      "carga_kg": 80.0,
+      "descanso_s": 120,
+      "obs": "Quadril para trás, coluna neutra; descer até sentir alongar atrás da coxa.",
+      "extrapolado": false
+     },
+     {
+      "exercicio": "Cadeira extensora",
+      "grupo": "quadriceps",
+      "series": 4,
+      "reps": "11 a 13",
+      "reps_min": 11,
+      "reps_max": 13,
+      "rir": 2,
+      "pct_1rm": 72.6,
+      "carga_kg": null,
+      "descanso_s": 90,
+      "obs": "Pausa de 1 s em cima.",
+      "extrapolado": false
+     },
+     {
+      "exercicio": "Panturrilha em pé",
+      "grupo": "panturrilha",
+      "series": 4,
+      "reps": "11 a 13",
+      "reps_min": 11,
+      "reps_max": 13,
+      "rir": 2,
+      "pct_1rm": 72.6,
+      "carga_kg": null,
+      "descanso_s": 90,
+      "obs": "Amplitude completa, pausa embaixo.",
+      "extrapolado": false
+     }
+    ],
+    "B": [
+     {
+      "exercicio": "Supino reto com barra",
+      "grupo": "peitoral",
+      "series": 6,
+      "reps": "11 a 13",
+      "reps_min": 11,
+      "reps_max": 13,
+      "rir": 2,
+      "pct_1rm": 71.7,
+      "carga_kg": 68.0,
+      "descanso_s": 120,
+      "obs": "Escápulas encaixadas; barra toca o peito sem quicar.",
+      "extrapolado": false
+     },
+     {
+      "exercicio": "Remada curvada com barra",
+      "grupo": "costas",
+      "series": 6,
+      "reps": "11 a 13",
+      "reps_min": 11,
+      "reps_max": 13,
+      "rir": 2,
+      "pct_1rm": 72.6,
+      "carga_kg": 68.0,
+      "descanso_s": 120,
+      "obs": "Tronco firme; puxar até a barriga.",
+      "extrapolado": false
+     },
+     {
+      "exercicio": "Desenvolvimento com halteres",
+      "grupo": "ombros",
+      "series": 6,
+      "reps": "11 a 13",
+      "reps_min": 11,
+      "reps_max": 13,
+      "rir": 2,
+      "pct_1rm": 72.6,
+      "carga_kg": 38.0,
+      "descanso_s": 90,
+      "obs": "Carga = soma dos dois halteres.",
+      "extrapolado": false
+     },
+     {
+      "exercicio": "Rosca direta com barra",
+      "grupo": "biceps",
+      "series": 6,
+      "reps": "11 a 13",
+      "reps_min": 11,
+      "reps_max": 13,
+      "rir": 2,
+      "pct_1rm": 72.6,
+      "carga_kg": null,
+      "descanso_s": 90,
+      "obs": "Sem balançar o tronco.",
+      "extrapolado": false
+     }
+    ],
+    "C": [
+     {
+      "exercicio": "Leg press 45°",
+      "grupo": "quadriceps",
+      "series": 3,
+      "reps": "11 a 13",
+      "reps_min": 11,
+      "reps_max": 13,
+      "rir": 2,
+      "pct_1rm": 80.2,
+      "carga_kg": 200.0,
+      "descanso_s": 120,
+      "obs": "Não tirar o quadril do banco no fundo.",
+      "extrapolado": false
+     },
+     {
+      "exercicio": "Cadeira flexora",
+      "grupo": "posteriores",
+      "series": 5,
+      "reps": "11 a 13",
+      "reps_min": 11,
+      "reps_max": 13,
+      "rir": 2,
+      "pct_1rm": 72.6,
+      "carga_kg": null,
+      "descanso_s": 90,
+      "obs": "Controle na volta (2 s).",
+      "extrapolado": false
+     },
+     {
+      "exercicio": "Elevação pélvica",
+      "grupo": "gluteos",
+      "series": 6,
+      "reps": "11 a 13",
+      "reps_min": 11,
+      "reps_max": 13,
+      "rir": 2,
+      "pct_1rm": 72.6,
+      "carga_kg": null,
+      "descanso_s": 90,
+      "obs": "Pausa de 1 s em cima.",
+      "extrapolado": false
+     },
+     {
+      "exercicio": "Panturrilha sentado",
+      "grupo": "panturrilha",
+      "series": 3,
+      "reps": "11 a 13",
+      "reps_min": 11,
+      "reps_max": 13,
+      "rir": 2,
+      "pct_1rm": 72.6,
+      "carga_kg": null,
+      "descanso_s": 90,
+      "obs": "",
+      "extrapolado": false
+     }
+    ],
+    "D": [
+     {
+      "exercicio": "Supino inclinado com halteres",
+      "grupo": "peitoral",
+      "series": 5,
+      "reps": "11 a 13",
+      "reps_min": 11,
+      "reps_max": 13,
+      "rir": 2,
+      "pct_1rm": 72.6,
+      "carga_kg": 50.0,
+      "descanso_s": 90,
+      "obs": "Carga = soma dos dois halteres.",
+      "extrapolado": false
+     },
+     {
+      "exercicio": "Puxada frontal",
+      "grupo": "costas",
+      "series": 5,
+      "reps": "11 a 13",
+      "reps_min": 11,
+      "reps_max": 13,
+      "rir": 2,
+      "pct_1rm": 72.6,
+      "carga_kg": 60.0,
+      "descanso_s": 120,
+      "obs": "Puxar até o queixo, peito aberto.",
+      "extrapolado": false
+     },
+     {
+      "exercicio": "Elevação lateral",
+      "grupo": "ombros",
+      "series": 5,
+      "reps": "11 a 13",
+      "reps_min": 11,
+      "reps_max": 13,
+      "rir": 2,
+      "pct_1rm": 72.6,
+      "carga_kg": null,
+      "descanso_s": 90,
+      "obs": "Até a linha do ombro.",
+      "extrapolado": false
+     },
+     {
+      "exercicio": "Tríceps na polia",
+      "grupo": "triceps",
+      "series": 6,
+      "reps": "11 a 13",
+      "reps_min": 11,
+      "reps_max": 13,
+      "rir": 2,
+      "pct_1rm": 72.6,
+      "carga_kg": null,
+      "descanso_s": 90,
+      "obs": "Cotovelos colados no corpo.",
+      "extrapolado": false
+     }
+    ]
+   }
+  },
+  {
+   "semana": 3,
+   "inicio": "2026-11-23",
+   "tipo": "normal",
+   "fase": "linear",
+   "series_por_grupo": {
+    "quadriceps": 12,
+    "posteriores": 12,
+    "panturrilha": 8,
+    "peitoral": 12,
+    "costas": 12,
+    "ombros": 12,
+    "biceps": 6,
+    "gluteos": 6,
+    "triceps": 6
+   },
+   "series_por_exercicio": {
+    "Agachamento livre": 4,
+    "Stiff com barra": 6,
+    "Cadeira extensora": 4,
+    "Panturrilha em pé": 4,
+    "Supino reto com barra": 6,
+    "Remada curvada com barra": 6,
+    "Desenvolvimento com halteres": 6,
+    "Rosca direta com barra": 6,
+    "Leg press 45°": 4,
+    "Cadeira flexora": 6,
+    "Elevação pélvica": 6,
+    "Panturrilha sentado": 4,
+    "Supino inclinado com halteres": 6,
+    "Puxada frontal": 6,
+    "Elevação lateral": 6,
+    "Tríceps na polia": 6
+   },
+   "sessoes": {
+    "A": [
+     {
+      "exercicio": "Agachamento livre",
+      "grupo": "quadriceps",
+      "series": 4,
+      "reps": "10 a 12",
+      "reps_min": 10,
+      "reps_max": 12,
+      "rir": 2,
+      "pct_1rm": 74.1,
+      "carga_kg": 94.0,
+      "descanso_s": 120,
+      "obs": "Descer até a coxa passar da paralela, se confortável; tronco firme.",
+      "extrapolado": false
+     },
+     {
+      "exercicio": "Stiff com barra",
+      "grupo": "posteriores",
+      "series": 6,
+      "reps": "10 a 12",
+      "reps_min": 10,
+      "reps_max": 12,
+      "rir": 2,
+      "pct_1rm": 74.1,
+      "carga_kg": 80.0,
+      "descanso_s": 120,
+      "obs": "Quadril para trás, coluna neutra; descer até sentir alongar atrás da coxa.",
+      "extrapolado": false
+     },
+     {
+      "exercicio": "Cadeira extensora",
+      "grupo": "quadriceps",
+      "series": 4,
+      "reps": "10 a 12",
+      "reps_min": 10,
+      "reps_max": 12,
+      "rir": 2,
+      "pct_1rm": 74.1,
+      "carga_kg": null,
+      "descanso_s": 90,
+      "obs": "Pausa de 1 s em cima.",
+      "extrapolado": false
+     },
+     {
+      "exercicio": "Panturrilha em pé",
+      "grupo": "panturrilha",
+      "series": 4,
+      "reps": "10 a 12",
+      "reps_min": 10,
+      "reps_max": 12,
+      "rir": 2,
+      "pct_1rm": 74.1,
+      "carga_kg": null,
+      "descanso_s": 90,
+      "obs": "Amplitude completa, pausa embaixo.",
+      "extrapolado": false
+     }
+    ],
+    "B": [
+     {
+      "exercicio": "Supino reto com barra",
+      "grupo": "peitoral",
+      "series": 6,
+      "reps": "10 a 12",
+      "reps_min": 10,
+      "reps_max": 12,
+      "rir": 2,
+      "pct_1rm": 73.4,
+      "carga_kg": 70.0,
+      "descanso_s": 120,
+      "obs": "Escápulas encaixadas; barra toca o peito sem quicar.",
+      "extrapolado": false
+     },
+     {
+      "exercicio": "Remada curvada com barra",
+      "grupo": "costas",
+      "series": 6,
+      "reps": "10 a 12",
+      "reps_min": 10,
+      "reps_max": 12,
+      "rir": 2,
+      "pct_1rm": 74.1,
+      "carga_kg": 68.0,
+      "descanso_s": 120,
+      "obs": "Tronco firme; puxar até a barriga.",
+      "extrapolado": false
+     },
+     {
+      "exercicio": "Desenvolvimento com halteres",
+      "grupo": "ombros",
+      "series": 6,
+      "reps": "10 a 12",
+      "reps_min": 10,
+      "reps_max": 12,
+      "rir": 2,
+      "pct_1rm": 74.1,
+      "carga_kg": 38.0,
+      "descanso_s": 90,
+      "obs": "Carga = soma dos dois halteres.",
+      "extrapolado": false
+     },
+     {
+      "exercicio": "Rosca direta com barra",
+      "grupo": "biceps",
+      "series": 6,
+      "reps": "10 a 12",
+      "reps_min": 10,
+      "reps_max": 12,
+      "rir": 2,
+      "pct_1rm": 74.1,
+      "carga_kg": null,
+      "descanso_s": 90,
+      "obs": "Sem balançar o tronco.",
+      "extrapolado": false
+     }
+    ],
+    "C": [
+     {
+      "exercicio": "Leg press 45°",
+      "grupo": "quadriceps",
+      "series": 4,
+      "reps": "10 a 12",
+      "reps_min": 10,
+      "reps_max": 12,
+      "rir": 2,
+      "pct_1rm": 82.3,
+      "carga_kg": 210.0,
+      "descanso_s": 120,
+      "obs": "Não tirar o quadril do banco no fundo.",
+      "extrapolado": false
+     },
+     {
+      "exercicio": "Cadeira flexora",
+      "grupo": "posteriores",
+      "series": 6,
+      "reps": "10 a 12",
+      "reps_min": 10,
+      "reps_max": 12,
+      "rir": 2,
+      "pct_1rm": 74.1,
+      "carga_kg": null,
+      "descanso_s": 90,
+      "obs": "Controle na volta (2 s).",
+      "extrapolado": false
+     },
+     {
+      "exercicio": "Elevação pélvica",
+      "grupo": "gluteos",
+      "series": 6,
+      "reps": "10 a 12",
+      "reps_min": 10,
+      "reps_max": 12,
+      "rir": 2,
+      "pct_1rm": 74.1,
+      "carga_kg": null,
+      "descanso_s": 90,
+      "obs": "Pausa de 1 s em cima.",
+      "extrapolado": false
+     },
+     {
+      "exercicio": "Panturrilha sentado",
+      "grupo": "panturrilha",
+      "series": 4,
+      "reps": "10 a 12",
+      "reps_min": 10,
+      "reps_max": 12,
+      "rir": 2,
+      "pct_1rm": 74.1,
+      "carga_kg": null,
+      "descanso_s": 90,
+      "obs": "",
+      "extrapolado": false
+     }
+    ],
+    "D": [
+     {
+      "exercicio": "Supino inclinado com halteres",
+      "grupo": "peitoral",
+      "series": 6,
+      "reps": "10 a 12",
+      "reps_min": 10,
+      "reps_max": 12,
+      "rir": 2,
+      "pct_1rm": 74.1,
+      "carga_kg": 50.0,
+      "descanso_s": 90,
+      "obs": "Carga = soma dos dois halteres.",
+      "extrapolado": false
+     },
+     {
+      "exercicio": "Puxada frontal",
+      "grupo": "costas",
+      "series": 6,
+      "reps": "10 a 12",
+      "reps_min": 10,
+      "reps_max": 12,
+      "rir": 2,
+      "pct_1rm": 74.1,
+      "carga_kg": 65.0,
+      "descanso_s": 120,
+      "obs": "Puxar até o queixo, peito aberto.",
+      "extrapolado": false
+     },
+     {
+      "exercicio": "Elevação lateral",
+      "grupo": "ombros",
+      "series": 6,
+      "reps": "10 a 12",
+      "reps_min": 10,
+      "reps_max": 12,
+      "rir": 2,
+      "pct_1rm": 74.1,
+      "carga_kg": null,
+      "descanso_s": 90,
+      "obs": "Até a linha do ombro.",
+      "extrapolado": false
+     },
+     {
+      "exercicio": "Tríceps na polia",
+      "grupo": "triceps",
+      "series": 6,
+      "reps": "10 a 12",
+      "reps_min": 10,
+      "reps_max": 12,
+      "rir": 2,
+      "pct_1rm": 74.1,
+      "carga_kg": null,
+      "descanso_s": 90,
+      "obs": "Cotovelos colados no corpo.",
+      "extrapolado": false
+     }
+    ]
+   }
+  },
+  {
+   "semana": 4,
+   "inicio": "2026-11-30",
+   "tipo": "normal",
+   "fase": "linear",
+   "series_por_grupo": {
+    "quadriceps": 14,
+    "posteriores": 12,
+    "panturrilha": 8,
+    "peitoral": 12,
+    "costas": 12,
+    "ombros": 12,
+    "biceps": 6,
+    "gluteos": 6,
+    "triceps": 6
+   },
+   "series_por_exercicio": {
+    "Agachamento livre": 5,
+    "Stiff com barra": 6,
+    "Cadeira extensora": 5,
+    "Panturrilha em pé": 4,
+    "Supino reto com barra": 6,
+    "Remada curvada com barra": 6,
+    "Desenvolvimento com halteres": 6,
+    "Rosca direta com barra": 6,
+    "Leg press 45°": 4,
+    "Cadeira flexora": 6,
+    "Elevação pélvica": 6,
+    "Panturrilha sentado": 4,
+    "Supino inclinado com halteres": 6,
+    "Puxada frontal": 6,
+    "Elevação lateral": 6,
+    "Tríceps na polia": 6
+   },
+   "sessoes": {
+    "A": [
+     {
+      "exercicio": "Agachamento livre",
+      "grupo": "quadriceps",
+      "series": 5,
+      "reps": "9 a 11",
+      "reps_min": 9,
+      "reps_max": 11,
+      "rir": 2,
+      "pct_1rm": 75.6,
+      "carga_kg": 96.0,
+      "descanso_s": 120,
+      "obs": "Descer até a coxa passar da paralela, se confortável; tronco firme.",
+      "extrapolado": false
+     },
+     {
+      "exercicio": "Stiff com barra",
+      "grupo": "posteriores",
+      "series": 6,
+      "reps": "9 a 11",
+      "reps_min": 9,
+      "reps_max": 11,
+      "rir": 2,
+      "pct_1rm": 75.6,
+      "carga_kg": 82.0,
+      "descanso_s": 120,
+      "obs": "Quadril para trás, coluna neutra; descer até sentir alongar atrás da coxa.",
+      "extrapolado": false
+     },
+     {
+      "exercicio": "Cadeira extensora",
+      "grupo": "quadriceps",
+      "series": 5,
+      "reps": "9 a 11",
+      "reps_min": 9,
+      "reps_max": 11,
+      "rir": 2,
+      "pct_1rm": 75.6,
+      "carga_kg": null,
+      "descanso_s": 90,
+      "obs": "Pausa de 1 s em cima.",
+      "extrapolado": false
+     },
+     {
+      "exercicio": "Panturrilha em pé",
+      "grupo": "panturrilha",
+      "series": 4,
+      "reps": "9 a 11",
+      "reps_min": 9,
+      "reps_max": 11,
+      "rir": 2,
+      "pct_1rm": 75.6,
+      "carga_kg": null,
+      "descanso_s": 90,
+      "obs": "Amplitude completa, pausa embaixo.",
+      "extrapolado": false
+     }
+    ],
+    "B": [
+     {
+      "exercicio": "Supino reto com barra",
+      "grupo": "peitoral",
+      "series": 6,
+      "reps": "9 a 11",
+      "reps_min": 9,
+      "reps_max": 11,
+      "rir": 2,
+      "pct_1rm": 75.3,
+      "carga_kg": 72.0,
+      "descanso_s": 120,
+      "obs": "Escápulas encaixadas; barra toca o peito sem quicar.",
+      "extrapolado": false
+     },
+     {
+      "exercicio": "Remada curvada com barra",
+      "grupo": "costas",
+      "series": 6,
+      "reps": "9 a 11",
+      "reps_min": 9,
+      "reps_max": 11,
+      "rir": 2,
+      "pct_1rm": 75.6,
+      "carga_kg": 70.0,
+      "descanso_s": 120,
+      "obs": "Tronco firme; puxar até a barriga.",
+      "extrapolado": false
+     },
+     {
+      "exercicio": "Desenvolvimento com halteres",
+      "grupo": "ombros",
+      "series": 6,
+      "reps": "9 a 11",
+      "reps_min": 9,
+      "reps_max": 11,
+      "rir": 2,
+      "pct_1rm": 75.6,
+      "carga_kg": 40.0,
+      "descanso_s": 90,
+      "obs": "Carga = soma dos dois halteres.",
+      "extrapolado": false
+     },
+     {
+      "exercicio": "Rosca direta com barra",
+      "grupo": "biceps",
+      "series": 6,
+      "reps": "9 a 11",
+      "reps_min": 9,
+      "reps_max": 11,
+      "rir": 2,
+      "pct_1rm": 75.6,
+      "carga_kg": null,
+      "descanso_s": 90,
+      "obs": "Sem balançar o tronco.",
+      "extrapolado": false
+     }
+    ],
+    "C": [
+     {
+      "exercicio": "Leg press 45°",
+      "grupo": "quadriceps",
+      "series": 4,
+      "reps": "9 a 11",
+      "reps_min": 9,
+      "reps_max": 11,
+      "rir": 2,
+      "pct_1rm": 84.7,
+      "carga_kg": 210.0,
+      "descanso_s": 120,
+      "obs": "Não tirar o quadril do banco no fundo.",
+      "extrapolado": false
+     },
+     {
+      "exercicio": "Cadeira flexora",
+      "grupo": "posteriores",
+      "series": 6,
+      "reps": "9 a 11",
+      "reps_min": 9,
+      "reps_max": 11,
+      "rir": 2,
+      "pct_1rm": 75.6,
+      "carga_kg": null,
+      "descanso_s": 90,
+      "obs": "Controle na volta (2 s).",
+      "extrapolado": false
+     },
+     {
+      "exercicio": "Elevação pélvica",
+      "grupo": "gluteos",
+      "series": 6,
+      "reps": "9 a 11",
+      "reps_min": 9,
+      "reps_max": 11,
+      "rir": 2,
+      "pct_1rm": 75.6,
+      "carga_kg": null,
+      "descanso_s": 90,
+      "obs": "Pausa de 1 s em cima.",
+      "extrapolado": false
+     },
+     {
+      "exercicio": "Panturrilha sentado",
+      "grupo": "panturrilha",
+      "series": 4,
+      "reps": "9 a 11",
+      "reps_min": 9,
+      "reps_max": 11,
+      "rir": 2,
+      "pct_1rm": 75.6,
+      "carga_kg": null,
+      "descanso_s": 90,
+      "obs": "",
+      "extrapolado": false
+     }
+    ],
+    "D": [
+     {
+      "exercicio": "Supino inclinado com halteres",
+      "grupo": "peitoral",
+      "series": 6,
+      "reps": "9 a 11",
+      "reps_min": 9,
+      "reps_max": 11,
+      "rir": 2,
+      "pct_1rm": 75.6,
+      "carga_kg": 52.0,
+      "descanso_s": 90,
+      "obs": "Carga = soma dos dois halteres.",
+      "extrapolado": false
+     },
+     {
+      "exercicio": "Puxada frontal",
+      "grupo": "costas",
+      "series": 6,
+      "reps": "9 a 11",
+      "reps_min": 9,
+      "reps_max": 11,
+      "rir": 2,
+      "pct_1rm": 75.6,
+      "carga_kg": 65.0,
+      "descanso_s": 120,
+      "obs": "Puxar até o queixo, peito aberto.",
+      "extrapolado": false
+     },
+     {
+      "exercicio": "Elevação lateral",
+      "grupo": "ombros",
+      "series": 6,
+      "reps": "9 a 11",
+      "reps_min": 9,
+      "reps_max": 11,
+      "rir": 2,
+      "pct_1rm": 75.6,
+      "carga_kg": null,
+      "descanso_s": 90,
+      "obs": "Até a linha do ombro.",
+      "extrapolado": false
+     },
+     {
+      "exercicio": "Tríceps na polia",
+      "grupo": "triceps",
+      "series": 6,
+      "reps": "9 a 11",
+      "reps_min": 9,
+      "reps_max": 11,
+      "rir": 2,
+      "pct_1rm": 75.6,
+      "carga_kg": null,
+      "descanso_s": 90,
+      "obs": "Cotovelos colados no corpo.",
+      "extrapolado": false
+     }
+    ]
+   }
+  },
+  {
+   "semana": 5,
+   "inicio": "2026-12-07",
+   "tipo": "normal",
+   "fase": "linear",
+   "series_por_grupo": {
+    "quadriceps": 15,
+    "posteriores": 12,
+    "panturrilha": 9,
+    "peitoral": 12,
+    "costas": 12,
+    "ombros": 12,
+    "biceps": 6,
+    "gluteos": 6,
+    "triceps": 6
+   },
+   "series_por_exercicio": {
+    "Agachamento livre": 5,
+    "Stiff com barra": 6,
+    "Cadeira extensora": 5,
+    "Panturrilha em pé": 5,
+    "Supino reto com barra": 6,
+    "Remada curvada com barra": 6,
+    "Desenvolvimento com halteres": 6,
+    "Rosca direta com barra": 6,
+    "Leg press 45°": 5,
+    "Cadeira flexora": 6,
+    "Elevação pélvica": 6,
+    "Panturrilha sentado": 4,
+    "Supino inclinado com halteres": 6,
+    "Puxada frontal": 6,
+    "Elevação lateral": 6,
+    "Tríceps na polia": 6
+   },
+   "sessoes": {
+    "A": [
+     {
+      "exercicio": "Agachamento livre",
+      "grupo": "quadriceps",
+      "series": 5,
+      "reps": "8 a 10",
+      "reps_min": 8,
+      "reps_max": 10,
+      "rir": 1,
+      "pct_1rm": 79.3,
+      "carga_kg": 102.0,
+      "descanso_s": 120,
+      "obs": "Descer até a coxa passar da paralela, se confortável; tronco firme.",
+      "extrapolado": false
+     },
+     {
+      "exercicio": "Stiff com barra",
+      "grupo": "posteriores",
+      "series": 6,
+      "reps": "8 a 10",
+      "reps_min": 8,
+      "reps_max": 10,
+      "rir": 1,
+      "pct_1rm": 79.3,
+      "carga_kg": 86.0,
+      "descanso_s": 120,
+      "obs": "Quadril para trás, coluna neutra; descer até sentir alongar atrás da coxa.",
+      "extrapolado": false
+     },
+     {
+      "exercicio": "Cadeira extensora",
+      "grupo": "quadriceps",
+      "series": 5,
+      "reps": "8 a 10",
+      "reps_min": 8,
+      "reps_max": 10,
+      "rir": 1,
+      "pct_1rm": 79.3,
+      "carga_kg": null,
+      "descanso_s": 90,
+      "obs": "Pausa de 1 s em cima.",
+      "extrapolado": false
+     },
+     {
+      "exercicio": "Panturrilha em pé",
+      "grupo": "panturrilha",
+      "series": 5,
+      "reps": "8 a 10",
+      "reps_min": 8,
+      "reps_max": 10,
+      "rir": 1,
+      "pct_1rm": 79.3,
+      "carga_kg": null,
+      "descanso_s": 90,
+      "obs": "Amplitude completa, pausa embaixo.",
+      "extrapolado": false
+     }
+    ],
+    "B": [
+     {
+      "exercicio": "Supino reto com barra",
+      "grupo": "peitoral",
+      "series": 6,
+      "reps": "8 a 10",
+      "reps_min": 8,
+      "reps_max": 10,
+      "rir": 1,
+      "pct_1rm": 79.5,
+      "carga_kg": 76.0,
+      "descanso_s": 120,
+      "obs": "Escápulas encaixadas; barra toca o peito sem quicar.",
+      "extrapolado": false
+     },
+     {
+      "exercicio": "Remada curvada com barra",
+      "grupo": "costas",
+      "series": 6,
+      "reps": "8 a 10",
+      "reps_min": 8,
+      "reps_max": 10,
+      "rir": 1,
+      "pct_1rm": 79.3,
+      "carga_kg": 74.0,
+      "descanso_s": 120,
+      "obs": "Tronco firme; puxar até a barriga.",
+      "extrapolado": false
+     },
+     {
+      "exercicio": "Desenvolvimento com halteres",
+      "grupo": "ombros",
+      "series": 6,
+      "reps": "8 a 10",
+      "reps_min": 8,
+      "reps_max": 10,
+      "rir": 1,
+      "pct_1rm": 79.3,
+      "carga_kg": 42.0,
+      "descanso_s": 90,
+      "obs": "Carga = soma dos dois halteres.",
+      "extrapolado": false
+     },
+     {
+      "exercicio": "Rosca direta com barra",
+      "grupo": "biceps",
+      "series": 6,
+      "reps": "8 a 10",
+      "reps_min": 8,
+      "reps_max": 10,
+      "rir": 1,
+      "pct_1rm": 79.3,
+      "carga_kg": null,
+      "descanso_s": 90,
+      "obs": "Sem balançar o tronco.",
+      "extrapolado": false
+     }
+    ],
+    "C": [
+     {
+      "exercicio": "Leg press 45°",
+      "grupo": "quadriceps",
+      "series": 5,
+      "reps": "8 a 10",
+      "reps_min": 8,
+      "reps_max": 10,
+      "rir": 1,
+      "pct_1rm": 90.0,
+      "carga_kg": 230.0,
+      "descanso_s": 120,
+      "obs": "Não tirar o quadril do banco no fundo.",
+      "extrapolado": false
+     },
+     {
+      "exercicio": "Cadeira flexora",
+      "grupo": "posteriores",
+      "series": 6,
+      "reps": "8 a 10",
+      "reps_min": 8,
+      "reps_max": 10,
+      "rir": 1,
+      "pct_1rm": 79.3,
+      "carga_kg": null,
+      "descanso_s": 90,
+      "obs": "Controle na volta (2 s).",
+      "extrapolado": false
+     },
+     {
+      "exercicio": "Elevação pélvica",
+      "grupo": "gluteos",
+      "series": 6,
+      "reps": "8 a 10",
+      "reps_min": 8,
+      "reps_max": 10,
+      "rir": 1,
+      "pct_1rm": 79.3,
+      "carga_kg": null,
+      "descanso_s": 90,
+      "obs": "Pausa de 1 s em cima.",
+      "extrapolado": false
+     },
+     {
+      "exercicio": "Panturrilha sentado",
+      "grupo": "panturrilha",
+      "series": 4,
+      "reps": "8 a 10",
+      "reps_min": 8,
+      "reps_max": 10,
+      "rir": 1,
+      "pct_1rm": 79.3,
+      "carga_kg": null,
+      "descanso_s": 90,
+      "obs": "",
+      "extrapolado": false
+     }
+    ],
+    "D": [
+     {
+      "exercicio": "Supino inclinado com halteres",
+      "grupo": "peitoral",
+      "series": 6,
+      "reps": "8 a 10",
+      "reps_min": 8,
+      "reps_max": 10,
+      "rir": 1,
+      "pct_1rm": 79.3,
+      "carga_kg": 54.0,
+      "descanso_s": 90,
+      "obs": "Carga = soma dos dois halteres.",
+      "extrapolado": false
+     },
+     {
+      "exercicio": "Puxada frontal",
+      "grupo": "costas",
+      "series": 6,
+      "reps": "8 a 10",
+      "reps_min": 8,
+      "reps_max": 10,
+      "rir": 1,
+      "pct_1rm": 79.3,
+      "carga_kg": 65.0,
+      "descanso_s": 120,
+      "obs": "Puxar até o queixo, peito aberto.",
+      "extrapolado": false
+     },
+     {
+      "exercicio": "Elevação lateral",
+      "grupo": "ombros",
+      "series": 6,
+      "reps": "8 a 10",
+      "reps_min": 8,
+      "reps_max": 10,
+      "rir": 1,
+      "pct_1rm": 79.3,
+      "carga_kg": null,
+      "descanso_s": 90,
+      "obs": "Até a linha do ombro.",
+      "extrapolado": false
+     },
+     {
+      "exercicio": "Tríceps na polia",
+      "grupo": "triceps",
+      "series": 6,
+      "reps": "8 a 10",
+      "reps_min": 8,
+      "reps_max": 10,
+      "rir": 1,
+      "pct_1rm": 79.3,
+      "carga_kg": null,
+      "descanso_s": 90,
+      "obs": "Cotovelos colados no corpo.",
+      "extrapolado": false
+     }
+    ]
+   }
+  },
+  {
+   "semana": 6,
+   "inicio": "2026-12-14",
+   "tipo": "deload",
+   "fase": "deload",
+   "series_por_grupo": {
+    "quadriceps": 6,
+    "posteriores": 6,
+    "panturrilha": 4,
+    "peitoral": 6,
+    "costas": 6,
+    "ombros": 6,
+    "biceps": 3,
+    "gluteos": 3,
+    "triceps": 3
+   },
+   "series_por_exercicio": {
+    "Agachamento livre": 2,
+    "Stiff com barra": 3,
+    "Cadeira extensora": 2,
+    "Panturrilha em pé": 2,
+    "Supino reto com barra": 3,
+    "Remada curvada com barra": 3,
+    "Desenvolvimento com halteres": 3,
+    "Rosca direta com barra": 3,
+    "Leg press 45°": 2,
+    "Cadeira flexora": 3,
+    "Elevação pélvica": 3,
+    "Panturrilha sentado": 2,
+    "Supino inclinado com halteres": 3,
+    "Puxada frontal": 3,
+    "Elevação lateral": 3,
+    "Tríceps na polia": 3
+   },
+   "sessoes": {
+    "A": [
+     {
+      "exercicio": "Agachamento livre",
+      "grupo": "quadriceps",
+      "series": 2,
+      "reps": "12 a 14",
+      "reps_min": 12,
+      "reps_max": 14,
+      "rir": 5,
+      "pct_1rm": 67.7,
+      "carga_kg": 86.0,
+      "descanso_s": 120,
+      "obs": "Descer até a coxa passar da paralela, se confortável; tronco firme.",
+      "extrapolado": true
+     },
+     {
+      "exercicio": "Stiff com barra",
+      "grupo": "posteriores",
+      "series": 3,
+      "reps": "12 a 14",
+      "reps_min": 12,
+      "reps_max": 14,
+      "rir": 5,
+      "pct_1rm": 67.7,
+      "carga_kg": 74.0,
+      "descanso_s": 120,
+      "obs": "Quadril para trás, coluna neutra; descer até sentir alongar atrás da coxa.",
+      "extrapolado": true
+     },
+     {
+      "exercicio": "Cadeira extensora",
+      "grupo": "quadriceps",
+      "series": 2,
+      "reps": "12 a 14",
+      "reps_min": 12,
+      "reps_max": 14,
+      "rir": 5,
+      "pct_1rm": 67.7,
+      "carga_kg": null,
+      "descanso_s": 90,
+      "obs": "Pausa de 1 s em cima.",
+      "extrapolado": true
+     },
+     {
+      "exercicio": "Panturrilha em pé",
+      "grupo": "panturrilha",
+      "series": 2,
+      "reps": "12 a 14",
+      "reps_min": 12,
+      "reps_max": 14,
+      "rir": 5,
+      "pct_1rm": 67.7,
+      "carga_kg": null,
+      "descanso_s": 90,
+      "obs": "Amplitude completa, pausa embaixo.",
+      "extrapolado": true
+     }
+    ],
+    "B": [
+     {
+      "exercicio": "Supino reto com barra",
+      "grupo": "peitoral",
+      "series": 3,
+      "reps": "12 a 14",
+      "reps_min": 12,
+      "reps_max": 14,
+      "rir": 5,
+      "pct_1rm": 66.0,
+      "carga_kg": 62.0,
+      "descanso_s": 120,
+      "obs": "Escápulas encaixadas; barra toca o peito sem quicar.",
+      "extrapolado": true
+     },
+     {
+      "exercicio": "Remada curvada com barra",
+      "grupo": "costas",
+      "series": 3,
+      "reps": "12 a 14",
+      "reps_min": 12,
+      "reps_max": 14,
+      "rir": 5,
+      "pct_1rm": 67.7,
+      "carga_kg": 62.0,
+      "descanso_s": 120,
+      "obs": "Tronco firme; puxar até a barriga.",
+      "extrapolado": true
+     },
+     {
+      "exercicio": "Desenvolvimento com halteres",
+      "grupo": "ombros",
+      "series": 3,
+      "reps": "12 a 14",
+      "reps_min": 12,
+      "reps_max": 14,
+      "rir": 5,
+      "pct_1rm": 67.7,
+      "carga_kg": 36.0,
+      "descanso_s": 90,
+      "obs": "Carga = soma dos dois halteres.",
+      "extrapolado": true
+     },
+     {
+      "exercicio": "Rosca direta com barra",
+      "grupo": "biceps",
+      "series": 3,
+      "reps": "12 a 14",
+      "reps_min": 12,
+      "reps_max": 14,
+      "rir": 5,
+      "pct_1rm": 67.7,
+      "carga_kg": null,
+      "descanso_s": 90,
+      "obs": "Sem balançar o tronco.",
+      "extrapolado": true
+     }
+    ],
+    "C": [
+     {
+      "exercicio": "Leg press 45°",
+      "grupo": "quadriceps",
+      "series": 2,
+      "reps": "12 a 14",
+      "reps_min": 12,
+      "reps_max": 14,
+      "rir": 5,
+      "pct_1rm": 73.0,
+      "carga_kg": 180.0,
+      "descanso_s": 120,
+      "obs": "Não tirar o quadril do banco no fundo.",
+      "extrapolado": false
+     },
+     {
+      "exercicio": "Cadeira flexora",
+      "grupo": "posteriores",
+      "series": 3,
+      "reps": "12 a 14",
+      "reps_min": 12,
+      "reps_max": 14,
+      "rir": 5,
+      "pct_1rm": 67.7,
+      "carga_kg": null,
+      "descanso_s": 90,
+      "obs": "Controle na volta (2 s).",
+      "extrapolado": true
+     },
+     {
+      "exercicio": "Elevação pélvica",
+      "grupo": "gluteos",
+      "series": 3,
+      "reps": "12 a 14",
+      "reps_min": 12,
+      "reps_max": 14,
+      "rir": 5,
+      "pct_1rm": 67.7,
+      "carga_kg": null,
+      "descanso_s": 90,
+      "obs": "Pausa de 1 s em cima.",
+      "extrapolado": true
+     },
+     {
+      "exercicio": "Panturrilha sentado",
+      "grupo": "panturrilha",
+      "series": 2,
+      "reps": "12 a 14",
+      "reps_min": 12,
+      "reps_max": 14,
+      "rir": 5,
+      "pct_1rm": 67.7,
+      "carga_kg": null,
+      "descanso_s": 90,
+      "obs": "",
+      "extrapolado": true
+     }
+    ],
+    "D": [
+     {
+      "exercicio": "Supino inclinado com halteres",
+      "grupo": "peitoral",
+      "series": 3,
+      "reps": "12 a 14",
+      "reps_min": 12,
+      "reps_max": 14,
+      "rir": 5,
+      "pct_1rm": 67.7,
+      "carga_kg": 46.0,
+      "descanso_s": 90,
+      "obs": "Carga = soma dos dois halteres.",
+      "extrapolado": true
+     },
+     {
+      "exercicio": "Puxada frontal",
+      "grupo": "costas",
+      "series": 3,
+      "reps": "12 a 14",
+      "reps_min": 12,
+      "reps_max": 14,
+      "rir": 5,
+      "pct_1rm": 67.7,
+      "carga_kg": 55.0,
+      "descanso_s": 120,
+      "obs": "Puxar até o queixo, peito aberto.",
+      "extrapolado": true
+     },
+     {
+      "exercicio": "Elevação lateral",
+      "grupo": "ombros",
+      "series": 3,
+      "reps": "12 a 14",
+      "reps_min": 12,
+      "reps_max": 14,
+      "rir": 5,
+      "pct_1rm": 67.7,
+      "carga_kg": null,
+      "descanso_s": 90,
+      "obs": "Até a linha do ombro.",
+      "extrapolado": true
+     },
+     {
+      "exercicio": "Tríceps na polia",
+      "grupo": "triceps",
+      "series": 3,
+      "reps": "12 a 14",
+      "reps_min": 12,
+      "reps_max": 14,
+      "rir": 5,
+      "pct_1rm": 67.7,
+      "carga_kg": null,
+      "descanso_s": 90,
+      "obs": "Cotovelos colados no corpo.",
+      "extrapolado": true
+     }
+    ]
+   }
+  }
+ ],
+ "exercicios": [
+  {
+   "nome": "Agachamento livre",
+   "grupo": "quadriceps",
+   "secundarios": [
+    "gluteos"
+   ],
+   "tabela": "geral",
+   "principal": true,
+   "incremento_kg": 2,
+   "obs": "Descer até a coxa passar da paralela, se confortável; tronco firme.",
+   "1rm": 129.2,
+   "1rm_origem": "estimado (100 kg × 8 + RIR 2), tabela geral",
+   "reps": [
+    12,
+    14
+   ],
+   "rir": 3
+  },
+  {
+   "nome": "Stiff com barra",
+   "grupo": "posteriores",
+   "secundarios": [
+    "gluteos"
+   ],
+   "tabela": "geral",
+   "principal": true,
+   "incremento_kg": 2,
+   "obs": "Quadril para trás, coluna neutra; descer até sentir alongar atrás da coxa.",
+   "1rm": 110.2,
+   "1rm_origem": "estimado (80 kg × 10 + RIR 3), tabela geral",
+   "reps": [
+    12,
+    14
+   ],
+   "rir": 3
+  },
+  {
+   "nome": "Cadeira extensora",
+   "grupo": "quadriceps",
+   "tabela": "geral",
+   "isolado": true,
+   "incremento_kg": 5,
+   "obs": "Pausa de 1 s em cima.",
+   "reps": [
+    12,
+    14
+   ],
+   "rir": 3
+  },
+  {
+   "nome": "Panturrilha em pé",
+   "grupo": "panturrilha",
+   "tabela": "geral",
+   "isolado": true,
+   "incremento_kg": 5,
+   "obs": "Amplitude completa, pausa embaixo.",
+   "reps": [
+    12,
+    14
+   ],
+   "rir": 3
+  },
+  {
+   "nome": "Supino reto com barra",
+   "grupo": "peitoral",
+   "secundarios": [
+    "triceps",
+    "ombros"
+   ],
+   "tabela": "supino",
+   "principal": true,
+   "incremento_kg": 2,
+   "obs": "Escápulas encaixadas; barra toca o peito sem quicar.",
+   "1rm": 96.5,
+   "1rm_origem": "estimado (80 kg × 6 + RIR 1), tabela supino",
+   "reps": [
+    12,
+    14
+   ],
+   "rir": 3
+  },
+  {
+   "nome": "Remada curvada com barra",
+   "grupo": "costas",
+   "secundarios": [
+    "biceps"
+   ],
+   "tabela": "geral",
+   "principal": true,
+   "incremento_kg": 2,
+   "obs": "Tronco firme; puxar até a barriga.",
+   "1rm": 94.5,
+   "1rm_origem": "estimado (70 kg × 10 + RIR 2), tabela geral",
+   "reps": [
+    12,
+    14
+   ],
+   "rir": 3
+  },
+  {
+   "nome": "Desenvolvimento com halteres",
+   "grupo": "ombros",
+   "secundarios": [
+    "triceps"
+   ],
+   "tabela": "geral",
+   "incremento_kg": 2,
+   "obs": "Carga = soma dos dois halteres.",
+   "1rm": 54.0,
+   "1rm_origem": "estimado (40 kg × 10 + RIR 2), tabela geral",
+   "reps": [
+    12,
+    14
+   ],
+   "rir": 3
+  },
+  {
+   "nome": "Rosca direta com barra",
+   "grupo": "biceps",
+   "tabela": "geral",
+   "isolado": true,
+   "incremento_kg": 2,
+   "obs": "Sem balançar o tronco.",
+   "reps": [
+    12,
+    14
+   ],
+   "rir": 3
+  },
+  {
+   "nome": "Leg press 45°",
+   "grupo": "quadriceps",
+   "secundarios": [
+    "gluteos"
+   ],
+   "tabela": "legpress",
+   "principal": true,
+   "incremento_kg": 10,
+   "obs": "Não tirar o quadril do banco no fundo.",
+   "1rm": 255.7,
+   "1rm_origem": "estimado (200 kg × 12 + RIR 2), tabela legpress",
+   "reps": [
+    12,
+    14
+   ],
+   "rir": 3
+  },
+  {
+   "nome": "Cadeira flexora",
+   "grupo": "posteriores",
+   "tabela": "geral",
+   "isolado": true,
+   "incremento_kg": 5,
+   "obs": "Controle na volta (2 s).",
+   "reps": [
+    12,
+    14
+   ],
+   "rir": 3
+  },
+  {
+   "nome": "Elevação pélvica",
+   "grupo": "gluteos",
+   "tabela": "geral",
+   "incremento_kg": 10,
+   "obs": "Pausa de 1 s em cima.",
+   "reps": [
+    12,
+    14
+   ],
+   "rir": 3
+  },
+  {
+   "nome": "Panturrilha sentado",
+   "grupo": "panturrilha",
+   "tabela": "geral",
+   "isolado": true,
+   "incremento_kg": 5,
+   "obs": "",
+   "reps": [
+    12,
+    14
+   ],
+   "rir": 3
+  },
+  {
+   "nome": "Supino inclinado com halteres",
+   "grupo": "peitoral",
+   "secundarios": [
+    "triceps",
+    "ombros"
+   ],
+   "tabela": "geral",
+   "incremento_kg": 2,
+   "obs": "Carga = soma dos dois halteres.",
+   "1rm": 70.2,
+   "1rm_origem": "estimado (52 kg × 10 + RIR 2), tabela geral",
+   "reps": [
+    12,
+    14
+   ],
+   "rir": 3
+  },
+  {
+   "nome": "Puxada frontal",
+   "grupo": "costas",
+   "secundarios": [
+    "biceps"
+   ],
+   "tabela": "geral",
+   "principal": true,
+   "incremento_kg": 5,
+   "obs": "Puxar até o queixo, peito aberto.",
+   "1rm": 87.8,
+   "1rm_origem": "estimado (65 kg × 10 + RIR 2), tabela geral",
+   "reps": [
+    12,
+    14
+   ],
+   "rir": 3
+  },
+  {
+   "nome": "Elevação lateral",
+   "grupo": "ombros",
+   "tabela": "geral",
+   "isolado": true,
+   "incremento_kg": 1,
+   "obs": "Até a linha do ombro.",
+   "reps": [
+    12,
+    14
+   ],
+   "rir": 3
+  },
+  {
+   "nome": "Tríceps na polia",
+   "grupo": "triceps",
+   "tabela": "geral",
+   "isolado": true,
+   "incremento_kg": 5,
+   "obs": "Cotovelos colados no corpo.",
+   "reps": [
+    12,
+    14
+   ],
+   "rir": 3
+  }
+ ],
+ "divisao": {
+  "A": [
+   "Agachamento livre",
+   "Stiff com barra",
+   "Cadeira extensora",
+   "Panturrilha em pé"
+  ],
+  "B": [
+   "Supino reto com barra",
+   "Remada curvada com barra",
+   "Desenvolvimento com halteres",
+   "Rosca direta com barra"
+  ],
+  "C": [
+   "Leg press 45°",
+   "Cadeira flexora",
+   "Elevação pélvica",
+   "Panturrilha sentado"
+  ],
+  "D": [
+   "Supino inclinado com halteres",
+   "Puxada frontal",
+   "Elevação lateral",
+   "Tríceps na polia"
+  ]
+ },
+ "nomes_dias": {
+  "A": "Inferiores 1",
+  "B": "Superiores 1",
+  "C": "Inferiores 2",
+  "D": "Superiores 2"
+ },
+ "rir_padrao": 2,
+ "volume_alvo": {
+  "inicio": 10,
+  "teto": 20,
+  "regra": "[V1]-[V3] faixa de séries por nível (Currier 2026; Baz-Valle 2022; Iversen 2021)"
+ },
+ "check_in_cargas_url": "https://tally.so/r/TROCAR",
+ "avisos": [
+  "biceps: a rampa pede até 9 séries/semana, mas 1 exercício(s) com até 6 séries não comportam; acrescente um exercício para esse grupo",
+  "costas: a rampa pede até 15 séries/semana, mas 2 exercício(s) com até 6 séries não comportam; acrescente um exercício para esse grupo",
+  "gluteos: a rampa pede até 9 séries/semana, mas 1 exercício(s) com até 6 séries não comportam; acrescente um exercício para esse grupo",
+  "ombros: a rampa pede até 15 séries/semana, mas 2 exercício(s) com até 6 séries não comportam; acrescente um exercício para esse grupo",
+  "peitoral: a rampa pede até 15 séries/semana, mas 2 exercício(s) com até 6 séries não comportam; acrescente um exercício para esse grupo",
+  "posteriores: a rampa pede até 15 séries/semana, mas 2 exercício(s) com até 6 séries não comportam; acrescente um exercício para esse grupo",
+  "triceps: a rampa pede até 9 séries/semana, mas 1 exercício(s) com até 6 séries não comportam; acrescente um exercício para esse grupo"
+ ],
+ "fonte": "01 - BASE CIENTÍFICA/Treino de força/Hipertrofia e força - Protocolo.md",
+ "gerado_em": "2026-11-19"
+}

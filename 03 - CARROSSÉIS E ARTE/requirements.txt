@@ -1,0 +1,6 @@
+# Dependências Python do gerador de carrosséis (versões conferidas com pip show em 2026-11-19, Python 3.12.10)
+# Instalar (PowerShell, na pasta 03 - CARROSSÉIS E ARTE):  python -m pip install -r requirements.txt
+# Também precisa do Google Chrome instalado: o render e o editor fotografam os slides com ele.
+pillow==12.3.0
+numpy==2.5.3
+scipy==1.18.1

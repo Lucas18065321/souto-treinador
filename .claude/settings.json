@@ -1,0 +1,44 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python *validar_roteiro.py*)",
+      "Bash(python *validar_carrossel.py*)",
+      "Bash(python *biblioteca.py* buscar*)",
+      "Bash(python *biblioteca.py* ver*)",
+      "Bash(python *biblioteca.py* trecho*)",
+      "Bash(python *biblioteca.py* conferir-ficha*)",
+      "Bash(python *biblioteca.py* panorama*)",
+      "Bash(python *gerar_indice.py*)",
+      "Bash(python *edison.py* creditos*)",
+      "Bash(python *edison.py* candidatos*)",
+      "Bash(node *validar-edicao.mjs*)",
+      "Bash(node *validar-shotlist.mjs*)",
+      "Bash(node *validar-vox.mjs*)",
+      "Bash(python *Agente de dieta/calcular_plano.py*)",
+      "Bash(python *Agente de dieta/alimentos.py* buscar*)",
+      "Bash(python *Agente de dieta/template/montar_plano.py*)"
+    ],
+    "deny": [
+      "Read(~/SoutoTreinador/privado/**)",
+      "Read(**/supabase.env)",
+      "Read(**/assinatura-rt.png)",
+      "Read(**/.edison-key)",
+      "Read(**/.env)"
+    ]
+  },
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Write|Edit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python \"$CLAUDE_PROJECT_DIR/.claude/hooks/validar_peca.py\"",
+            "timeout": 120,
+            "statusMessage": "Validando roteiro, carrossel ou edição contra a ficha"
+          }
+        ]
+      }
+    ]
+  }
+}

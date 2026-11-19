@@ -1,0 +1,29 @@
+{
+ "modelo": "dossie",
+ "nota": "TESTE DO MOTOR (Modelo 3 · Dossiê, 5 slides de amostra) com texto FICTÍCIO e marcadores cinza no lugar das artes. Ficha fictícia do teste dos roteiros. NÃO PUBLICAR.",
+ "ficha": "TESTE Volume de treino - Ficha",
+ "tipo_carrossel": "tese-mito",
+ "eixo": "Cultura",
+ "funil": "meio",
+ "headline": "Mais séries, mais músculo? O que acontece quando o volume do treino sobe",
+ "cta": {"tipo": "consultoria", "beneficio": "a dose certa de treino para a sua rotina"},
+ "slides": [
+  {"tipo": "capa", "funcao": "capa", "fundo": "cor", "imagem": "../../Gerador/_marcadores/branco.png",
+   "topo": "O VOLUME", "base": "**DA SEMANA**", "sub": "mais séries,\nmais músculo?\naté onde vale", "tag": "DOSSIÊ DO TREINO"},
+  {"tipo": "manchete", "funcao": "hook", "imagem": "../../Gerador/_marcadores/foto.png",
+   "titulo": "**Sair destruído da academia** parece sinal de treino bem feito",
+   "texto": "Só que o espelho nem sempre acompanha o cansaço. **A dose da semana** entra na conta."},
+  {"tipo": "foto", "funcao": "mecanismo", "imagem": "../../Gerador/_marcadores/foto.png",
+   "texto": ["Segundo uma revisão de estudos, subir **de 4 para 10 séries por semana** provavelmente aumenta o ganho de músculo.",
+             "**O efeito vale até certo ponto, como a água numa planta.**"],
+   "afirmacoes": [1]},
+  {"tipo": "manchete", "funcao": "prova", "imagem": "../../Gerador/_marcadores/foto.png",
+   "titulo": "**Peso leve provavelmente dá músculo parecido,** se a série terminar perto do cansaço",
+   "texto": "A crença de que só peso alto dá músculo não se sustenta na revisão. _A série perto do cansaço é o que pesa._",
+   "afirmacoes": ["M1"]},
+  {"tipo": "cta", "funcao": "cta", "imagem": "../../Gerador/_marcadores/foto.png", "tag": "Treino individualizado",
+   "titulo": "**Quer um treino para a sua rotina?** _A dose certa para o seu momento._",
+   "caixa": "**Link na bio** · Jorge Souto, treinador · CREF 000000-G/UF",
+   "cta": {"tipo": "consultoria", "beneficio": "a dose certa de treino para a sua rotina"}}
+ ]
+}

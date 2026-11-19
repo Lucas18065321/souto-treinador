@@ -1,0 +1,91 @@
+/* Modelo B (escuro) · carrega depois do plano.css. Para ler no celular (para imprimir, mande o modelo A).
+   Fundo preto da marca (#0B0B0E) com a luz azul (degradê "noite"), cards em azul-grafite, números grandes em destaque, painel "bento" na evolução
+   e páginas de texto em cards. Mesmas fontes e mesmas regras do modelo A (sem verde × vermelho, sem promessa). */
+
+html.modelo-b {
+  --tinta: #F2F4F8;
+  --tinta-2: #C1C7D8;
+  --tinta-3: #9BA3BA;
+  --papel: #0B0B0E;
+  --creme: #050507;
+  --creme-2: #1A1D2B;
+  --linha: #262A3A;
+  --linha-2: #363B50;
+  --acento: #93A6FF;
+  --sup: #141724;
+  --sup-2: #1B1F30;
+  --grade: #232738;
+  --trilho: #272C40;
+  --c1: #93A6FF;
+  --c2: #5C78EE;
+  --c3: #2E49CE;
+  --area: .18;
+  --raio: 5mm;
+  --destaque: #93A6FF;   /* números grandes */
+  background: var(--papel);
+}
+
+/* capa: preto com a luz azul da marca no canto (degradê linear opaco: o radial e a transparência somem na impressão) */
+.modelo-b .capa { background: linear-gradient(212deg, #2E49CE 0%, #141A3D 34%, #0B0B0E 64%); }
+.modelo-b .capa-marca { opacity: .05; }
+.modelo-b .capa-dados { border-top: .3mm solid rgba(255, 255, 255, .16); }
+.modelo-b .capa-dado { border-right-color: rgba(255, 255, 255, .14); }
+.modelo-b .capa-pe { color: var(--tinta-3); }
+
+/* superfícies */
+.modelo-b .painel, .modelo-b .ref, .modelo-b .dia-item, .modelo-b .alarme, .modelo-b .card, .modelo-b .num-card { background: var(--sup); border-color: var(--linha); }
+.modelo-b .painel.creme, .modelo-b .ref-topo, .modelo-b .aviso-peso, .modelo-b .conta-item, .modelo-b .dia-item.treino { background: var(--sup-2); }
+.modelo-b .ref, .modelo-b .painel, .modelo-b .dia-item, .modelo-b .alarme, .modelo-b .aviso-peso, .modelo-b .conta-item { border-radius: var(--raio); }
+.modelo-b .dia-item.treino { border-color: var(--tinta-3); }
+.modelo-b .assinatura-linha { border-top-color: var(--tinta-3); }
+.modelo-b .bloco-rt { background: var(--sup); border-color: var(--linha); border-radius: var(--raio); }
+.modelo-b .assinatura-img { background: #F2F4F8; border-radius: 2mm; padding: 1mm 3mm; }   /* assinatura em tinta escura: fundo claro só atrás dela */
+
+/* números grandes em destaque; o rótulo fica neutro */
+.modelo-b .num-grande { color: var(--destaque); font-size: 28pt; }
+.modelo-b .num-card .rot, .modelo-b .card.mini .rot, .modelo-b .bento .rot, .modelo-b .conta-item .rot, .modelo-b .macro .rot { color: var(--tinta-2); }
+.modelo-b .conta-item b, .modelo-b .macro b, .modelo-b .agua-calc > b, .modelo-b .num-calc { color: var(--destaque); }
+.modelo-b .conta-item.fim { background: linear-gradient(100deg, #2E49CE 0%, #1F33A3 100%); }   /* o resultado da conta em destaque */
+.modelo-b .conta-item.fim b, .modelo-b .conta-item.fim .rot { color: #fff; }
+
+/* gráficos */
+.modelo-b .g-faixa { fill: none; }
+.modelo-b .g-etiqueta { fill: #F2F4F8; }
+.modelo-b .g-etiqueta-tx { fill: #0B0B0E; }
+
+/* painel bento da evolução: anel grande + números ao lado */
+.bento { display: grid; grid-template-columns: 1.05fr 1fr; gap: 4mm; margin-bottom: 4mm; break-inside: avoid; }
+.bento .card { margin: 0; }
+.bento-anel { display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 5mm; }
+.anel-caixa.grande { width: 52mm; margin: 3mm auto 2mm; }
+.anel-caixa.grande .anel-centro b { font-size: 32pt; color: var(--destaque); }
+.anel-caixa.grande .anel-centro span { font-size: 10pt; }
+.bento-anel .anel-leg { max-width: 62mm; }
+.bento-lado { display: grid; gap: 4mm; }
+.bento-num { display: flex; flex-direction: column; justify-content: center; padding: 4mm 5mm; }
+.bento-num .num-barra { margin-top: 2mm; }
+
+/* páginas de texto em cards */
+.modelo-b .sec > .lista { background: var(--sup); border-radius: var(--raio); padding: 4mm 5mm 2.5mm; }
+.modelo-b .leitura { border-top: 0; display: grid; gap: 3mm; }
+.modelo-b .leitura-linha { background: var(--sup); border: 0; border-radius: var(--raio); padding: 4mm 5mm; }
+.modelo-b .meta { background: var(--sup); border: 0; border-radius: var(--raio); padding: 3mm 4.5mm; margin-bottom: 2.5mm; }
+.modelo-b .meta-n { width: 9mm; height: 9mm; border-radius: 50%; background: var(--degrade); color: #fff;
+  font-family: var(--fonte-num); font-weight: 600; font-size: 12pt; display: flex; align-items: center; justify-content: center; }
+.modelo-b .combinado { background: var(--sup); border-radius: 0 var(--raio) var(--raio) 0; padding: 3.5mm 5mm; }
+.modelo-b .tab-sup, .modelo-b .tab-sup tbody { display: block; }
+.modelo-b .tab-sup thead, .modelo-b .tab-sup colgroup { display: none; }
+.modelo-b .tab-sup tr { display: grid; grid-template-columns: 1fr 1fr 1.25fr 1.25fr; gap: 4mm; background: var(--sup);
+  border-radius: var(--raio); padding: 4mm 5mm; margin-bottom: 3mm; break-inside: avoid; }
+.modelo-b .tab-sup td { border: 0; padding: 0; }
+.modelo-b .tab-sup td::before { content: attr(data-rot); display: block; font-size: 8.5pt; font-weight: 600; letter-spacing: .12em;
+  text-transform: uppercase; color: var(--acento); margin-bottom: 1mm; }
+
+@media screen {
+  .modelo-b body { background: var(--creme); }
+  .modelo-b .doc { box-shadow: 0 0 0 1px #1E2130; }
+}
+@media screen and (max-width: 640px) {
+  .bento { grid-template-columns: 1fr; }
+  .modelo-b .tab-sup tr { grid-template-columns: 1fr; gap: 6px; }
+}

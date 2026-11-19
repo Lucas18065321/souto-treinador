@@ -1,0 +1,804 @@
+{
+  "_leia": "Palavras que ligam um artigo a um eixo (mesmos nomes de 01 - BASE CIENTÍFICA/_SISTEMA/Scripts/escopos.json). Casamento pelo começo da palavra, sem acento e sem maiúscula. 'a&b' = as duas precisam aparecer. 'sinonimos' traduz a busca em português para os termos dos artigos (inglês).",
+  "eixos": {
+    "crononutricao": [
+      "time-restricted eating",
+      "time restricted eating",
+      "time-restricted feeding",
+      "intermittent fasting",
+      "alternate-day fasting",
+      "alternate day fasting",
+      "meal timing",
+      "breakfast",
+      "late eating",
+      "late dinner",
+      "chrononutrition",
+      "circadian",
+      "chronotype",
+      "shift work",
+      "night shift",
+      "eating window",
+      "jejum",
+      "crononutri"
+    ],
+    "comportamental": [
+      "eating disorder",
+      "anorexia nervosa",
+      "bulimia",
+      "binge eating",
+      "arfid",
+      "orthorexia",
+      "emotional eating",
+      "intuitive eating",
+      "mindful eating",
+      "food addiction",
+      "weight stigma",
+      "dietary restraint",
+      "eating behavio",
+      "food craving",
+      "hedonic",
+      "palatab",
+      "sweet taste",
+      "food reward",
+      "appetite",
+      "satiety",
+      "transtorno alimentar",
+      "compuls",
+      "dietary behavio",
+      "food choice",
+      "approach-avoidance",
+      "unhealthy food",
+      "snack"
+    ],
+    "cardiometabolico": [
+      "cardiometabolic",
+      "metabolic syndrome",
+      "insulin resistance",
+      "dyslipid",
+      "cholesterol",
+      "ldl",
+      "apob",
+      "apolipoprotein b",
+      "lipoprotein(a)",
+      "triglyceride",
+      "hypertension",
+      "blood pressure",
+      "uric acid",
+      "lipid profile",
+      "plant-based diet",
+      "mediterranean diet",
+      "dash diet",
+      "olive oil",
+      "dietary fat",
+      "saturated fat"
+    ],
+    "sono-imunidade": [
+      "sleep&immun",
+      "sleep&vaccin",
+      "sleep&infection",
+      "sleep&inflammat",
+      "sleep&cytokine",
+      "melatonin&immun",
+      "shift work&infection"
+    ],
+    "sono-peso": [
+      "sleep&weight",
+      "sleep&appetite",
+      "sleep&obesity",
+      "sleep&energy intake",
+      "sleep restriction",
+      "sleep deprivation",
+      "sleep extension",
+      "sleep duration",
+      "sleep quality",
+      "insomnia"
+    ],
+    "epidemiologia": [
+      "prevalence",
+      "global burden",
+      "burden of disease",
+      "gbd",
+      "nhanes",
+      "vigitel",
+      "trends in",
+      "epidemiolog",
+      "population-based",
+      "national survey"
+    ],
+    "cardiopatias": [
+      "cardiovascular disease",
+      "cardiovascular events",
+      "coronary",
+      "heart failure",
+      "myocardial infarction",
+      "stroke",
+      "atherosclero",
+      "cardiac",
+      "cardiovascular mortality"
+    ],
+    "diabetes": [
+      "diabetes",
+      "diabetic",
+      "glycemic",
+      "glycaemic",
+      "hba1c",
+      "glycated",
+      "glucose",
+      "insulin sensitivity",
+      "prediabetes",
+      "type 3 diabetes"
+    ],
+    "tireoide": [
+      "thyroid",
+      "hypothyroid",
+      "hyperthyroid",
+      "hashimoto",
+      "iodine",
+      "levothyroxine",
+      "tsh"
+    ],
+    "autoimunes": [
+      "autoimmun",
+      "rheumatoid",
+      "lupus",
+      "multiple sclerosis",
+      "psoriasis",
+      "celiac",
+      "coeliac",
+      "spondylo"
+    ],
+    "intestino": [
+      "gut",
+      "microbio",
+      "microbiota",
+      "microbiome",
+      "intestinal",
+      "bowel",
+      "irritable",
+      "ibs",
+      "inflammatory bowel",
+      "crohn",
+      "colitis",
+      "fodmap",
+      "probiotic",
+      "prebiotic",
+      "synbiotic",
+      "postbiotic",
+      "dietary fiber",
+      "dietary fibre",
+      "constipation",
+      "gut-brain",
+      "faecal",
+      "fecal",
+      "short-chain fatty",
+      "colorectal"
+    ],
+    "calculo-energetico": [
+      "energy expenditure",
+      "resting metabolic",
+      "metabolic rate",
+      "predictive equation",
+      "indirect calorimetry",
+      "energy requirement",
+      "doubly labeled",
+      "doubly labelled",
+      "energy balance",
+      "metabolic adaptation"
+    ],
+    "droga-nutriente": [
+      "drug-nutrient",
+      "drug nutrient",
+      "food-drug",
+      "drug interaction",
+      "metformin&b12",
+      "proton pump",
+      "warfarin",
+      "statin&supplement"
+    ],
+    "exames": [
+      "biomarker",
+      "reference interval",
+      "reference range",
+      "laboratory test",
+      "screening test",
+      "ferritin",
+      "25-hydroxyvitamin d",
+      "vitamin d status",
+      "homocysteine",
+      "c-reactive protein"
+    ],
+    "regulatorio-acesso": [
+      "food policy",
+      "front-of-pack",
+      "front-of-package",
+      "labeling",
+      "labelling",
+      "sugar tax",
+      "beverage tax",
+      "food marketing",
+      "advertising",
+      "regulation",
+      "food environment",
+      "food insecurity",
+      "anvisa"
+    ],
+    "drc": [
+      "chronic kidney",
+      "ckd",
+      "kidney disease",
+      "renal function",
+      "dialysis",
+      "nephro",
+      "kidney stone"
+    ],
+    "masld": [
+      "masld",
+      "nafld",
+      "fatty liver",
+      "steatosis",
+      "steatotic",
+      "mash",
+      "nash",
+      "hepatic fat",
+      "liver fat"
+    ],
+    "obesidade-incretinas": [
+      "glp-1",
+      "glucagon-like peptide",
+      "semaglutide",
+      "tirzepatide",
+      "liraglutide",
+      "incretin",
+      "anti-obesity medication",
+      "obesity pharmaco",
+      "weight loss",
+      "weight-loss",
+      "obesity",
+      "adiposity",
+      "body mass index"
+    ],
+    "gestacao": [
+      "pregnan",
+      "gestation",
+      "maternal",
+      "lactation",
+      "breastfeed",
+      "breast-feed",
+      "prenatal",
+      "postpartum",
+      "infant",
+      "preconception"
+    ],
+    "envelhecimento": [
+      "older adults",
+      "older people",
+      "elderly",
+      "aging",
+      "ageing",
+      "sarcopenia",
+      "frailty",
+      "cognitive decline",
+      "dementia",
+      "alzheimer",
+      "longevity",
+      "biological age",
+      "healthy aging",
+      "healthy ageing"
+    ],
+    "sop": [
+      "polycystic ovary",
+      "pcos"
+    ],
+    "bariatrica": [
+      "bariatric",
+      "gastric bypass",
+      "sleeve gastrectomy",
+      "metabolic surgery"
+    ],
+    "anemias": [
+      "anemia",
+      "anaemia",
+      "iron deficiency",
+      "iron status",
+      "hemoglobin",
+      "haemoglobin",
+      "b12 deficiency",
+      "folate deficiency"
+    ],
+    "gota": [
+      "gout",
+      "hyperuricemia",
+      "hyperuricaemia",
+      "urate"
+    ],
+    "alergias": [
+      "food allergy",
+      "allergic",
+      "anaphylaxis",
+      "food intolerance",
+      "lactose intolerance",
+      "cow's milk"
+    ],
+    "esporte-composicao": [
+      "resistance training",
+      "resistance exercise",
+      "body composition",
+      "muscle mass",
+      "lean mass",
+      "hypertrophy",
+      "fat-free mass",
+      "muscle protein synthesis",
+      "protein intake&muscle",
+      "strength training"
+    ],
+    "esporte-endurance": [
+      "endurance",
+      "marathon",
+      "cycling",
+      "athlete",
+      "aerobic exercise",
+      "vo2",
+      "sports nutrition",
+      "exercise performance",
+      "carbohydrate&exercise"
+    ],
+    "esporte-combate-suplementos": [
+      "creatine",
+      "caffeine",
+      "beta-alanine",
+      "sodium bicarbonate",
+      "dietary nitrate",
+      "beetroot",
+      "supplement",
+      "whey",
+      "weight cut",
+      "combat sport",
+      "rapid weight loss",
+      "ergogenic"
+    ],
+    "saude-mental-cognicao": [
+      "depress",
+      "anxiety",
+      "mood",
+      "cognitive",
+      "cognition",
+      "brain",
+      "memory",
+      "dopamin",
+      "serotonin",
+      "neurogenesis",
+      "mental health",
+      "psychiatr",
+      "ketone",
+      "ketogenic",
+      "choline",
+      "flavonoid",
+      "stress"
+    ],
+    "treino-forca": [
+      "resistance training",
+      "resistance exercise",
+      "strength training",
+      "weight training",
+      "muscle strength",
+      "muscular strength",
+      "hypertroph",
+      "training volume",
+      "volume load",
+      "weekly sets",
+      "set volume",
+      "repetition maximum",
+      "1rm",
+      "one-repetition",
+      "repetitions in reserve",
+      "proximity to failure",
+      "muscle failure",
+      "momentary failure",
+      "rating of perceived exertion",
+      "periodiz",
+      "periodis",
+      "undulating",
+      "block periodization",
+      "autoregulat",
+      "velocity-based",
+      "velocity loss",
+      "deload",
+      "taper",
+      "detraining",
+      "rest interval",
+      "inter-set rest",
+      "drop-set",
+      "rest-pause",
+      "pre-exhaustion",
+      "exercise order",
+      "training frequency",
+      "progressive overload",
+      "powerlifting",
+      "bodybuilding",
+      "bodybuilder",
+      "training load&monitor",
+      "recovery&strength",
+      "fatigue&resistance"
+    ]
+  },
+  "eixos_extra": [
+    "saude-mental-cognicao"
+  ],
+  "sinonimos": {
+    "sono": [
+      "sleep"
+    ],
+    "dormir": [
+      "sleep"
+    ],
+    "insonia": [
+      "insomnia"
+    ],
+    "melatonina": [
+      "melatonin"
+    ],
+    "intestino": [
+      "gut",
+      "intestinal",
+      "bowel"
+    ],
+    "microbiota": [
+      "microbiota",
+      "microbiome"
+    ],
+    "probiotico": [
+      "probiotic"
+    ],
+    "prebiotico": [
+      "prebiotic"
+    ],
+    "fibra": [
+      "fiber",
+      "fibre"
+    ],
+    "fibras": [
+      "fiber",
+      "fibre"
+    ],
+    "creatina": [
+      "creatine"
+    ],
+    "cafeina": [
+      "caffeine"
+    ],
+    "cafe": [
+      "coffee"
+    ],
+    "whey": [
+      "whey"
+    ],
+    "suplemento": [
+      "supplement"
+    ],
+    "suplementos": [
+      "supplement"
+    ],
+    "cognicao": [
+      "cognit"
+    ],
+    "cognitiva": [
+      "cognit"
+    ],
+    "cognitivo": [
+      "cognit"
+    ],
+    "memoria": [
+      "memory"
+    ],
+    "cerebro": [
+      "brain"
+    ],
+    "depressao": [
+      "depress"
+    ],
+    "ansiedade": [
+      "anxiety"
+    ],
+    "humor": [
+      "mood"
+    ],
+    "estresse": [
+      "stress"
+    ],
+    "dopamina": [
+      "dopamin"
+    ],
+    "serotonina": [
+      "serotonin"
+    ],
+    "colesterol": [
+      "cholesterol",
+      "ldl"
+    ],
+    "triglicerideo": [
+      "triglyceride"
+    ],
+    "triglicerides": [
+      "triglyceride"
+    ],
+    "pressao": [
+      "blood pressure",
+      "hypertension"
+    ],
+    "hipertensao": [
+      "hypertension",
+      "blood pressure"
+    ],
+    "coracao": [
+      "cardiovascular",
+      "heart"
+    ],
+    "cardiovascular": [
+      "cardiovascular"
+    ],
+    "diabetes": [
+      "diabet"
+    ],
+    "glicemia": [
+      "glucose",
+      "glycemic",
+      "glycaemic"
+    ],
+    "insulina": [
+      "insulin"
+    ],
+    "acucar": [
+      "sugar"
+    ],
+    "adocante": [
+      "sweetener"
+    ],
+    "adocantes": [
+      "sweetener"
+    ],
+    "doce": [
+      "sweet"
+    ],
+    "obesidade": [
+      "obesity"
+    ],
+    "emagrecimento": [
+      "weight loss"
+    ],
+    "emagrecer": [
+      "weight loss"
+    ],
+    "peso": [
+      "weight",
+      "body mass"
+    ],
+    "gordura": [
+      "fat"
+    ],
+    "apetite": [
+      "appetite"
+    ],
+    "saciedade": [
+      "satiety"
+    ],
+    "fome": [
+      "hunger",
+      "appetite"
+    ],
+    "jejum": [
+      "fasting"
+    ],
+    "cafe da manha": [
+      "breakfast"
+    ],
+    "horario": [
+      "timing"
+    ],
+    "circadiano": [
+      "circadian"
+    ],
+    "proteina": [
+      "protein"
+    ],
+    "carboidrato": [
+      "carbohydrate"
+    ],
+    "carboidratos": [
+      "carbohydrate"
+    ],
+    "lowcarb": [
+      "low-carbohydrate",
+      "low carbohydrate"
+    ],
+    "cetogenica": [
+      "ketogenic"
+    ],
+    "cetonicos": [
+      "ketone"
+    ],
+    "ultraprocessados": [
+      "ultra-processed",
+      "ultraprocessed"
+    ],
+    "alcool": [
+      "alcohol"
+    ],
+    "vegetariana": [
+      "vegetarian",
+      "plant-based"
+    ],
+    "vegana": [
+      "vegan",
+      "plant-based"
+    ],
+    "mediterranea": [
+      "mediterranean"
+    ],
+    "azeite": [
+      "olive oil"
+    ],
+    "omega": [
+      "omega-3",
+      "n-3",
+      "fish oil"
+    ],
+    "omega 3": [
+      "omega-3",
+      "n-3",
+      "fish oil"
+    ],
+    "vitamina": [
+      "vitamin"
+    ],
+    "ferro": [
+      "iron"
+    ],
+    "magnesio": [
+      "magnesium"
+    ],
+    "zinco": [
+      "zinc"
+    ],
+    "colina": [
+      "choline"
+    ],
+    "flavonoides": [
+      "flavonoid"
+    ],
+    "curcuma": [
+      "curcumin",
+      "turmeric"
+    ],
+    "figado": [
+      "liver"
+    ],
+    "esteatose": [
+      "steatosis",
+      "fatty liver",
+      "masld",
+      "nafld"
+    ],
+    "rim": [
+      "kidney",
+      "renal"
+    ],
+    "tireoide": [
+      "thyroid"
+    ],
+    "anemia": [
+      "anemia",
+      "anaemia"
+    ],
+    "gota": [
+      "gout"
+    ],
+    "gestante": [
+      "pregnan"
+    ],
+    "gravidez": [
+      "pregnan"
+    ],
+    "idosos": [
+      "older",
+      "elderly",
+      "aging"
+    ],
+    "criancas": [
+      "children",
+      "child",
+      "pediatric"
+    ],
+    "adolescentes": [
+      "adolescent"
+    ],
+    "treino": [
+      "training",
+      "exercise"
+    ],
+    "exercicio": [
+      "exercise"
+    ],
+    "musculo": [
+      "muscle"
+    ],
+    "hipertrofia": [
+      "hypertrophy"
+    ],
+    "atletas": [
+      "athlete"
+    ],
+    "desempenho": [
+      "performance"
+    ],
+    "corrida": [
+      "running",
+      "endurance"
+    ],
+    "inflamacao": [
+      "inflammat"
+    ],
+    "imunidade": [
+      "immun"
+    ],
+    "cancer": [
+      "cancer"
+    ],
+    "mortalidade": [
+      "mortality"
+    ],
+    "musculacao": [
+      "resistance training",
+      "weight training"
+    ],
+    "forca": [
+      "strength"
+    ],
+    "volume": [
+      "volume"
+    ],
+    "series": [
+      "sets"
+    ],
+    "repeticoes": [
+      "repetitions"
+    ],
+    "carga": [
+      "load"
+    ],
+    "periodizacao": [
+      "periodization",
+      "periodisation"
+    ],
+    "falha": [
+      "failure"
+    ],
+    "descanso": [
+      "rest interval"
+    ],
+    "recuperacao": [
+      "recovery"
+    ],
+    "fadiga": [
+      "fatigue"
+    ],
+    "frequencia": [
+      "frequency"
+    ],
+    "progressao": [
+      "progression",
+      "progressive overload"
+    ],
+    "autorregulacao": [
+      "autoregulation"
+    ],
+    "velocidade": [
+      "velocity"
+    ],
+    "polimento": [
+      "taper"
+    ],
+    "destreino": [
+      "detraining"
+    ]
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "_sobre": "Receita de suplementação para o sono, pronta para usar: preencha o paciente (ou deixe em branco para escrever à mão). Fundamentação, regras e fontes: Fundamentação - suplementação para o sono.md",
+  "paciente": {
+    "nome": "",
+    "endereco": ""
+  },
+  "data": "",
+  "local": "",
+  "assinatura_digital": true,
+  "formulas": [
+    {
+      "uso": "Uso oral",
+      "publico": "Uso adulto",
+      "forma": "Pó para solução oral em sachê de dose única",
+      "componentes": [
+        {
+          "ativo": "Glicina",
+          "detalhe": "livre; com a glicina do bisglicinato, cerca de 2,9 g no total",
+          "dose": "1,4 g"
+        },
+        {
+          "ativo": "Magnésio",
+          "detalhe": "sob a forma de bisglicinato de magnésio, em magnésio elementar",
+          "dose": "250 mg"
+        },
+        {
+          "ativo": "L-teanina",
+          "detalhe": "de folhas de Camellia sinensis",
+          "dose": "200 mg"
+        },
+        {
+          "ativo": "Aromatizante de uva em pó e sucralose",
+          "detalhe": "sucralose até 40 mg por sachê",
+          "dose": "qs"
+        }
+      ],
+      "excipiente": {
+        "nome": "Dióxido de silício coloidal (antiaglomerante)",
+        "quantidade": "1%"
+      },
+      "quantidade": "30 (trinta) sachês",
+      "posologia": "Dissolver 1 (um) sachê em 100 a 150 mL de água e tomar de 30 a 60 minutos antes de deitar, todas as noites.",
+      "duracao": "30 (trinta) dias. Não repetir sem nova avaliação.",
+      "obs_farmacia": "Sem açúcar, lactose, maltodextrina, polióis, corante ou diluente. Bisglicinato pelo teor de magnésio do laudo. Sachê laminado.",
+      "contraindicacoes": [
+        "Gestação ou lactação: não usar.",
+        "Menores de 19 anos: não usar.",
+        "Doença nos rins: não usar sem aval médico, porque o magnésio pode se acumular.",
+        "Em caso de uso de clozapina ou outro antipsicótico: não usar, porque a glicina pode interferir no remédio.",
+        "Em caso de uso de antibiótico do tipo quinolona (como o ciprofloxacino): tomar o antibiótico 2 horas antes ou 6 horas depois do sachê, porque o magnésio reduz a absorção dele.",
+        "Em caso de uso de tetraciclina (como a doxiciclina), alendronato ou levotiroxina: tomar o remédio longe do sachê, porque o magnésio reduz a absorção deles."
+      ]
+    }
+  ],
+  "orientacoes": [
+    "Tome todas as noites, de 30 a 60 minutos antes de deitar, em 100 a 150 mL de água.",
+    "Se o intestino soltar, suspenda e me avise. Em 4 semanas, reavaliamos juntos se o sachê está ajudando no seu sono."
+  ],
+  "base_legal": "Suplemento manipulado prescrito por nutricionista: Res. CFN 656/2020 (alterada pela 731/2022) e IN Anvisa 28/2018. Receita não controlada.",
+  "fontes": [
+    "Fontes: glicina (Yamadera 2007; Inagawa 2006) · magnésio (Schuster 2025) · L-teanina (Hidese 2019)."
+  ],
+  "_sabor": {
+    "padrao": "uva montado na farmácia (aroma de uva + sucralose)",
+    "troca_frutas_vermelhas": "no lugar das linhas de aroma e sucralose: 'Base de refresco em pó sabor frutas vermelhas, adoçada com estévia, sem maltodextrina (referência: Fresh Drink® Natural Frutas Vermelhas, Embrafarma, ou similar) ... 1 a 1,5 g'; tirar 'polióis' das restrições"
+  }
+}

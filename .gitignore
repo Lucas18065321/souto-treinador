@@ -1,0 +1,53 @@
+# ===== Segredos (NUNCA sobem) =====
+.env
+*.env
+!.env.example
+**/privado/
+*.key
+*-key
+.edison-key
+assinatura*.png
+assinatura*.jpg
+
+# ===== Artigos científicos (direito autoral: cada um baixa os seus) =====
+01 - BASE CIENTÍFICA/ENTRADA/*
+!01 - BASE CIENTÍFICA/ENTRADA/LEIA-ME.md
+01 - BASE CIENTÍFICA/_MÁQUINA/pdf/
+01 - BASE CIENTÍFICA/_MÁQUINA/texto/
+01 - BASE CIENTÍFICA/_MÁQUINA/texto-fontes/
+01 - BASE CIENTÍFICA/_MÁQUINA/fontes_fila/
+01 - BASE CIENTÍFICA/_MÁQUINA/cache/
+01 - BASE CIENTÍFICA/_MÁQUINA/edison/
+
+# ===== Dados de alunos (LGPD) =====
+**/Alunos/
+**/Consultoria/
+
+# ===== Pesados / gerados =====
+node_modules/
+__pycache__/
+*.pyc
+.venv/
+venv/
+out/
+renders/
+*.mp4
+*.mov
+*.wav.tmp
+**/png/
+
+# ===== Sistema =====
+.DS_Store
+Thumbs.db
+desktop.ini
+~$*
+01 - BASE CIENTÍFICA/_MÁQUINA/artigos/
+01 - BASE CIENTÍFICA/_MÁQUINA/catalogo.jsonl
+01 - BASE CIENTÍFICA/_MÁQUINA/fila.jsonl
+01 - BASE CIENTÍFICA/_MÁQUINA/fora_do_catalogo.json
+01 - BASE CIENTÍFICA/_MÁQUINA/para-baixar.md
+
+# Gerados
+docs/guia.html
+03 - CARROSSÉIS E ARTE/Carrosséis/_testes/**/slide-*.png
+03 - CARROSSÉIS E ARTE/Carrosséis/_testes/**/html/

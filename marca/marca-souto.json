@@ -1,0 +1,53 @@
+{
+  "nome": "Souto Treinador",
+  "profissional": "Jorge Souto",
+  "profissao": "Educador físico",
+  "arroba": "@CONFIRMAR",
+  "logo": {
+    "branco": "logo/souto-logo-branco.png",
+    "preto": "logo/souto-logo-preto-transparente.png",
+    "azul": "logo/souto-logo-azul.png",
+    "original_preto": "logo/souto-logo-preto.png",
+    "original_sombra": "logo/souto-logo-branco-sombra.jpg",
+    "obs": "PNGs transparentes gerados da logo preta original (recortados, 6% de margem)."
+  },
+  "cores": {
+    "azul_eletrico": "#2E49CE",
+    "azul_royal": "#1F33A3",
+    "azul_aco": "#445DB4",
+    "azul_noite": "#141A3D",
+    "grafite": "#1C1B24",
+    "preto": "#0B0B0E",
+    "nevoa": "#DCE1ED",
+    "papel": "#F2F4F8",
+    "branco": "#FFFFFF"
+  },
+  "degrades": {
+    "principal": [
+      "#1F33A3",
+      "#2E49CE"
+    ],
+    "noite": [
+      "#0B0B0E",
+      "#141A3D",
+      "#2E49CE"
+    ],
+    "papel_timbrado": [
+      "#F2F4F8",
+      "#DCE1ED",
+      "#2E49CE"
+    ]
+  },
+  "fontes": {
+    "titulo": "Saira Condensed (provisória, próxima do logo; confirmar a fonte original com o Jorge)",
+    "texto": "Inter",
+    "dados": "JetBrains Mono"
+  },
+  "video": {
+    "dominante": "#2E49CE",
+    "choque": "#DCE1ED",
+    "papel": "#F2F4F8",
+    "tinta": "#0B0B0E"
+  },
+  "origem": "Cores amostradas do moodboard de referência aprovado em 2026-11-18 (a imagem de referência não vai no repositório)."
+}

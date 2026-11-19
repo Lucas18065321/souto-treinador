@@ -1,0 +1,46 @@
+{
+  "_sobre": "Configuração única da gestão da consultoria Souto Treinador (dieta, Painel ST, receituário). Tudo o que tem TROCAR é provisório: troque aqui, e só aqui. Este arquivo vai para o GitHub: NUNCA ponha chave, senha, telefone pessoal ou dado de aluno nele.",
+  "_TROCAR": [
+    "profissional.registro: o CREF verdadeiro do Jorge (formato CREF 000000-G/UF)",
+    "profissional.arroba: confirmar o @ oficial",
+    "profissional.whatsapp_comercial: só se quiser o número comercial no rodapé (deixe vazio para não sair)"
+  ],
+
+  "marca": {
+    "nome": "Souto Treinador",
+    "nome_caixa_alta": "SOUTO TREINADOR",
+    "logo_branco": "../marca/logo/souto-logo-branco.png",
+    "logo_azul": "../marca/logo/souto-logo-azul.png",
+    "logo_preto": "../marca/logo/souto-logo-preto-transparente.png",
+    "cores_arquivo": "../marca/marca-souto.json"
+  },
+
+  "profissional": {
+    "nome": "Jorge Souto",
+    "profissao": "Educador físico",
+    "registro": "CREF 000000-G/UF",
+    "arroba": "@soutotreinador",
+    "whatsapp_comercial": ""
+  },
+
+  "rt": {
+    "_sobre": "Responsável Técnico pela parte de dieta. A prescrição dietética é ato privativo do nutricionista (Lei 8.234/1991): todo plano alimentar sai com este bloco e só é enviado depois da aprovação do RT.",
+    "nome": "Lucas Melo",
+    "profissao": "Nutricionista",
+    "registro": "CRN6 - 50479-P",
+    "linha_documento": "Prescrição dietética: Lucas Melo · Nutricionista · CRN6 - 50479-P"
+  },
+
+  "pastas": {
+    "_sobre": "Caminhos fora do repositório. %USERPROFILE% vira a sua pasta de usuário do Windows. Pode trocar pelas variáveis de ambiente ST_PRIVADO e ST_ALUNOS.",
+    "privado": "%USERPROFILE%\\SoutoTreinador\\privado",
+    "alunos": "%USERPROFILE%\\SoutoTreinador\\Alunos",
+    "assinatura_rt": "%USERPROFILE%\\SoutoTreinador\\privado\\assinatura-rt.png",
+    "supabase_env": "%USERPROFILE%\\SoutoTreinador\\privado\\supabase.env"
+  },
+
+  "painel": {
+    "porta": 8787,
+    "saudacao": "JORGE"
+  }
+}

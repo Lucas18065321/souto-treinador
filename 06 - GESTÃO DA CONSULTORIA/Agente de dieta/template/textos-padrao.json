@@ -1,0 +1,95 @@
+{
+  "_sobre": "Textos fixos do plano alimentar, iguais para todos os alunos. Edite aqui (não no script). Marca, CREF, @ e o bloco do RT ficam em ../../config-st.json. O que estiver em _conferir ainda não foi aprovado pelo RT.",
+  "_conferir": [
+    "conservacao (prazos de geladeira e congelador)",
+    "coccao",
+    "como_usar",
+    "alarme.emagrecimento",
+    "calculo"
+  ],
+  "fases": {
+    "deficit": "Fase de emagrecimento",
+    "manutencao": "Fase de manutenção",
+    "pausa": "Pausa planejada",
+    "superavit": "Fase de ganho de massa"
+  },
+  "calculo": {
+    "guia": "Pense no corpo como uma conta: a comida entra, o gasto do dia sai. No emagrecimento, o plano entra com um pouco menos e o corpo tira a diferença da reserva.",
+    "guia_fase": {
+      "superavit": "Pense no corpo como uma conta: a comida entra, o gasto do dia sai. Para ganhar massa, o plano entra com um pouco mais que o gasto, para sobrar energia para o treino e para construir músculo.",
+      "manutencao": "Pense no corpo como uma conta: a comida entra, o gasto do dia sai. Na manutenção, o plano entra com o mesmo tanto que o gasto do dia.",
+      "pausa": "Pense no corpo como uma conta: a comida entra, o gasto do dia sai. Na pausa, o plano entra com o mesmo tanto que o gasto do dia, por 1 a 2 semanas."
+    },
+    "repouso": "com o corpo parado",
+    "metodos": {
+      "mifflin_fa": "Gasto em repouso pela equação de Mifflin-St Jeor, vezes o fator de atividade.",
+      "calibrado": "Gasto do dia ajustado pelo que o seu peso mostrou nas últimas semanas.",
+      "rt": "Gasto do dia pelo método do nutricionista responsável técnico."
+    },
+    "mesmo_metodo": "Este é o seu método: nos próximos planos a conta é a mesma, refeita com o seu peso do dia.",
+    "deficit_treino": "Para quem treina, um corte maior pode atrapalhar o ganho de músculo; por isso o ajuste fica em até 500 calorias por dia.",
+    "macros": {
+      "proteina": "mantém e constrói o músculo",
+      "carboidrato": "energia para o dia e para o treino",
+      "gordura": "hormônios e absorção de algumas vitaminas"
+    },
+    "agua": "Café e chá sem açúcar contam; refrigerante e suco, não."
+  },
+  "fontes": {
+    "mifflin_fa": "Frankenfield D, Roth-Yousey L, Compher C. Revisão sistemática das equações do gasto em repouso. J Am Diet Assoc. 2005;105(5):775-89.",
+    "deficit_treino": "Murphy C, Koehler K. Metanálise: déficit de energia e ganho de músculo no treino de força. Scand J Med Sci Sports. 2022;32(1):125-37.",
+    "proteina_treino": "Quaresma M, et al. Diretrizes de Prática Clínica para Nutrição Esportiva (ABNE). J Phys Educ. 2025;36(1):e3605."
+  },
+  "frase_metas": "Metas são combinados para guiar o acompanhamento; o resultado depende de muitos fatores.",
+  "pronto_para_consumo": "Todas as quantidades são do alimento pronto para comer: já cozido, assado ou grelhado. Pese depois de preparar, sem o caldo. Nos grupos, escolha 1 opção: todas valem o mesmo para o seu plano.",
+  "como_usar": [
+    "As quantidades são do alimento pronto para comer. Uma balança de cozinha ajuda nas primeiras semanas; depois, a medida caseira basta.",
+    "Em cada grupo, escolha 1 opção. Trocar o frango pela tilápia, por exemplo, não muda o seu plano.",
+    "Os horários são um guia. Se o dia mudar, mantenha a ordem das refeições e um intervalo parecido entre elas.",
+    "Saiu do plano numa refeição? Volte na seguinte, sem compensar. Conte no check-in: é assim que ajustamos o plano para a sua rotina.",
+    "Folhas e legumes podem variar à vontade dentro do mesmo peso."
+  ],
+  "coccao": [
+    "Prefira airfryer, forno, grelha ou panela de pressão. Legumes, sempre no vapor. O azeite do plano vai cru, por cima do prato.",
+    "Para untar a panela, a frigideira ou a forma, use só um fio de azeite ou de óleo vegetal (canola, soja ou girassol), espalhado com papel-toalha. Prefira esses óleos à manteiga: trocar gordura saturada por insaturada pode ajudar a baixar o colesterol.",
+    "Para refogar, use água no lugar do óleo: alho e cebola soltam o sabor do mesmo jeito.",
+    "Folhas, legumes e frutas que vão crus: lave em água corrente, deixe de molho em água com água sanitária própria para alimentos, na diluição do rótulo, e enxágue antes de comer.",
+    "Tire a pele do frango e a gordura que dá para ver na carne antes de preparar.",
+    "Tempere com sal, alho, cebola, limão, ervas e especiarias. Evite tempero pronto em cubo ou em pó.",
+    "Na airfryer, não precisa de óleo. Se quiser dourar, 1 borrifada de azeite no borrifador basta.",
+    "Feijão e outros grãos: cozinhe só com temperos naturais, sem bacon, linguiça ou paio."
+  ],
+  "conservacao": {
+    "geladeira": [
+      "Comida pronta dura até 3 dias na geladeira, em pote fechado.",
+      "Guarde em até 2 horas depois de pronta. Não deixe esfriar em cima do fogão.",
+      "Divida em potes rasos: esfria mais rápido e por igual.",
+      "Salada crua e folhas: monte no dia, em pote separado da comida quente."
+    ],
+    "congelador": [
+      "No congelador, a marmita dura até 30 dias. Escreva a data na tampa.",
+      "Congelam bem: carnes, frango, peixe, arroz, feijão, batata-doce, mandioca e legumes cozidos.",
+      "Descongele na geladeira, de um dia para o outro, nunca na pia.",
+      "Esquente até sair vapor de toda a comida. O que já descongelou não volta para o congelador."
+    ]
+  },
+  "alarme": {
+    "acao": "Vá a um pronto-socorro ou ligue 192 (ambulância). Depois avise a equipe, no mesmo dia.",
+    "intro": "Faça isso se acontecer qualquer um destes sinais, sem esperar o check-in:",
+    "gastro": [
+      "Muito sangue nas fezes, ou fezes só de sangue.",
+      "6 ou mais idas ao banheiro no dia, com sangue.",
+      "Sangue nas fezes junto com febre (acima de 37,5 °C) ou coração acelerado em repouso.",
+      "Fezes pretas ou com sangue escuro.",
+      "Vômito que não deixa beber água, com muita moleza ou olhos fundos.",
+      "Dor muito forte na barriga (9 ou 10 de 10) que começou agora.",
+      "Desmaio."
+    ],
+    "emagrecimento": [
+      "Vômito que não deixa beber água, com muita moleza ou olhos fundos.",
+      "Dor muito forte (9 ou 10 de 10) que começou agora.",
+      "Desmaio."
+    ]
+  },
+  "checkin": "Seu check-in chega toda {dia}, pelo WhatsApp. Responda no mesmo dia: é com ele que ajustamos o seu plano e o seu treino."
+}

@@ -1,0 +1,52 @@
+{
+ "_sobre": "Aluno FICTÍCIO para teste do motor de treino. Nenhum dado real. Copie este formato para cada aluno, mas grave a cópia em %USERPROFILE%/SoutoTreinador/Alunos/<nome>/Treinos/ (nunca no repositório).",
+ "aluno": {
+  "nome": "Rafael Exemplo (fictício)",
+  "sexo": "M",
+  "idade": 29,
+  "nivel": "intermediario",
+  "experiencia_anos": 2,
+  "objetivo": "hipertrofia",
+  "dias_semana": 4,
+  "local": "academia completa",
+  "restricoes": "nenhuma relatada (fictício)",
+  "nutricao": "dúvidas de dieta vão para o nutricionista RT"
+ },
+ "check_in_cargas_url": "https://tally.so/r/TROCAR",
+ "volume_inicial": {"biceps": 6, "triceps": 6, "panturrilha": 6, "gluteos": 6},
+ "testes": [
+  {"exercicio": "Agachamento livre", "carga": 100, "reps": 8, "rir": 2, "data": "2026-11-02"},
+  {"exercicio": "Supino reto com barra", "carga": 80, "reps": 6, "rir": 1, "data": "2026-11-03"},
+  {"exercicio": "Remada curvada com barra", "carga": 70, "reps": 10, "rir": 2, "data": "2026-11-03"},
+  {"exercicio": "Leg press 45°", "carga": 200, "reps": 12, "rir": 2, "data": "2026-11-05"},
+  {"exercicio": "Stiff com barra", "carga": 80, "reps": 10, "rir": 3, "data": "2026-11-02"},
+  {"exercicio": "Desenvolvimento com halteres", "carga": 40, "reps": 10, "rir": 2, "data": "2026-11-03"},
+  {"exercicio": "Puxada frontal", "carga": 65, "reps": 10, "rir": 2, "data": "2026-11-06"},
+  {"exercicio": "Supino inclinado com halteres", "carga": 52, "reps": 10, "rir": 2, "data": "2026-11-06"}
+ ],
+ "exercicios": [
+  {"nome": "Agachamento livre", "grupo": "quadriceps", "secundarios": ["gluteos"], "tabela": "geral", "principal": true, "incremento_kg": 2, "obs": "Descer até a coxa passar da paralela, se confortável; tronco firme."},
+  {"nome": "Stiff com barra", "grupo": "posteriores", "secundarios": ["gluteos"], "tabela": "geral", "principal": true, "incremento_kg": 2, "obs": "Quadril para trás, coluna neutra; descer até sentir alongar atrás da coxa."},
+  {"nome": "Cadeira extensora", "grupo": "quadriceps", "tabela": "geral", "isolado": true, "incremento_kg": 5, "obs": "Pausa de 1 s em cima."},
+  {"nome": "Panturrilha em pé", "grupo": "panturrilha", "tabela": "geral", "isolado": true, "incremento_kg": 5, "obs": "Amplitude completa, pausa embaixo."},
+  {"nome": "Supino reto com barra", "grupo": "peitoral", "secundarios": ["triceps", "ombros"], "tabela": "supino", "principal": true, "incremento_kg": 2, "obs": "Escápulas encaixadas; barra toca o peito sem quicar."},
+  {"nome": "Remada curvada com barra", "grupo": "costas", "secundarios": ["biceps"], "tabela": "geral", "principal": true, "incremento_kg": 2, "obs": "Tronco firme; puxar até a barriga."},
+  {"nome": "Desenvolvimento com halteres", "grupo": "ombros", "secundarios": ["triceps"], "tabela": "geral", "incremento_kg": 2, "obs": "Carga = soma dos dois halteres."},
+  {"nome": "Rosca direta com barra", "grupo": "biceps", "tabela": "geral", "isolado": true, "incremento_kg": 2, "obs": "Sem balançar o tronco."},
+  {"nome": "Leg press 45°", "grupo": "quadriceps", "secundarios": ["gluteos"], "tabela": "legpress", "principal": true, "incremento_kg": 10, "obs": "Não tirar o quadril do banco no fundo."},
+  {"nome": "Cadeira flexora", "grupo": "posteriores", "tabela": "geral", "isolado": true, "incremento_kg": 5, "obs": "Controle na volta (2 s)."},
+  {"nome": "Elevação pélvica", "grupo": "gluteos", "tabela": "geral", "incremento_kg": 10, "obs": "Pausa de 1 s em cima."},
+  {"nome": "Panturrilha sentado", "grupo": "panturrilha", "tabela": "geral", "isolado": true, "incremento_kg": 5, "obs": ""},
+  {"nome": "Supino inclinado com halteres", "grupo": "peitoral", "secundarios": ["triceps", "ombros"], "tabela": "geral", "incremento_kg": 2, "obs": "Carga = soma dos dois halteres."},
+  {"nome": "Puxada frontal", "grupo": "costas", "secundarios": ["biceps"], "tabela": "geral", "principal": true, "incremento_kg": 5, "obs": "Puxar até o queixo, peito aberto."},
+  {"nome": "Elevação lateral", "grupo": "ombros", "tabela": "geral", "isolado": true, "incremento_kg": 1, "obs": "Até a linha do ombro."},
+  {"nome": "Tríceps na polia", "grupo": "triceps", "tabela": "geral", "isolado": true, "incremento_kg": 5, "obs": "Cotovelos colados no corpo."}
+ ],
+ "divisao": {
+  "A": ["Agachamento livre", "Stiff com barra", "Cadeira extensora", "Panturrilha em pé"],
+  "B": ["Supino reto com barra", "Remada curvada com barra", "Desenvolvimento com halteres", "Rosca direta com barra"],
+  "C": ["Leg press 45°", "Cadeira flexora", "Elevação pélvica", "Panturrilha sentado"],
+  "D": ["Supino inclinado com halteres", "Puxada frontal", "Elevação lateral", "Tríceps na polia"]
+ },
+ "nomes_dias": {"A": "Inferiores 1", "B": "Superiores 1", "C": "Inferiores 2", "D": "Superiores 2"}
+}

@@ -1,0 +1,33 @@
+{
+ "modelo": "manga-dark",
+ "nota": "TESTE DO MOTOR (Modelo 1 · Mangá Dark, 5 slides de amostra) com texto FICTÍCIO e marcadores cinza no lugar das artes. Ficha fictícia do teste dos roteiros. NÃO PUBLICAR.",
+ "ficha": "TESTE Volume de treino - Ficha",
+ "tipo_carrossel": "tese-mito",
+ "eixo": "Cultura",
+ "funil": "meio",
+ "headline": "Mais séries, mais músculo? O que acontece quando o volume do treino sobe",
+ "cta": {"tipo": "consultoria", "beneficio": "a dose certa de treino para a sua rotina"},
+ "slides": [
+  {"tipo": "capa", "funcao": "capa", "tratamento": "recorte", "fundo": "preto", "imagem": "../../Gerador/_marcadores/branco.png",
+   "linha1": "Mais séries,", "linha2": "mais ==músculo==?", "sub": "o que acontece quando o volume da semana sobe"},
+  {"tipo": "texto", "funcao": "hook", "tema": "escuro", "tratamento": "recorte", "fundo": "blend", "zona": "baixo",
+   "imagem": "../../Gerador/_marcadores/branco.png", "imagem_blend": "../../Gerador/_marcadores/blend.png",
+   "texto": ["Sair da academia **com o braço tremendo** parece sinal de treino bem feito.",
+             "Só que o espelho ==nem sempre acompanha o cansaço==."]},
+  {"tipo": "texto", "funcao": "mecanismo", "tema": "claro", "tratamento": "recorte", "fundo": "quadriculado", "zona": "baixo",
+   "imagem": "../../Gerador/_marcadores/branco.png",
+   "texto": ["Segundo uma revisão de estudos, subir **de 4 para 10 séries por semana** provavelmente aumenta o ganho de músculo.",
+             "O efeito vale ==até certo ponto==."],
+   "afirmacoes": [1]},
+  {"tipo": "texto", "funcao": "prova", "tema": "escuro", "tratamento": "cena", "zona": "baixo", "enquadramento": "center bottom",
+   "imagem": "../../Gerador/_marcadores/foto.png",
+   "texto": ["Treinar perto do cansaço total **pode ajudar** a ganhar músculo.",
+             "Chegar à falha em toda série ==não parece necessário==."],
+   "afirmacoes": [2]},
+  {"tipo": "cta", "funcao": "cta", "antes": "Quer um treino para a sua rotina?", "palavra": "CONSULTORIA",
+   "depois": "com Jorge Souto, treinador · CREF 000000-G/UF · link na bio",
+   "chamada": "Músculo responde à dose certa, repetida.<br>**Achar a sua dose vem primeiro.**",
+   "imagem_blend": "../../Gerador/_marcadores/blend.png",
+   "cta": {"tipo": "consultoria", "beneficio": "a dose certa de treino para a sua rotina"}}
+ ]
+}

@@ -1,0 +1,75 @@
+{
+ "modelo": "cinema",
+ "nota": "TESTE DO MOTOR (Modelo 4 · Cinema, 5 slides de amostra) com texto FICTÍCIO e marcadores cinza no lugar das artes. Ficha fictícia do teste dos roteiros. NÃO PUBLICAR.",
+ "ficha": "TESTE Volume de treino - Ficha",
+ "tipo_carrossel": "tese-mito",
+ "eixo": "Cultura",
+ "funil": "meio",
+ "headline": "Mais séries, mais músculo? O que acontece quando o volume do treino sobe",
+ "cta": {
+  "tipo": "consultoria",
+  "beneficio": "a dose certa de treino para a sua rotina"
+ },
+ "slides": [
+  {
+   "tipo": "capa",
+   "funcao": "capa",
+   "imagem": "../../Gerador/_marcadores/foto.png",
+   "contador": "#01 / 05",
+   "linha1": "A dose",
+   "linha2": "da semana",
+   "script": "volume",
+   "caixa": "_Mais séries, mais músculo?_ **Até onde vale.**"
+  },
+  {
+   "tipo": "busca",
+   "funcao": "hook",
+   "busca": "volume de treino",
+   "imagem": "../../Gerador/_marcadores/branco.png",
+   "indice": [
+    "Conteúdos",
+    "Início",
+    "O cansaço",
+    "A dose",
+    "A falha",
+    "O próximo passo"
+   ],
+   "texto": [
+    "_Sair da academia destruído_ ==parece sinal de treino bem feito.==",
+    "Só que o espelho ==nem sempre acompanha o cansaço.=="
+   ],
+   "balao": "Será que\né treino demais?",
+   "fecho": "_A resposta está na_ ==soma da semana.=="
+  },
+  {
+   "tipo": "lateral",
+   "funcao": "mecanismo",
+   "imagem": "../../Gerador/_marcadores/branco.png",
+   "texto": [
+    "_Segundo uma revisão,_ ==subir de 4 para 10 séries por semana provavelmente aumenta o músculo.==",
+    "**_O efeito vale até certo ponto._**"
+   ],
+   "rodape": "**Como regar uma planta:** !!a água ajuda até encharcar o vaso.!!",
+   "afirmacoes": [
+    1
+   ]
+  },
+  {
+   "tipo": "janela",
+   "funcao": "direcao",
+   "barra": "O próximo passo",
+   "janela": "==Contar as séries de cada músculo.== Depois, subir a dose aos poucos.",
+   "texto": "Terminar a série **perto do cansaço**, semana após semana."
+  },
+  {
+   "tipo": "pergunta",
+   "funcao": "cta",
+   "tema": "escuro",
+   "cta": {
+    "tipo": "consultoria",
+    "beneficio": "a dose certa de treino para a sua rotina"
+   },
+   "texto": "**Quer um treino para a sua rotina?**<br>Jorge Souto, CREF 000000-G/UF · ==link na bio=="
+  }
+ ]
+}

@@ -1,0 +1,8 @@
+# Gestão da consultoria Souto Treinador (Python 3.12)
+# O Painel ST, o agente de dieta e o cliente do Supabase usam SÓ a biblioteca padrão do Python.
+# Os pacotes abaixo são opcionais:
+#   pypdf  -> conta as páginas do PDF com precisão (sem ele, o script conta pelo próprio arquivo)
+#   pillow -> só para regerar o ícone do Painel ST (Painel ST/gerar_icone.py)
+# Instalar:  python -m pip install -r requirements.txt
+pypdf>=4.0
+pillow>=10.0

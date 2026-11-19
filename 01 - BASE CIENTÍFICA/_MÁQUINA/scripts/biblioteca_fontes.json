@@ -1,0 +1,10 @@
+{
+  "_leia": "Pastas de PDF que o biblioteca.py cataloga (caminhos relativos a '01 - BASE CIENTÍFICA'). ENTRADA: onde o Lucas solta PDFs novos; depois de catalogados eles vão para _MÁQUINA/pdf (duplicata exata: só some da ENTRADA). _MÁQUINA/pdf: todos os PDFs já catalogados, sem duplicata. As diretrizes, consensos e fontes das Reviews entram pela fila (fila.jsonl; comando importar-fila), não por aqui. PDFs de pacientes e livros ficam de fora pelos filtros abaixo (nomes de subpastas).",
+  "incluir": [
+    {"pasta": "_MÁQUINA/pdf", "origem": "base científica"},
+    {"pasta": "ENTRADA", "origem": "entrada", "recursivo": true}
+  ],
+  "ignorar_subpastas_com": ["LIVRO", "PROTOCOLO", "ANAMNESE", "PACIENTE", "CONSULTORIA"],
+  "limite_mb": 40,
+  "limite_paginas_livro": 160
+}

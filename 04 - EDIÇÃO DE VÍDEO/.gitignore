@@ -1,0 +1,59 @@
+# ===== Motor de vídeo: no GitHub vai só a ferramenta =====
+# Projetos, brutos, prévias, finais, B-roll, músicas, modelos do Whisper e referências da regressão ficam FORA do
+# repositório, na pasta SOUTO_VIDEO_PROJETOS (padrão %USERPROFILE%\Videos\Souto-Projetos). Mesmo assim, se algo
+# cair aqui por engano, não sobe:
+01_bruto/
+02_analise/
+03_roteiro/
+04_broll/
+05_audio/
+06_previas/
+07_final/
+_biblioteca/
+_sistema/
+*.mp4
+*.mov
+*.mkv
+*.webm
+*.mp3
+*.m4a
+*.oga
+*.render.mp4
+*.tmp.mov
+*.baixando
+*.tmp
+
+# Reinstaláveis
+node_modules/
+motor/node_modules/
+motor/out/
+motor/testes-pub/
+.remotion/
+motor/node_modules/.cache/
+motor/gen-ledger.json
+motor/src/.props-*.json
+**/.props-render-*.json
+**/.props-ilha.json
+
+# Modelos e ferramentas baixados (o instalar-video.ps1 baixa e confere o sha256)
+*.bin
+deep-filter*.exe
+
+# SFX: só vão os livres (Glitch Noises CC0 + sintetizados). Mixkit e 99Sounds proíbem redistribuir:
+# cada um baixa os seus (guia 04-video, seção SFX). A pasta motionix/ é gerada pelo instalador.
+sfx/biblioteca/motionix/
+sfx/lab/*/*.wav
+!sfx/lab/*/*_gn-*.wav
+!sfx/lab/papel/papel_0[1-6]_pestana-*.wav
+sfx/lab/previas/
+sfx/lab/medidas.tsv
+sfx/lab/medidas.json
+
+# Segredos
+.env
+*.env
+!.env.example
+
+# Sistema
+Thumbs.db
+desktop.ini

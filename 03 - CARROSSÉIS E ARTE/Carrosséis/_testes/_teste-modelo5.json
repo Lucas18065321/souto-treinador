@@ -1,0 +1,141 @@
+{
+ "modelo": "brandsdecoded",
+ "nota": "TESTE DO MOTOR (Modelo 5 · BrandsDecoded, anatomia de 9 slides) com texto FICTÍCIO e marcadores cinza no lugar das artes. A Ficha citada é a fictícia do teste dos roteiros (02 - ROTEIROS/_SISTEMA/teste). Modelo de forma, não pauta pronta. NÃO PUBLICAR.",
+ "ficha": "TESTE Volume de treino - Ficha",
+ "tipo_carrossel": "tese-mito",
+ "eixo": "Cultura",
+ "funil": "meio",
+ "headline": "O fim do treino até a exaustão: o que acontece com o músculo quando o volume da semana sobe",
+ "cta": {
+  "tipo": "consultoria",
+  "beneficio": "a dose certa de treino para a sua rotina e o seu momento"
+ },
+ "slides": [
+  {
+   "tipo": "capa",
+   "funcao": "capa",
+   "imagem": "../../Gerador/_marcadores/foto.png",
+   "posicao_imagem": "center top",
+   "headline": "O FIM DO TREINO ATÉ A *EXAUSTÃO*: O QUE ACONTECE COM O MÚSCULO QUANDO O VOLUME DA SEMANA SOBE"
+  },
+  {
+   "tipo": "dark",
+   "funcao": "hook",
+   "imagem": "../../Gerador/_marcadores/foto.png",
+   "tag": "TESTE · A CRENÇA",
+   "texto": [
+    "Sair da academia **com o braço tremendo** parece a prova de um treino bem feito. Quanto mais cansaço, mais músculo, diz a crença.",
+    "Só que o espelho nem sempre acompanha o *cansaço* da última série."
+   ]
+  },
+  {
+   "tipo": "light",
+   "funcao": "mecanismo",
+   "tag": "COMO FUNCIONA",
+   "texto": [
+    "O músculo responde à **dose da semana**, a soma das séries de todos os treinos, mais do que ao estrago de um dia só."
+   ],
+   "componente": {
+    "tipo": "card",
+    "texto": "Como regar uma planta: pouca água não basta, e encharcar o vaso **não faz crescer mais rápido**."
+   },
+   "imagem": "../../Gerador/_marcadores/foto.png"
+  },
+  {
+   "tipo": "dark",
+   "funcao": "mecanismo",
+   "tag": "O TAMANHO DA DOSE",
+   "componente": {
+    "tipo": "stat",
+    "valor": "4 → 10",
+    "legenda": "séries por semana para cada músculo"
+   },
+   "texto": [
+    "Segundo uma revisão de estudos, subir de 4 para 10 séries por semana **provavelmente aumenta** o ganho de músculo, até certo ponto.",
+    "A conta vale para cada músculo, somando **todos os treinos da semana**, do primeiro ao último."
+   ],
+   "afirmacoes": [
+    1
+   ]
+  },
+  {
+   "tipo": "light",
+   "funcao": "prova",
+   "tag": "OS NÚMEROS",
+   "titulo": "O QUE O TREINO *CONSEGUE* MUDAR",
+   "texto": [
+    "Os achados da revisão, em linguagem simples:"
+   ],
+   "componente": {
+    "tipo": "tabela",
+    "cabecalho": [
+     "Mudança",
+     "O que a revisão viu"
+    ],
+    "linhas": [
+     [
+      "De 4 para 10 séries por semana",
+      "provavelmente mais músculo"
+     ],
+     [
+      "Série perto do cansaço total",
+      "pode ajudar no músculo"
+     ],
+     [
+      "Treino de força em qualquer idade",
+      "aumenta a força"
+     ]
+    ],
+    "fonte": "revisão de estudos usada no teste do motor (fictícia)"
+   },
+   "afirmacoes": [
+    1,
+    2,
+    3
+   ]
+  },
+  {
+   "tipo": "dark",
+   "funcao": "expansao",
+   "imagem_fundo": "../../Gerador/_marcadores/foto.png",
+   "tag": "A VIRADA",
+   "texto": [
+    "Chegar à falha em toda série **não parece necessário**: treinar perto do cansaço total pode ajudar e já cumpre o papel.",
+    "O que pesa mais é a soma da semana, repetida com constância."
+   ],
+   "afirmacoes": [
+    2
+   ]
+  },
+  {
+   "tipo": "light",
+   "funcao": "aplicacao",
+   "imagem": "../../Gerador/_marcadores/foto.png",
+   "tag": "NA PRÁTICA",
+   "texto": [
+    "Se o seu treino tem poucas séries para cada músculo, **vale conversar sobre a dose** com quem acompanha. A quantidade certa muda de pessoa para pessoa."
+   ]
+  },
+  {
+   "tipo": "grad",
+   "funcao": "direcao",
+   "tag": "A REGRA FINAL",
+   "titulo": "A SEMANA *DECIDE*",
+   "setas": [
+    "Contar as séries de cada músculo **na semana inteira**",
+    "Terminar a série **perto do cansaço**, sem precisar da falha",
+    "Subir a dose **aos poucos**, com acompanhamento"
+   ]
+  },
+  {
+   "tipo": "cta",
+   "funcao": "cta",
+   "ponte": "Treino bom é o que se repete, semana após semana, na dose certa. **Achar a sua dose** é o primeiro passo.",
+   "titulo": "QUER UM TREINO PARA A SUA ROTINA?",
+   "cta": {
+    "tipo": "consultoria",
+    "beneficio": "a dose certa de treino para a sua rotina e o seu momento"
+   }
+  }
+ ]
+}

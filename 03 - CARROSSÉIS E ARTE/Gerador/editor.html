@@ -1,0 +1,658 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Editor de carrossel</title>
+<style>
+:root{--bg:#141416;--p1:#1c1d21;--p2:#25262b;--bd:#33343a;--tx:#e8e8ea;--mut:#9a9ba3;--az:#3b82f6;--vd:#22c55e;--am:#f59e0b;--vm:#ef4444}
+*{box-sizing:border-box}
+html,body{margin:0;height:100%;background:var(--bg);color:var(--tx);font:13px/1.35 system-ui,-apple-system,"Segoe UI",sans-serif}
+body{display:grid;grid-template-rows:auto minmax(0,1fr)}
+button,select,input{font:inherit;color:inherit}
+button{background:var(--p2);border:1px solid var(--bd);border-radius:6px;padding:6px 10px;cursor:pointer;white-space:nowrap}
+button:hover{border-color:#55565e}button:disabled{opacity:.4;cursor:default}
+button.pri{background:var(--az);border-color:var(--az);color:#fff}
+button.on{background:#2b3a55;border-color:var(--az)}
+select,input[type=number],input[type=text]{background:var(--p2);border:1px solid var(--bd);border-radius:6px;padding:5px 7px;min-width:0}
+input[type=number]{width:70px}
+input[type=color]{width:38px;height:30px;border:1px solid var(--bd);border-radius:6px;background:var(--p2);padding:2px}
+input[type=range]{width:100%}
+header{min-height:54px;display:flex;flex-wrap:wrap;align-items:center;gap:8px 10px;padding:8px 12px;border-bottom:1px solid var(--bd);background:var(--p1)}
+header .g{display:flex;gap:6px;align-items:center;padding-right:10px;border-right:1px solid var(--bd)}
+header .g:last-of-type{border-right:0}
+#status{margin-left:auto;color:var(--mut);white-space:nowrap}#status.ok{color:var(--vd)}#status.aviso{color:var(--am)}#status.erro{color:var(--vm)}
+main{display:grid;grid-template-columns:132px minmax(0,1fr) 330px;min-height:0}
+#slides{overflow-y:auto;padding:10px;border-right:1px solid var(--bd);background:var(--p1);display:flex;flex-direction:column;gap:10px}
+.mini{position:relative;padding:0;border-radius:6px;overflow:hidden;aspect-ratio:4/5;background:#000;width:100%}
+.mini img{width:100%;height:100%;object-fit:cover;display:block}
+.mini span{position:absolute;left:4px;top:4px;background:rgba(0,0,0,.7);padding:1px 6px;border-radius:4px;font-size:11px}
+.mini i{position:absolute;right:4px;top:4px;background:var(--am);color:#000;padding:0 5px;border-radius:4px;font-size:10px;font-style:normal}
+.mini.ativo{outline:2px solid var(--az);outline-offset:2px}
+#palco{overflow:auto;display:grid;place-items:center;background:repeating-conic-gradient(#18181b 0 25%,#1b1b1f 0 50%) 0 0/24px 24px}
+#moldura{position:relative;box-shadow:0 10px 40px rgba(0,0,0,.6)}
+#quadro{position:absolute;left:0;top:0;width:1080px;height:1350px;border:0;transform-origin:0 0;background:#000}
+#painel{overflow-y:auto;border-left:1px solid var(--bd);background:var(--p1);padding:12px}
+#painel h3{margin:14px 0 8px;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--mut)}
+#painel h3:first-child{margin-top:0}
+.linha{display:flex;gap:6px;align-items:center;margin-bottom:7px;flex-wrap:wrap}
+.linha label{color:var(--mut);min-width:64px}
+.nome{font-weight:600;margin-bottom:8px;word-break:break-word}
+.dica{color:var(--mut);font-size:12px}
+#camadas .cam{display:flex;align-items:center;gap:6px;padding:4px 6px;border-radius:5px;cursor:pointer}
+#camadas .cam:hover{background:var(--p2)}#camadas .cam.ativo{background:#2b3a55}
+#camadas .cam button{padding:0 5px;font-size:11px}
+#camadas .cam span{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+#alertas div{padding:5px 7px;border-radius:5px;background:#3a2a10;color:#fcd34d;margin-bottom:5px;font-size:12px}
+#alertas .ok{background:#123222;color:#86efac}
+kbd{background:var(--p2);border:1px solid var(--bd);border-radius:4px;padding:0 4px;font-size:11px}
+</style>
+</head>
+<body>
+<header>
+  <div class="g"><select id="sel-carrossel" title="Carrossel"></select></div>
+  <div class="g"><button id="b-desfazer" title="Ctrl+Z">↶ Desfazer</button><button id="b-refazer" title="Ctrl+Y">↷ Refazer</button></div>
+  <div class="g"><button id="b-texto">+ Texto</button><button id="b-imagem">+ Imagem</button><input type="file" id="f-imagem" accept="image/png,image/jpeg,image/webp" hidden></div>
+  <div class="g"><select id="sel-zoom" title="Zoom"><option value="0">Ajustar</option><option value="0.5">50%</option><option value="0.75">75%</option><option value="1">100%</option></select></div>
+  <div class="g"><button id="b-salvar" title="Ctrl+S">Salvar</button><button id="b-png">Gerar PNG</button><button id="b-baixar" class="pri">⬇ Baixar PNG</button><button id="b-zip" class="pri">⬇ Baixar todos (.zip)</button></div>
+  <span id="status"></span>
+</header>
+<main>
+  <aside id="slides"></aside>
+  <section id="palco"><div id="moldura"><iframe id="quadro" title="Slide"></iframe></div></section>
+  <aside id="painel"><div id="props"></div><h3>Camadas</h3><div id="camadas"></div><h3>Alertas de diagramação</h3><div id="alertas"><div class="ok">Gere o PNG para conferir.</div></div>
+  <h3>Atalhos</h3><div class="dica">Clique: seleciona · <kbd>Alt</kbd>+clique: elemento de baixo · duplo clique ou <kbd>Enter</kbd>: editar texto · arrastar: mover (encaixa nas guias; <kbd>Shift</kbd> solta) · alças: tamanho · setas: 1 px (<kbd>Shift</kbd> 10 px) · <kbd>Del</kbd>: excluir · <kbd>Ctrl</kbd>+<kbd>D</kbd>: duplicar · <kbd>Ctrl</kbd>+<kbd>Z</kbd>/<kbd>Y</kbd> · <kbd>Ctrl</kbd>+<kbd>S</kbd>: salvar · <kbd>Esc</kbd>: solta a seleção. Foto de fundo: arraste para enquadrar.</div></aside>
+</main>
+<script>
+const $ = s => document.querySelector(s);
+const esc = t => String(t).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const S = {lista:[], c:null, i:0, doc:null, win:null, ov:null, sel:null, edit:null, sujo:false, undo:[], redo:[], escala:1, nat:{}, inter:false};
+const INLINE = new Set(['B','I','U','EM','STRONG','SPAN','BR','SMALL','A','MARK','SUB','SUP','S']);
+const DEST = {dest:'Destaque', mk:'Marca-texto', lj:'Cor da marca', mt:'Marcador', sel:'Caixa de seleção'};
+const EDCSS = `#__ed{position:absolute;left:0;top:0;width:1080px;height:1350px;pointer-events:none;z-index:2147483646;--k:1}
+#__ed .cx,#__ed .hv{position:absolute;display:none;box-sizing:border-box}
+#__ed .cx{border:calc(2px*var(--k)) solid #3b82f6;box-shadow:0 0 0 calc(1px*var(--k)) rgba(255,255,255,.7)}
+#__ed .hv{border:calc(1px*var(--k)) dashed rgba(59,130,246,.9)}
+#__ed .h{position:absolute;width:calc(16px*var(--k));height:calc(16px*var(--k));transform:translate(-50%,-50%);background:#fff;border:calc(2px*var(--k)) solid #3b82f6;border-radius:calc(3px*var(--k));pointer-events:auto;display:none;box-sizing:border-box}
+#__ed .g{position:absolute;background:#ff2d95;display:none}
+#__ed .gv{top:0;bottom:0;width:calc(1px*var(--k))}#__ed .gh{left:0;right:0;height:calc(1px*var(--k))}
+#__ed .seg{position:absolute;inset:14px;border:calc(1px*var(--k)) dashed rgba(0,200,255,.8);display:none}
+#__ed .seg.on{display:block}
+[contenteditable="true"]{outline:none;cursor:text;caret-color:#3b82f6}
+html.__mover,html.__mover *{cursor:move!important}`;
+
+/* ---------- servidor ---------- */
+async function api(rota, dados){
+  const r = await fetch(rota, dados ? {method:'POST', headers:{'Content-Type':'application/json'}, body:JSON.stringify(dados)} : {});
+  const j = await r.json();
+  if(!r.ok || j.erro) throw new Error(j.erro || ('erro ' + r.status));
+  return j;
+}
+function status(t, tipo){ const s = $('#status'); s.textContent = t; s.className = tipo || ''; }
+function marcarSujo(){ S.sujo = true; status('● alterações não salvas', 'aviso'); }
+const px = v => parseFloat(v) || 0;
+const hex = c => { const m = String(c).match(/[\d.]+/g); if(!m) return '#000000'; return '#' + m.slice(0,3).map(v => (+v).toString(16).padStart(2,'0')).join(''); };
+
+/* ---------- carrosséis e slides ---------- */
+async function iniciar(){
+  try { S.lista = (await api('/api/carrosseis')).carrosseis; } catch(e){ status('Servidor do editor não respondeu: ' + e.message, 'erro'); return; }
+  if(!S.lista.length){ status('Nenhum carrossel renderizado ainda (rode o render_carrossel.py).', 'aviso'); return; }
+  const sel = $('#sel-carrossel');
+  sel.innerHTML = S.lista.map((c,k) => `<option value="${k}">${esc(c.nome)}</option>`).join('');
+  const q = new URLSearchParams(location.search);
+  let k = Math.max(0, S.lista.findIndex(c => c.nome === q.get('c')));
+  sel.value = k;
+  sel.onchange = async () => { await salvarSeSujo(); abrirCarrossel(+sel.value, 0); };
+  abrirCarrossel(k, Math.max(0, (+q.get('s') || 1) - 1));
+}
+function abrirCarrossel(k, i){
+  S.c = S.lista[k];
+  miniaturas();
+  abrirSlide(Math.min(i, S.c.slides.length - 1));
+}
+function miniaturas(){
+  const t = Date.now();
+  $('#slides').innerHTML = S.c.slides.map((u,k) => `<button class="mini" data-k="${k}" title="Slide ${k+1}">${S.c.pngs[k] ? `<img src="${S.c.pngs[k].split('?')[0]}?t=${t}" alt="">` : ''}<span>${String(k+1).padStart(2,'0')}</span>${S.c.editados[k] ? '<i>editado</i>' : ''}</button>`).join('');
+  document.querySelectorAll('.mini').forEach(b => b.onclick = () => abrirSlide(+b.dataset.k));
+}
+async function abrirSlide(i){
+  await salvarSeSujo();
+  S.i = i; S.sel = null; S.edit = null; S.undo = []; S.redo = []; S.sujo = false;
+  document.querySelectorAll('.mini').forEach(b => b.classList.toggle('ativo', +b.dataset.k === i));
+  history.replaceState(null, '', `?c=${encodeURIComponent(S.c.nome)}&s=${i+1}`);
+  const q = $('#quadro');
+  q.onload = preparar;
+  q.src = S.c.slides[i] + '?t=' + Date.now();
+  status(`Slide ${i+1} de ${S.c.slides.length}`);
+}
+
+/* ---------- preparar o slide para edição ---------- */
+function preparar(){
+  const q = $('#quadro'); S.doc = q.contentDocument; S.win = q.contentWindow;
+  const d = S.doc;
+  const st = d.createElement('style'); st.id = '__ed_css'; st.textContent = EDCSS; d.head.appendChild(st);
+  montarOverlay();
+  d.addEventListener('pointerdown', apertar, true);
+  d.addEventListener('pointermove', sobrevoar, true);
+  d.addEventListener('dblclick', duploClique, true);
+  d.addEventListener('keydown', teclado, true);
+  d.addEventListener('paste', colar, true);
+  d.addEventListener('input', () => { marcarSujo(); atualizarCaixa(); }, true);
+  ajustarEscala(); camadas(); painel();
+  (d.fonts ? d.fonts.ready : Promise.resolve()).then(() => setTimeout(() => {
+    if(S.doc !== d) return;
+    const al = (d.body.getAttribute('data-alertas') || '').split(' || ').filter(Boolean);
+    mostrarAlertas(al, 'ao abrir'); atualizarCaixa(); camadas();
+  }, 900));
+}
+function montarOverlay(){
+  const d = S.doc; const velho = d.getElementById('__ed'); if(velho) velho.remove();
+  const o = d.createElement('div'); o.id = '__ed';
+  o.innerHTML = '<div class="seg"></div><div class="hv"></div><div class="cx"></div>' + ['nw','n','ne','e','se','s','sw','w'].map(h => `<div class="h" data-h="${h}"></div>`).join('') + '<div class="g gv"></div><div class="g gh"></div>';
+  d.body.appendChild(o); S.ov = o; o.style.setProperty('--k', 1 / S.escala);
+  o.querySelector('.seg').classList.toggle('on', !!S.margens);
+}
+function ajustarEscala(){
+  const p = $('#palco'), z = +$('#sel-zoom').value;
+  const s = z || Math.max(0.15, Math.min((p.clientWidth - 32) / 1080, (p.clientHeight - 32) / 1350));
+  S.escala = s;
+  const m = $('#moldura'); m.style.width = 1080 * s + 'px'; m.style.height = 1350 * s + 'px';
+  $('#quadro').style.transform = `scale(${s})`;
+  if(S.ov) S.ov.style.setProperty('--k', 1 / s);
+  atualizarCaixa();
+}
+
+/* ---------- seleção ---------- */
+function selecionavel(el){
+  while(el && el.nodeType === 1 && el !== S.doc.body && el !== S.doc.documentElement){
+    if(el.closest('#__ed')) return null;
+    if(el instanceof S.win.SVGElement && el.tagName.toLowerCase() !== 'svg'){ el = el.ownerSVGElement || el.parentElement; continue; }
+    if(INLINE.has(el.tagName) && S.win.getComputedStyle(el).display.startsWith('inline') && el.parentElement !== S.doc.body){ el = el.parentElement; continue; }
+    return el;
+  }
+  return null;
+}
+function proximoSob(x, y){
+  const pilha = []; S.doc.elementsFromPoint(x, y).forEach(e => { const s = selecionavel(e); if(s && !pilha.includes(s)) pilha.push(s); });
+  if(!pilha.length) return null;
+  const k = pilha.indexOf(S.sel);
+  return pilha[(k + 1) % pilha.length];
+}
+const temTexto = el => !!el && !(el instanceof S.win.SVGElement) && el.tagName !== 'IMG' && el.textContent.trim().length > 0;
+function urlFundo(el){ const m = /url\(["']?(.*?)["']?\)/.exec(S.win.getComputedStyle(el).backgroundImage); return m ? m[1] : ''; }
+function ehImagem(el){ return !!el && (el.tagName === 'IMG' || !!urlFundo(el)); }
+function ehFundoCheio(el){
+  if(!el || !urlFundo(el) || temTexto(el)) return false;
+  const r = el.getBoundingClientRect(); return r.width >= 1000 && r.height >= 1250;
+}
+function nomeDe(el){
+  if(el.dataset && el.dataset.el) return el.dataset.el;
+  const cls = typeof el.className === 'string' ? el.className.trim().split(/\s+/).filter(Boolean)[0] : (el.className && el.className.baseVal) || '';
+  const t = temTexto(el) ? ' “' + el.textContent.trim().replace(/\s+/g,' ').slice(0, 26) + '”' : '';
+  return (el.tagName === 'IMG' ? 'Imagem' : urlFundo(el) ? 'Imagem de fundo' : el.tagName === 'svg' ? 'Ícone' : (cls ? '.' + cls : el.tagName.toLowerCase())) + t;
+}
+function selecionar(el){
+  S.sel = el || null;
+  if(el && ehImagem(el)) natural(el.tagName === 'IMG' ? el.currentSrc || el.src : urlFundo(el));
+  atualizarCaixa(); painel(); camadas();
+}
+function atualizarCaixa(){
+  const o = S.ov; if(!o || !o.isConnected) return;
+  const cx = o.querySelector('.cx'), hs = o.querySelectorAll('.h');
+  if(!S.sel || !S.sel.isConnected){ cx.style.display = 'none'; hs.forEach(h => h.style.display = 'none'); return; }
+  const r = S.sel.getBoundingClientRect();
+  Object.assign(cx.style, {display:'block', left:r.left+'px', top:r.top+'px', width:r.width+'px', height:r.height+'px', borderColor: S.edit ? '#22c55e' : '#3b82f6'});
+  const txt = temTexto(S.sel), pos = {nw:[0,0], n:[.5,0], ne:[1,0], e:[1,.5], se:[1,1], s:[.5,1], sw:[0,1], w:[0,.5]};
+  hs.forEach(h => { const k = h.dataset.h; h.style.display = (!S.edit && (!txt || k === 'e' || k === 'w')) ? 'block' : 'none';
+    h.style.left = (r.left + r.width * pos[k][0]) + 'px'; h.style.top = (r.top + r.height * pos[k][1]) + 'px'; h.style.cursor = k + '-resize'; });
+}
+function sobrevoar(e){
+  const hv = S.ov && S.ov.querySelector('.hv'); if(!hv || e.buttons) return;
+  const el = selecionavel(e.target);
+  if(!el || el === S.sel){ hv.style.display = 'none'; return; }
+  const r = el.getBoundingClientRect();
+  Object.assign(hv.style, {display:'block', left:r.left+'px', top:r.top+'px', width:r.width+'px', height:r.height+'px'});
+}
+
+/* ---------- mover, redimensionar, enquadrar ---------- */
+function blocoContencao(el){
+  for(let p = el.parentElement; p; p = p.parentElement){ if(p === S.doc.body || S.win.getComputedStyle(p).position !== 'static') return p; }
+  return S.doc.body;
+}
+function congelar(el){
+  // fixa a caixa do elemento em left/top/width (px) sem mudar nada na tela; depois disso mover = somar em left/top
+  ['data-encaixe', 'data-invade', 'data-prop-auto'].forEach(a => el.removeAttribute(a)); // ajuste automático não desfaz a posição escolhida à mão
+  const cs = S.win.getComputedStyle(el);
+  if(cs.position === 'absolute' || cs.position === 'fixed'){
+    let L, T, w, h;
+    if(!(el instanceof S.win.HTMLElement)){
+      const r = el.getBoundingClientRect(), cb = blocoContencao(el).getBoundingClientRect();
+      L = r.left - cb.left; T = r.top - cb.top; w = r.width; h = r.height;
+    } else {
+      L = el.offsetLeft - px(cs.marginLeft); T = el.offsetTop - px(cs.marginTop); w = el.offsetWidth; h = el.offsetHeight;
+      if(cs.boxSizing === 'content-box'){ w -= px(cs.paddingLeft) + px(cs.paddingRight) + px(cs.borderLeftWidth) + px(cs.borderRightWidth);
+        h -= px(cs.paddingTop) + px(cs.paddingBottom) + px(cs.borderTopWidth) + px(cs.borderBottomWidth); }
+    }
+    Object.assign(el.style, {left:L+'px', top:T+'px', right:'auto', bottom:'auto', width:w+'px'});
+    if(!temTexto(el)) el.style.height = h + 'px';
+    return {modo:'abs', L, T};
+  }
+  if(cs.position === 'static') el.style.position = 'relative';
+  return {modo:'rel', L:px(el.style.left), T:px(el.style.top)};
+}
+function moverPor(el, dx, dy){ const f = congelar(el); el.style.left = (f.L + dx) + 'px'; el.style.top = (f.T + dy) + 'px'; }
+function linhasGuia(el){
+  const X = [0, 540, 1080], Y = [0, 675, 1350];
+  const add = c => { if(c === el || c.id === '__ed' || c.contains(el) || el.contains(c) || /^(SCRIPT|STYLE)$/.test(c.tagName)) return;
+    const cs = S.win.getComputedStyle(c); if(cs.display === 'none' || cs.visibility === 'hidden') return;
+    const r = c.getBoundingClientRect(); if(r.width < 4 || r.height < 4 || (r.width >= 1070 && r.height >= 1340)) return;
+    X.push(r.left, r.right, (r.left + r.right) / 2); Y.push(r.top, r.bottom, (r.top + r.bottom) / 2); };
+  [...S.doc.body.children].forEach(add);
+  if(el.parentElement && el.parentElement !== S.doc.body) [...el.parentElement.children].forEach(add);
+  return {X, Y};
+}
+function guias(gx, gy){
+  const v = S.ov.querySelector('.gv'), h = S.ov.querySelector('.gh');
+  v.style.display = gx == null ? 'none' : 'block'; if(gx != null) v.style.left = gx + 'px';
+  h.style.display = gy == null ? 'none' : 'block'; if(gy != null) h.style.top = gy + 'px';
+}
+function encaixar(r0, dx, dy, L, livre){
+  let gx = null, gy = null;
+  if(!livre){
+    let best = 7, ax = 0; for(const x of L.X) for(const v of [r0.left + dx, r0.right + dx, (r0.left + r0.right) / 2 + dx]) if(Math.abs(x - v) < best){ best = Math.abs(x - v); gx = x; ax = x - v; }
+    dx += ax;
+    best = 7; let ay = 0; for(const y of L.Y) for(const v of [r0.top + dy, r0.bottom + dy, (r0.top + r0.bottom) / 2 + dy]) if(Math.abs(y - v) < best){ best = Math.abs(y - v); gy = y; ay = y - v; }
+    dy += ay;
+  }
+  guias(gx, gy);
+  return {dx, dy};
+}
+function natural(u){
+  if(!u || S.nat[u]) return S.nat[u];
+  const im = new Image(); im.onload = () => { S.nat[u] = {w:im.naturalWidth, h:im.naturalHeight}; }; im.src = u;
+  return null;
+}
+function geoFundo(el){
+  const u = urlFundo(el), n = S.nat[u]; if(!n) return null;
+  const cs = S.win.getComputedStyle(el), W = el.clientWidth, H = el.clientHeight, bs = cs.backgroundSize;
+  let dw, dh;
+  if(bs === 'cover' || bs === 'contain'){ const k = (bs === 'cover' ? Math.max : Math.min)(W / n.w, H / n.h); dw = n.w * k; dh = n.h * k; }
+  else { const m = bs.match(/[\d.]+/g) || [W, H]; dw = +m[0]; dh = +(m[1] || dw * n.h / n.w); }
+  const pp = cs.backgroundPosition.split(',')[0].trim().split(/\s+/);
+  const pct = (v, livre) => v.endsWith('%') ? px(v) : livre ? px(v) / livre * 100 : 50;
+  return {W, H, dw, dh, n, px:pct(pp[0] || '50%', W - dw), py:pct(pp[1] || '50%', H - dh)};
+}
+const lim = (v, a, b) => Math.max(a, Math.min(b, v));
+function enquadrar(el, g, dx, dy){
+  const nx = g.dw > g.W ? lim(g.px - dx / (g.dw - g.W) * 100, 0, 100) : g.px;
+  const ny = g.dh > g.H ? lim(g.py - dy / (g.dh - g.H) * 100, 0, 100) : g.py;
+  el.style.backgroundPosition = `${nx.toFixed(1)}% ${ny.toFixed(1)}%`;
+}
+function iniciarArrasto(e, modo, h){
+  const el = S.sel, d = S.doc, st = {modo, h, x0:e.clientX, y0:e.clientY, moveu:false};
+  const mv = ev => {
+    const dx = ev.clientX - st.x0, dy = ev.clientY - st.y0;
+    if(!st.moveu){
+      if(Math.hypot(dx, dy) < 3) return;
+      if(modo === 'pan'){ st.g = geoFundo(el); if(!st.g) return; }
+      st.moveu = true; guardar(); d.documentElement.classList.add('__mover');
+      try { d.documentElement.setPointerCapture(ev.pointerId); } catch(_){}
+      if(modo !== 'pan'){ st.f = congelar(el); st.r0 = el.getBoundingClientRect(); st.w0 = px(el.style.width) || st.r0.width; st.h0 = px(el.style.height) || st.r0.height; st.L = linhasGuia(el); }
+    }
+    if(modo === 'pan') enquadrar(el, st.g, dx, dy);
+    else if(modo === 'mover'){ const s = encaixar(st.r0, dx, dy, st.L, ev.shiftKey); el.style.left = (st.f.L + s.dx) + 'px'; el.style.top = (st.f.T + s.dy) + 'px'; }
+    else redimensionar(st, el, dx, dy, ev.shiftKey);
+    atualizarCaixa();
+  };
+  const up = () => {
+    d.removeEventListener('pointermove', mv, true); d.removeEventListener('pointerup', up, true);
+    d.documentElement.classList.remove('__mover'); if(S.ov) guias(null, null);
+    if(st.moveu){ marcarSujo(); painel(); }
+  };
+  d.addEventListener('pointermove', mv, true); d.addEventListener('pointerup', up, true);
+}
+function redimensionar(st, el, dx, dy, livre){
+  const h = st.h; let L = st.f.L, T = st.f.T, w = st.w0, hh = st.h0;
+  if(h.includes('e')) w = st.w0 + dx;
+  if(h.includes('w')){ w = st.w0 - dx; L = st.f.L + dx; }
+  if(h.includes('s')) hh = st.h0 + dy;
+  if(h.includes('n')){ hh = st.h0 - dy; T = st.f.T + dy; }
+  if(h.length === 2 && !temTexto(el) && !livre){
+    const k = Math.max(w / st.w0, hh / st.h0); w = st.w0 * k; hh = st.h0 * k;
+    L = h.includes('w') ? st.f.L + (st.w0 - w) : st.f.L; T = h.includes('n') ? st.f.T + (st.h0 - hh) : st.f.T;
+  }
+  el.style.width = Math.max(20, w) + 'px';
+  if(!temTexto(el)) el.style.height = Math.max(20, hh) + 'px';
+  el.style.left = L + 'px'; el.style.top = T + 'px';
+}
+
+/* ---------- eventos no slide ---------- */
+function apertar(e){
+  if(e.button !== 0) return;
+  const t = e.target;
+  if(S.edit && S.edit.contains(t)) return;
+  if(t.classList && t.classList.contains('h') && t.parentElement && t.parentElement.id === '__ed'){ e.preventDefault(); iniciarArrasto(e, 'redim', t.dataset.h); return; }
+  if(S.edit) sairEdicao();
+  const el = e.altKey ? proximoSob(e.clientX, e.clientY) : selecionavel(t);
+  selecionar(el);
+  if(!el) return;
+  e.preventDefault();
+  iniciarArrasto(e, ehFundoCheio(el) ? 'pan' : 'mover');
+}
+function duploClique(e){ const el = selecionavel(S.doc.elementFromPoint(e.clientX, e.clientY)) || S.sel; if(el && temTexto(el)) entrarEdicao(el, e); }
+function entrarEdicao(el, e){
+  if(S.edit === el) return;
+  guardar(); S.sel = el; S.edit = el;
+  el.setAttribute('contenteditable', 'true'); el.focus();
+  const sl = S.win.getSelection(); sl.removeAllRanges();
+  const r = e ? S.doc.caretRangeFromPoint(e.clientX, e.clientY) : null;
+  if(r) sl.addRange(r); else { const rr = S.doc.createRange(); rr.selectNodeContents(el); rr.collapse(false); sl.addRange(rr); }
+  atualizarCaixa(); painel(); camadas();
+}
+function sairEdicao(){
+  const el = S.edit; if(!el) return;
+  el.removeAttribute('contenteditable'); S.edit = null;
+  try { S.win.getSelection().removeAllRanges(); } catch(_){}
+  atualizarCaixa(); painel(); camadas();
+}
+function colar(e){ if(!S.edit) return; e.preventDefault(); S.doc.execCommand('insertText', false, e.clipboardData.getData('text/plain')); }
+function teclado(e){
+  const alvo = e.target, mod = e.ctrlKey || e.metaKey, k = e.key.toLowerCase();
+  if(mod && k === 's'){ e.preventDefault(); salvar(); return; }
+  if(S.edit){
+    if(e.key === 'Escape'){ e.preventDefault(); sairEdicao(); }
+    else if(e.key === 'Enter'){ e.preventDefault(); S.doc.execCommand('insertLineBreak'); }
+    else if(mod && k === 'b'){ e.preventDefault(); formatar('bold'); }
+    else if(mod && k === 'i'){ e.preventDefault(); formatar('italic'); }
+    return;
+  }
+  if(alvo && alvo.ownerDocument === document && /^(INPUT|SELECT|TEXTAREA)$/.test(alvo.tagName)) return;
+  if(mod && k === 'z'){ e.preventDefault(); e.shiftKey ? refazer() : desfazer(); return; }
+  if(mod && k === 'y'){ e.preventDefault(); refazer(); return; }
+  if(!S.sel || !S.doc) return;
+  if(mod && k === 'd'){ e.preventDefault(); duplicar(); return; }
+  if(e.key === 'Delete' || e.key === 'Backspace'){ e.preventDefault(); excluir(); return; }
+  if(e.key === 'Escape'){ selecionar(null); return; }
+  if(e.key === 'Enter' && temTexto(S.sel)){ e.preventDefault(); entrarEdicao(S.sel); return; }
+  const p = e.shiftKey ? 10 : 1, mv = {ArrowLeft:[-p,0], ArrowRight:[p,0], ArrowUp:[0,-p], ArrowDown:[0,p]}[e.key];
+  if(mv){ e.preventDefault(); if(!S.empurrando){ guardar(); S.empurrando = true; } clearTimeout(S.te); S.te = setTimeout(() => S.empurrando = false, 700);
+    moverPor(S.sel, mv[0], mv[1]); marcarSujo(); atualizarCaixa(); painel(); }
+}
+
+/* ---------- desfazer ---------- */
+function foto(){
+  const b = S.doc.body.cloneNode(true); const o = b.querySelector('#__ed'); if(o) o.remove();
+  b.querySelectorAll('[contenteditable]').forEach(n => n.removeAttribute('contenteditable'));
+  return {h:b.innerHTML, c:S.doc.body.className, s:S.doc.body.getAttribute('style') || ''};
+}
+function guardar(){ if(!S.doc) return; S.undo.push(foto()); if(S.undo.length > 100) S.undo.shift(); S.redo = []; }
+function restaurar(f){
+  S.edit = null; S.doc.body.innerHTML = f.h; S.doc.body.className = f.c;
+  if(f.s) S.doc.body.setAttribute('style', f.s); else S.doc.body.removeAttribute('style');
+  montarOverlay(); selecionar(null); marcarSujo();
+}
+function desfazer(){ if(!S.undo.length) return; S.redo.push(foto()); restaurar(S.undo.pop()); }
+function refazer(){ if(!S.redo.length) return; S.undo.push(foto()); restaurar(S.redo.pop()); }
+function umaVez(){ if(!S.inter){ guardar(); S.inter = true; } }
+
+/* ---------- ações ---------- */
+function duplicar(){
+  const el = S.sel; if(!el || el === S.doc.body) return; guardar();
+  const c = el.cloneNode(true); el.after(c);
+  if(S.win.getComputedStyle(c).position === 'absolute') moverPor(c, 24, 24);
+  if(c.dataset.el) c.dataset.el += ' (cópia)';
+  selecionar(c); marcarSujo();
+}
+function excluir(){ const el = S.sel; if(!el) return; guardar(); el.remove(); selecionar(null); marcarSujo(); }
+function camada(delta){
+  const el = S.sel; if(!el) return; guardar();
+  if(S.win.getComputedStyle(el).position === 'static') el.style.position = 'relative';
+  const z = parseInt(S.win.getComputedStyle(el).zIndex) || 0; el.style.zIndex = Math.max(0, z + delta);
+  marcarSujo(); painel(); camadas();
+}
+function alternarVisivel(el){ guardar(); el.style.visibility = S.win.getComputedStyle(el).visibility === 'hidden' ? 'visible' : 'hidden'; marcarSujo(); camadas(); atualizarCaixa(); }
+function formatar(cmd){ if(!S.edit) return; S.doc.execCommand(cmd); marcarSujo(); }
+function destacar(cls){
+  if(!S.edit) return; const sl = S.win.getSelection(); if(!sl.rangeCount || sl.isCollapsed) { status('Selecione as palavras primeiro', 'aviso'); return; }
+  const r = sl.getRangeAt(0), base = r.commonAncestorContainer.nodeType === 1 ? r.commonAncestorContainer : r.commonAncestorContainer.parentElement;
+  const ja = base.closest('span.' + cls);
+  if(ja && S.edit.contains(ja)){ desembrulhar(ja); }
+  else { const sp = S.doc.createElement('span'); sp.className = cls; sp.appendChild(r.extractContents()); r.insertNode(sp); sl.removeAllRanges(); const nr = S.doc.createRange(); nr.selectNodeContents(sp); sl.addRange(nr); }
+  marcarSujo(); atualizarCaixa();
+}
+function desembrulhar(n){ while(n.firstChild) n.parentNode.insertBefore(n.firstChild, n); n.remove(); }
+function limparFormato(){
+  if(!S.edit) return; const sl = S.win.getSelection(); S.doc.execCommand('removeFormat');
+  S.edit.querySelectorAll('b,i,u,strong,em,span').forEach(n => { if(sl.containsNode(n, true) && !n.classList.contains('n')) desembrulhar(n); });
+  marcarSujo();
+}
+function classesDestaque(){
+  const achadas = new Set();
+  for(const sh of S.doc.styleSheets){ let regras; try { regras = sh.cssRules; } catch(_){ continue; }
+    for(const r of regras){ const m = (r.selectorText || '').match(/\.(dest|mk|lj|mt|sel)\b/g); if(m) m.forEach(x => achadas.add(x.slice(1))); } }
+  return [...achadas];
+}
+function novoTexto(){
+  if(!S.doc) return; guardar();
+  const d = S.doc.createElement('div'); d.dataset.el = 'Texto novo'; d.textContent = 'Novo texto';
+  Object.assign(d.style, {position:'absolute', left:'140px', top:'600px', width:'800px', fontSize:'48px', lineHeight:'1.1', zIndex:'60', textAlign:'center'});
+  S.doc.body.insertBefore(d, S.ov); selecionar(d); entrarEdicao(d); S.doc.execCommand('selectAll'); marcarSujo();
+}
+async function enviarImagem(arq){
+  const dados = await new Promise(ok => { const fr = new FileReader(); fr.onload = () => ok(fr.result); fr.readAsDataURL(arq); });
+  return (await api('/api/enviar', {arquivo:S.c.slides[S.i], nome:arq.name, dados})).src;
+}
+async function novaImagem(arq){
+  try {
+    status('Enviando imagem…'); const src = await enviarImagem(arq); guardar();
+    const im = S.doc.createElement('img'); im.dataset.el = 'Imagem nova'; im.dataset.arte = '1'; im.setAttribute('data-original', src);
+    Object.assign(im.style, {position:'absolute', left:'290px', top:'420px', width:'500px', objectFit:'contain', zIndex:'20'});
+    im.onload = () => { im.style.height = (500 * im.naturalHeight / im.naturalWidth) + 'px'; atualizarCaixa(); };
+    im.src = src; S.doc.body.insertBefore(im, S.ov); selecionar(im); marcarSujo(); status('Imagem adicionada');
+  } catch(e){ status('Falhou: ' + e.message, 'erro'); }
+}
+function srcAtual(el){ return el.tagName === 'IMG' ? el.getAttribute('src') : urlFundo(el); }
+function trocarSrc(el, src, manterCaixa){
+  if(el.tagName === 'IMG'){
+    const f = congelar(el), w0 = px(el.style.width), h0 = px(el.style.height);
+    el.onload = () => { el.onload = null; if(!manterCaixa) return; const k = Math.min(w0 / el.naturalWidth, h0 / el.naturalHeight), w = el.naturalWidth * k, h = el.naturalHeight * k;
+      Object.assign(el.style, {width:w+'px', height:h+'px', left:(f.L + (w0 - w) / 2)+'px', top:(f.T + h0 - h)+'px'}); atualizarCaixa(); };
+    el.src = src;
+  } else el.style.backgroundImage = `url('${src}')`;
+}
+async function trocarImagem(arq){
+  const el = S.sel; if(!el) return;
+  try { status('Enviando imagem…'); const src = await enviarImagem(arq); guardar(); el.setAttribute('data-original', src); trocarSrc(el, src, true); marcarSujo(); status('Imagem trocada'); painel(); }
+  catch(e){ status('Falhou: ' + e.message, 'erro'); }
+}
+async function recortarFundo(modo){
+  const el = S.sel; if(!el) return;
+  const orig = el.getAttribute('data-original') || srcAtual(el);
+  try {
+    status('Recortando o fundo…');
+    const r = await api('/api/recortar', {arquivo:S.c.slides[S.i], imagem:new URL(orig, S.doc.baseURI).pathname, modo});
+    guardar(); el.setAttribute('data-original', r.original); el.dataset.modo = modo; trocarSrc(el, r.src + '?t=' + Date.now(), true);
+    setTimeout(() => { if(el.tagName === 'IMG') el.setAttribute('src', r.src); }, 400);
+    marcarSujo(); status('Fundo recortado ✓ (confira as bordas no zoom 100%)', 'ok');
+  } catch(e){ status('Recorte falhou: ' + e.message, 'erro'); }
+}
+function voltarOriginal(){ const el = S.sel, o = el && el.getAttribute('data-original'); if(!o) return; guardar(); trocarSrc(el, o, true); marcarSujo(); }
+
+/* ---------- painel de propriedades ---------- */
+function campo(rotulo, html){ return `<div class="linha"><label>${rotulo}</label>${html}</div>`; }
+function painel(){
+  const P = $('#props'); if(!S.doc){ P.innerHTML = ''; return; }
+  const el = S.sel;
+  if(!el){
+    const b = S.doc.body, cs = S.win.getComputedStyle(b), tema = b.classList.contains('escuro') ? 'escuro' : b.classList.contains('claro') ? 'claro' : '';
+    P.innerHTML = `<h3>Slide</h3><div class="dica" style="margin-bottom:10px">Clique num elemento do slide para editar. Para alcançar o que está por baixo, use <kbd>Alt</kbd>+clique ou a lista de camadas.</div>`
+      + campo('Fundo', `<input type="color" id="p-fundo" value="${hex(cs.backgroundColor)}">`)
+      + (tema ? campo('Tema', `<button data-tema="escuro" class="${tema === 'escuro' ? 'on' : ''}">Escuro</button><button data-tema="claro" class="${tema === 'claro' ? 'on' : ''}">Claro</button>`) : '')
+      + campo('Guias', `<button id="p-margens" class="${S.margens ? 'on' : ''}">Margem de segurança</button>`);
+    $('#p-fundo').oninput = e => { umaVez(); b.style.background = e.target.value; marcarSujo(); };
+    $('#p-fundo').onchange = () => S.inter = false;
+    P.querySelectorAll('[data-tema]').forEach(x => x.onclick = () => { guardar(); b.classList.remove('escuro', 'claro'); b.classList.add(x.dataset.tema); marcarSujo(); painel(); });
+    $('#p-margens').onclick = () => { S.margens = !S.margens; S.ov.querySelector('.seg').classList.toggle('on', S.margens); painel(); };
+    return;
+  }
+  const cs = S.win.getComputedStyle(el), r = el.getBoundingClientRect(), txt = temTexto(el), img = ehImagem(el);
+  let h = `<h3>Elemento</h3><div class="nome">${esc(nomeDe(el))}</div>
+    <div class="linha"><button id="a-pai" title="Selecionar o elemento que contém este">↑ Pai</button><button id="a-dup">Duplicar</button><button id="a-vis">${cs.visibility === 'hidden' ? 'Mostrar' : 'Ocultar'}</button><button id="a-del">Excluir</button></div>
+    <div class="linha"><button id="a-frente">Trazer p/ frente</button><button id="a-tras">Enviar p/ trás</button></div>
+    <h3>Posição e tamanho (px)</h3>
+    ${campo('X / Y', `<input type="number" id="p-x" value="${Math.round(r.left)}"><input type="number" id="p-y" value="${Math.round(r.top)}">`)}
+    ${campo('Largura', `<input type="number" id="p-w" value="${Math.round(r.width)}">${txt ? '' : `<span class="dica">Altura</span><input type="number" id="p-h" value="${Math.round(r.height)}">`}`)}
+    ${campo('Centralizar', `<button id="p-cx">Na horizontal</button><button id="p-cy">Na vertical</button>`)}`;
+  if(txt){
+    const fams = [...new Set([...S.doc.fonts].map(f => f.family.replace(/["']/g, '')).concat([cs.fontFamily.split(',')[0].replace(/["']/g, '').trim()]))];
+    const fam = cs.fontFamily.split(',')[0].replace(/["']/g, '').trim();
+    const lh = cs.lineHeight === 'normal' ? 1.2 : px(cs.lineHeight) / px(cs.fontSize);
+    h += `<h3>Texto</h3>
+      ${S.edit ? `<div class="linha"><button id="f-b"><b>N</b></button><button id="f-i"><i>I</i></button><button id="f-u"><u>S</u></button>${classesDestaque().map(c => `<button data-dest="${c}">${DEST[c] || c}</button>`).join('')}<button id="f-x">Limpar</button></div><div class="dica" style="margin-bottom:8px">Selecione as palavras e aplique. <kbd>Esc</kbd> termina a edição.</div>`
+                : `<div class="linha"><button id="f-editar" class="pri">✎ Editar texto</button></div>`}
+      ${campo('Fonte', `<select id="p-fam">${fams.map(f => `<option ${f === fam ? 'selected' : ''}>${esc(f)}</option>`).join('')}</select>`)}
+      ${campo('Tamanho', `<button id="p-fs-">−</button><input type="number" id="p-fs" value="${Math.round(px(cs.fontSize))}"><button id="p-fs+">+</button>`)}
+      ${campo('Peso', `<select id="p-fw">${[300,400,500,600,700,800,900].map(v => `<option ${+cs.fontWeight === v ? 'selected' : ''}>${v}</option>`).join('')}</select>`)}
+      ${campo('Cor', `<input type="color" id="p-cor" value="${hex(cs.color)}">`)}
+      ${campo('Alinhar', ['left','center','right','justify'].map(a => `<button data-al="${a}" class="${cs.textAlign === a || (a === 'left' && cs.textAlign === 'start') ? 'on' : ''}">${{left:'⇤',center:'↔',right:'⇥',justify:'☰'}[a]}</button>`).join(''))}
+      ${campo('Entrelinha', `<input type="number" id="p-lh" step="0.02" value="${lh.toFixed(2)}">`)}
+      ${campo('Espaço letras', `<input type="number" id="p-ls" step="0.5" value="${px(cs.letterSpacing).toFixed(1)}">`)}
+      ${campo('Maiúsculas', `<button id="p-up" class="${cs.textTransform === 'uppercase' ? 'on' : ''}">AA</button>`)}`;
+  }
+  if(img){
+    h += `<h3>Imagem</h3>
+      <div class="linha"><button id="i-trocar">Trocar imagem…</button>${el.getAttribute('data-original') ? '<button id="i-orig">Voltar à original</button>' : ''}</div>
+      <div class="linha"><button id="i-rec-tinta" title="Traço de mangá, gravura, objeto luminoso: o fundo some até nos vãos">Recortar fundo · traço</button><button id="i-rec-borda" title="Foto ou objeto realista: some só o fundo ligado às bordas">Recortar fundo · foto</button></div>`;
+    if(el.tagName === 'IMG') h += campo('Encaixe', `<select id="i-fit"><option value="contain" ${cs.objectFit === 'contain' ? 'selected' : ''}>Inteira</option><option value="cover" ${cs.objectFit === 'cover' ? 'selected' : ''}>Preencher</option></select>`);
+    else { const g = geoFundo(el); h += `${campo('Enquadrar X', `<input type="range" id="i-px" min="0" max="100" value="${g ? g.px.toFixed(0) : 50}">`)}${campo('Enquadrar Y', `<input type="range" id="i-py" min="0" max="100" value="${g ? g.py.toFixed(0) : 50}">`)}${campo('Zoom', `<input type="range" id="i-zoom" min="100" max="300" value="${el.dataset.zoom || 100}">`)}`; }
+  }
+  h += `<h3>Aparência</h3>${campo('Opacidade', `<input type="range" id="p-op" min="0" max="100" value="${Math.round(+cs.opacity * 100)}">`)}
+    ${campo('Mistura', `<select id="p-mix">${['normal','multiply','screen','lighten','darken','overlay'].map(m => `<option ${cs.mixBlendMode === m ? 'selected' : ''}>${m}</option>`).join('')}</select>`)}`;
+  P.innerHTML = h;
+  const liga = (id, ev, fn) => { const n = document.getElementById(id); if(n) n[ev] = fn; };
+  const vivo = (id, fn) => { const n = document.getElementById(id); if(!n) return; n.oninput = e => { umaVez(); fn(e.target.value); marcarSujo(); atualizarCaixa(); }; n.onchange = () => { S.inter = false; painel(); }; };
+  liga('a-pai', 'onclick', () => { const p = el.parentElement; if(p && p !== S.doc.body) selecionar(p); });
+  liga('a-dup', 'onclick', duplicar); liga('a-del', 'onclick', excluir); liga('a-vis', 'onclick', () => { alternarVisivel(el); painel(); });
+  liga('a-frente', 'onclick', () => camada(1)); liga('a-tras', 'onclick', () => camada(-1));
+  vivo('p-x', v => { const rr = el.getBoundingClientRect(); moverPor(el, +v - rr.left, 0); });
+  vivo('p-y', v => { const rr = el.getBoundingClientRect(); moverPor(el, 0, +v - rr.top); });
+  vivo('p-w', v => { congelar(el); el.style.width = Math.max(10, +v) + 'px'; });
+  vivo('p-h', v => { congelar(el); el.style.height = Math.max(10, +v) + 'px'; });
+  liga('p-cx', 'onclick', () => { guardar(); const rr = el.getBoundingClientRect(); moverPor(el, 540 - (rr.left + rr.width / 2), 0); marcarSujo(); atualizarCaixa(); painel(); });
+  liga('p-cy', 'onclick', () => { guardar(); const rr = el.getBoundingClientRect(); moverPor(el, 0, 675 - (rr.top + rr.height / 2)); marcarSujo(); atualizarCaixa(); painel(); });
+  if(txt){
+    liga('f-editar', 'onclick', () => entrarEdicao(el));
+    liga('f-b', 'onmousedown', e => { e.preventDefault(); formatar('bold'); });
+    liga('f-i', 'onmousedown', e => { e.preventDefault(); formatar('italic'); });
+    liga('f-u', 'onmousedown', e => { e.preventDefault(); formatar('underline'); });
+    liga('f-x', 'onmousedown', e => { e.preventDefault(); limparFormato(); });
+    document.querySelectorAll('[data-dest]').forEach(b => b.onmousedown = e => { e.preventDefault(); destacar(b.dataset.dest); });
+    vivo('p-fam', v => { el.style.fontFamily = `'${v}'`; });
+    const tamanho = v => { // muda o corpo do elemento e, na mesma proporção, o dos filhos que têm corpo próprio
+      const antes = px(S.win.getComputedStyle(el).fontSize), k = (+v) / antes; if(!(k > 0)) return;
+      const filhos = [...el.querySelectorAll('*')].filter(c => c instanceof S.win.HTMLElement && px(S.win.getComputedStyle(c).fontSize) !== px(S.win.getComputedStyle(c.parentElement).fontSize)).map(c => [c, px(S.win.getComputedStyle(c).fontSize)]);
+      ['data-fitw','data-max','data-fith'].forEach(a => el.removeAttribute(a));
+      el.style.fontSize = (+v) + 'px'; filhos.forEach(([c, f]) => c.style.fontSize = (f * k).toFixed(1) + 'px');
+    };
+    vivo('p-fs', tamanho);
+    liga('p-fs-', 'onclick', () => { guardar(); tamanho(Math.round(px(S.win.getComputedStyle(el).fontSize)) - 2); marcarSujo(); atualizarCaixa(); painel(); });
+    liga('p-fs+', 'onclick', () => { guardar(); tamanho(Math.round(px(S.win.getComputedStyle(el).fontSize)) + 2); marcarSujo(); atualizarCaixa(); painel(); });
+    vivo('p-fw', v => el.style.fontWeight = v);
+    vivo('p-cor', v => el.style.color = v);
+    vivo('p-lh', v => el.style.lineHeight = v);
+    vivo('p-ls', v => el.style.letterSpacing = v + 'px');
+    liga('p-up', 'onclick', () => { guardar(); el.style.textTransform = S.win.getComputedStyle(el).textTransform === 'uppercase' ? 'none' : 'uppercase'; marcarSujo(); atualizarCaixa(); painel(); });
+    document.querySelectorAll('[data-al]').forEach(b => b.onclick = () => { guardar(); el.style.textAlign = b.dataset.al; el.style.textAlignLast = b.dataset.al === 'justify' ? 'left' : b.dataset.al; marcarSujo(); painel(); });
+  }
+  if(img){
+    liga('i-trocar', 'onclick', () => { const f = $('#f-imagem'); f.dataset.modo = 'trocar'; f.click(); });
+    liga('i-orig', 'onclick', voltarOriginal);
+    liga('i-rec-tinta', 'onclick', () => recortarFundo('tinta'));
+    liga('i-rec-borda', 'onclick', () => recortarFundo('borda'));
+    vivo('i-fit', v => el.style.objectFit = v);
+    vivo('i-px', v => { const g = geoFundo(el); el.style.backgroundPosition = `${v}% ${g ? g.py.toFixed(1) : 50}%`; });
+    vivo('i-py', v => { const g = geoFundo(el); el.style.backgroundPosition = `${g ? g.px.toFixed(1) : 50}% ${v}%`; });
+    vivo('i-zoom', v => {
+      const n = S.nat[urlFundo(el)]; if(!n) return;
+      if(!el.dataset.base) el.dataset.base = S.win.getComputedStyle(el).backgroundSize === 'contain' ? 'contain' : 'cover';
+      const k = (el.dataset.base === 'cover' ? Math.max : Math.min)(el.clientWidth / n.w, el.clientHeight / n.h) * (+v) / 100;
+      el.style.backgroundSize = `${(n.w * k).toFixed(0)}px ${(n.h * k).toFixed(0)}px`; el.dataset.zoom = v;
+    });
+  }
+  vivo('p-op', v => el.style.opacity = (+v / 100).toFixed(2));
+  vivo('p-mix', v => el.style.mixBlendMode = v);
+}
+
+/* ---------- camadas e alertas ---------- */
+function camadas(){
+  const C = $('#camadas'); if(!S.doc){ C.innerHTML = ''; return; }
+  const lista = [];
+  const add = (el, nivel) => {
+    if(/^(SCRIPT|STYLE)$/.test(el.tagName) || el.id === '__ed') return;
+    lista.push([el, nivel]);
+    if(nivel < 1) [...el.children].forEach(c => { if(!(c instanceof S.win.HTMLElement) && c.tagName.toLowerCase() !== 'svg') return; if(INLINE.has(c.tagName) && S.win.getComputedStyle(c).display.startsWith('inline')) return; add(c, nivel + 1); });
+  };
+  const topo = [...S.doc.body.children].sort((a, b) => (parseInt(S.win.getComputedStyle(b).zIndex) || 0) - (parseInt(S.win.getComputedStyle(a).zIndex) || 0));
+  topo.forEach(c => add(c, 0));
+  C.innerHTML = lista.map(([el, n], k) => `<div class="cam ${el === S.sel ? 'ativo' : ''}" data-k="${k}" style="padding-left:${6 + n * 16}px"><button data-olho="${k}" title="Ocultar/mostrar">${S.win.getComputedStyle(el).visibility === 'hidden' ? '◌' : '●'}</button><span>${esc(nomeDe(el))}</span></div>`).join('');
+  C.querySelectorAll('.cam').forEach(d => d.onclick = e => { if(e.target.dataset.olho) return; if(S.edit) sairEdicao(); selecionar(lista[+d.dataset.k][0]); });
+  C.querySelectorAll('[data-olho]').forEach(b => b.onclick = () => alternarVisivel(lista[+b.dataset.olho][0]));
+}
+function mostrarAlertas(al, quando){
+  $('#alertas').innerHTML = al.length ? al.map(a => `<div>${esc(a)}</div>`).join('') : `<div class="ok">0 alertas (${esc(quando)})</div>`;
+}
+
+/* ---------- salvar e exportar ---------- */
+function serializar(){
+  const raiz = S.doc.documentElement.cloneNode(true);
+  raiz.querySelectorAll('#__ed,#__ed_css').forEach(n => n.remove());
+  raiz.querySelectorAll('[contenteditable]').forEach(n => n.removeAttribute('contenteditable'));
+  raiz.classList.remove('__mover'); if(!raiz.getAttribute('class')) raiz.removeAttribute('class');
+  const b = raiz.querySelector('body'); b.removeAttribute('data-alertas'); b.classList.remove('pronto');
+  raiz.setAttribute('data-editado', new Date().toISOString().slice(0, 16));
+  return '<!doctype html>\n' + raiz.outerHTML;
+}
+async function salvar(){
+  if(!S.doc) return;
+  if(S.edit) sairEdicao();
+  try { status('Salvando…'); await api('/api/salvar', {arquivo:S.c.slides[S.i], html:serializar()}); S.sujo = false; S.c.editados[S.i] = true; status('Salvo ✓', 'ok'); }
+  catch(e){ status('Não salvou: ' + e.message, 'erro'); throw e; }
+}
+async function salvarSeSujo(){ if(S.sujo && S.doc) await salvar(); }
+function atualizarMini(k, png){ S.c.pngs[k] = png; miniaturas(); document.querySelectorAll('.mini').forEach(b => b.classList.toggle('ativo', +b.dataset.k === S.i)); }
+async function gerarPng(){
+  await salvar(); status('Gerando o PNG 2160×2700…');
+  const r = await api('/api/exportar', {arquivo:S.c.slides[S.i]});
+  atualizarMini(S.i, r.png); mostrarAlertas(r.alertas, 'PNG gerado agora');
+  status(r.alertas.length ? `PNG gerado · ${r.alertas.length} alerta(s) de diagramação` : 'PNG gerado ✓ · 0 alertas', r.alertas.length ? 'aviso' : 'ok');
+  return r;
+}
+function baixar(u, nome){ const a = document.createElement('a'); a.href = u; a.download = nome; document.body.appendChild(a); a.click(); a.remove(); }
+async function baixarPng(){ const r = await gerarPng(); if(r.png) baixar(r.png, `${S.c.nome.split('/').pop()} - slide-${String(S.i + 1).padStart(2, '0')}.png`); }
+async function baixarTodos(){
+  await salvar(); status('Gerando todos os PNGs…');
+  const r = await api('/api/exportar-todos', {pasta:S.c.pasta});
+  r.slides.forEach(s => S.c.pngs[s.n - 1] = s.png); miniaturas(); document.querySelectorAll('.mini').forEach(b => b.classList.toggle('ativo', +b.dataset.k === S.i));
+  const al = r.slides.flatMap(s => s.alertas.map(a => `slide-${String(s.n).padStart(2, '0')}: ${a}`));
+  mostrarAlertas(al, 'todos os slides');
+  status(al.length ? `${r.slides.length} PNGs · ${al.length} alerta(s)` : `${r.slides.length} PNGs ✓ · 0 alertas`, al.length ? 'aviso' : 'ok');
+  baixar('/api/zip?pasta=' + encodeURIComponent(S.c.pasta), S.c.nome.split('/').pop() + '.zip');
+}
+
+/* ---------- ligar a barra ---------- */
+$('#b-desfazer').onclick = desfazer; $('#b-refazer').onclick = refazer;
+$('#b-texto').onclick = novoTexto;
+$('#b-imagem').onclick = () => { const f = $('#f-imagem'); f.dataset.modo = 'nova'; f.click(); };
+$('#f-imagem').onchange = e => { const a = e.target.files[0]; e.target.value = ''; if(!a) return; e.target.dataset.modo === 'trocar' ? trocarImagem(a) : novaImagem(a); };
+$('#sel-zoom').onchange = ajustarEscala;
+$('#b-salvar').onclick = () => salvar().catch(() => {});
+$('#b-png').onclick = () => gerarPng().catch(e => status('Falhou: ' + e.message, 'erro'));
+$('#b-baixar').onclick = () => baixarPng().catch(e => status('Falhou: ' + e.message, 'erro'));
+$('#b-zip').onclick = () => baixarTodos().catch(e => status('Falhou: ' + e.message, 'erro'));
+window.addEventListener('resize', ajustarEscala);
+document.addEventListener('keydown', teclado);
+window.addEventListener('beforeunload', e => { if(S.sujo){ e.preventDefault(); e.returnValue = ''; } });
+iniciar();
+</script>
+</body>
+</html>

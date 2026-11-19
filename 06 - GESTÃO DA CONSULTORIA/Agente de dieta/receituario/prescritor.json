@@ -1,0 +1,8 @@
+{
+  "_sobre": "Prescritor da receita = o nutricionista RT. O contato profissional (WhatsApp, e-mail, endereço) NÃO fica no repositório: copie este arquivo para %USERPROFILE%\\SoutoTreinador\\privado\\prescritor.json e preencha lá (o script usa o de lá primeiro).",
+  "nome": "Lucas Melo",
+  "profissao": "Nutricionista",
+  "crn": "CRN6 - 50479-P",
+  "contato": [],
+  "endereco": ""
+}

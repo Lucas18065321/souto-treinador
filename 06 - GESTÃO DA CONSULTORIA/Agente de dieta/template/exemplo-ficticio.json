@@ -1,0 +1,837 @@
+{
+ "_aviso": "EXEMPLO FICTÍCIO para testar o template. Aluna, números e histórico inventados; nenhum dado é de pessoa real. As gramas e kcal dos alimentos são ilustrativas: quem calcula pela TACO é o agente /montar-dieta.",
+ "documento": {
+  "ficticio": true,
+  "aluno_nome": "Ana Exemplo",
+  "primeiro_nome": "Ana",
+  "linha": "emagrecimento",
+  "tem_treino": true,
+  "treino": {
+   "dias": [
+    "segunda",
+    "quarta",
+    "sexta"
+   ],
+   "horario": "18:30"
+  },
+  "inicio": "2026-10-20",
+  "validade": "2026-11-19",
+  "dia_checkin": "segunda-feira",
+  "mostrar_numeros": true,
+  "modelo": "a",
+  "data_assinatura": "2026-10-20"
+ },
+ "plano": {
+  "aluno_id": "AL-0000-EX",
+  "versao": 2,
+  "tipo_versao": "ajuste",
+  "plano_anterior_id": "DIE-0000-EX1",
+  "fase": "deficit",
+  "dias_validade": 30,
+  "o_que_muda": [
+   "O lanche da tarde virou pré-treino, com um pouco mais de carboidrato.",
+   "O jantar ganhou opções rápidas, que podem ir prontas para o congelador.",
+   "A refeição livre de sábado entrou no plano, com hora marcada."
+  ],
+  "get_kcal": 2053,
+  "tmb_kcal": 1493,
+  "get_metodo": "mifflin_fa",
+  "fator_atividade": 1.375,
+  "fator_atividade_texto": "treino de força 3x por semana",
+  "peso_usado_kg": 79.3,
+  "data_peso": "2026-10-19",
+  "kcal_dia": 1600,
+  "tipos_de_dia": [],
+  "proteina_g": 140,
+  "carboidrato_g": 148,
+  "gordura_g": 50,
+  "fibra_g": 28,
+  "refeicoes": [
+   {
+    "nome_exibicao": "Café da manhã",
+    "refeicao_padrao": "Café da manhã",
+    "horario": "07:00",
+    "kcal": 315,
+    "proteina_g": 20,
+    "carboidrato_g": 36,
+    "gordura_g": 12,
+    "tipo_dia": "todos",
+    "itens": [
+     {
+      "alimento": "Ovos mexidos",
+      "medida_caseira": "2 unidades",
+      "gramas": 100,
+      "preparo": "frigideira antiaderente, sem óleo",
+      "grupo_substituicao": "proteina_cafe"
+     },
+     {
+      "alimento": "Pão francês",
+      "medida_caseira": "1 unidade",
+      "gramas": 50,
+      "preparo": "",
+      "grupo_substituicao": "pao_e_afins"
+     },
+     {
+      "alimento": "Mamão papaia",
+      "medida_caseira": "½ unidade pequena",
+      "gramas": 150,
+      "preparo": "",
+      "grupo_substituicao": "fruta"
+     },
+     {
+      "alimento": "Café sem açúcar",
+      "medida_caseira": "à vontade",
+      "gramas": null,
+      "preparo": "",
+      "categoria": "Bebida"
+     }
+    ]
+   },
+   {
+    "nome_exibicao": "Lanche da manhã",
+    "refeicao_padrao": "Lanche da manhã",
+    "horario": "10:00",
+    "kcal": 155,
+    "proteina_g": 8,
+    "carboidrato_g": 22,
+    "gordura_g": 5,
+    "tipo_dia": "todos",
+    "itens": [
+     {
+      "alimento": "Iogurte natural integral",
+      "medida_caseira": "1 pote",
+      "gramas": 170,
+      "preparo": "",
+      "grupo_substituicao": "laticinio"
+     },
+     {
+      "alimento": "Banana prata",
+      "medida_caseira": "1 unidade",
+      "gramas": 65,
+      "preparo": "",
+      "grupo_substituicao": "fruta"
+     }
+    ]
+   },
+   {
+    "nome_exibicao": "Almoço",
+    "refeicao_padrao": "Almoço",
+    "horario": "12:30",
+    "kcal": 445,
+    "proteina_g": 46,
+    "carboidrato_g": 40,
+    "gordura_g": 13,
+    "tipo_dia": "todos",
+    "itens": [
+     {
+      "alimento": "Peito de frango",
+      "medida_caseira": "1 filé médio",
+      "gramas": 100,
+      "preparo": "airfryer, sem óleo",
+      "grupo_substituicao": "proteina_principal"
+     },
+     {
+      "alimento": "Arroz branco cozido",
+      "medida_caseira": "4 colheres de sopa cheias",
+      "gramas": 120,
+      "preparo": "",
+      "grupo_substituicao": "carboidrato_principal"
+     },
+     {
+      "alimento": "Feijão carioca cozido",
+      "medida_caseira": "1 concha média",
+      "gramas": 100,
+      "preparo": "temperos naturais",
+      "grupo_substituicao": "feijoes"
+     },
+     {
+      "alimento": "Legumes (abobrinha, cenoura, chuchu, vagem)",
+      "medida_caseira": "1 xícara",
+      "gramas": 100,
+      "preparo": "no vapor ou cozidos",
+      "categoria": "Legumes e folhas"
+     },
+     {
+      "alimento": "Folhas e tomate (alface, rúcula, tomate)",
+      "medida_caseira": "1 prato de sobremesa cheio",
+      "gramas": 80,
+      "preparo": "crus",
+      "categoria": "Legumes e folhas"
+     },
+     {
+      "alimento": "Azeite de oliva extravirgem",
+      "medida_caseira": "1 colher de chá",
+      "gramas": 5,
+      "preparo": "cru, por cima do prato",
+      "categoria": "Gordura"
+     }
+    ]
+   },
+   {
+    "nome_exibicao": "Lanche da tarde (pré-treino)",
+    "refeicao_padrao": "Lanche da tarde",
+    "horario": "16:30",
+    "kcal": 215,
+    "proteina_g": 18,
+    "carboidrato_g": 24,
+    "gordura_g": 6,
+    "tipo_dia": "todos",
+    "itens": [
+     {
+      "alimento": "Tapioca",
+      "medida_caseira": "1 unidade média",
+      "gramas": 60,
+      "preparo": "frigideira, sem óleo",
+      "grupo_substituicao": "pao_e_afins"
+     },
+     {
+      "alimento": "Frango desfiado",
+      "medida_caseira": "3 colheres de sopa",
+      "gramas": 50,
+      "preparo": "cozido",
+      "grupo_substituicao": "recheio"
+     }
+    ]
+   },
+   {
+    "nome_exibicao": "Jantar",
+    "refeicao_padrao": "Jantar",
+    "horario": "20:00",
+    "kcal": 310,
+    "proteina_g": 38,
+    "carboidrato_g": 18,
+    "gordura_g": 11,
+    "tipo_dia": "todos",
+    "itens": [
+     {
+      "alimento": "Tilápia",
+      "medida_caseira": "1 filé grande",
+      "gramas": 120,
+      "preparo": "airfryer, sem óleo",
+      "grupo_substituicao": "proteina_principal"
+     },
+     {
+      "alimento": "Batata-doce cozida",
+      "medida_caseira": "1 unidade média",
+      "gramas": 200,
+      "preparo": "",
+      "grupo_substituicao": "carboidrato_principal"
+     },
+     {
+      "alimento": "Legumes (brócolis, abobrinha, cenoura)",
+      "medida_caseira": "1 xícara",
+      "gramas": 100,
+      "preparo": "no vapor ou cozidos",
+      "categoria": "Legumes e folhas"
+     },
+     {
+      "alimento": "Azeite de oliva extravirgem",
+      "medida_caseira": "1 colher de chá",
+      "gramas": 5,
+      "preparo": "cru, por cima do prato",
+      "categoria": "Gordura"
+     }
+    ]
+   },
+   {
+    "nome_exibicao": "Ceia",
+    "refeicao_padrao": "Ceia ou depois do jantar",
+    "horario": "22:00",
+    "kcal": 95,
+    "proteina_g": 10,
+    "carboidrato_g": 8,
+    "gordura_g": 3,
+    "tipo_dia": "todos",
+    "itens": [
+     {
+      "alimento": "Iogurte natural desnatado",
+      "medida_caseira": "1 pote grande",
+      "gramas": 200,
+      "preparo": "",
+      "grupo_substituicao": "laticinio"
+     }
+    ]
+   }
+  ],
+  "livre_prevista": true,
+  "livre_por_semana": 1,
+  "livre_dias": [
+   "sábado"
+  ],
+  "livre_substitui": "Jantar",
+  "livre_teto_kcal": 800,
+  "livre_teto_texto": "um prato feito de restaurante ou 2 a 3 fatias de pizza, comendo com calma e sem compensar no dia seguinte",
+  "substituicoes": [
+   {
+    "grupo": "proteina_cafe",
+    "nome_exibicao": "Proteína",
+    "refeicoes": [
+     "Café da manhã"
+    ],
+    "base": {
+     "alimento": "Ovos mexidos",
+     "medida_caseira": "2 unidades",
+     "gramas": 100,
+     "preparo": "frigideira antiaderente, sem óleo",
+     "kcal": 146
+    },
+    "equivalentes": [
+     {
+      "alimento": "Queijo minas frescal",
+      "medida_caseira": "2 fatias médias",
+      "gramas": 55,
+      "preparo": "",
+      "kcal": 145
+     },
+     {
+      "alimento": "Ricota",
+      "medida_caseira": "3 colheres de sopa cheias",
+      "gramas": 100,
+      "preparo": "",
+      "kcal": 140
+     },
+     {
+      "alimento": "Frango desfiado",
+      "medida_caseira": "4 colheres de sopa",
+      "gramas": 90,
+      "preparo": "cozido",
+      "kcal": 147
+     }
+    ]
+   },
+   {
+    "grupo": "pao_e_afins",
+    "nome_exibicao": "Pão e afins",
+    "refeicoes": [
+     "Café da manhã",
+     "Lanche da tarde (pré-treino)"
+    ],
+    "base": {
+     "alimento": "Pão francês",
+     "medida_caseira": "1 unidade",
+     "gramas": 50,
+     "preparo": "",
+     "kcal": 150
+    },
+    "equivalentes": [
+     {
+      "alimento": "Tapioca",
+      "medida_caseira": "1 unidade média",
+      "gramas": 60,
+      "preparo": "frigideira, sem óleo",
+      "kcal": 144
+     },
+     {
+      "alimento": "Cuscuz de milho",
+      "medida_caseira": "1 fatia média",
+      "gramas": 130,
+      "preparo": "cozido no vapor",
+      "kcal": 147
+     },
+     {
+      "alimento": "Aveia em flocos",
+      "medida_caseira": "4 colheres de sopa",
+      "gramas": 40,
+      "preparo": "crua, no iogurte ou na fruta",
+      "kcal": 150
+     }
+    ]
+   },
+   {
+    "grupo": "fruta",
+    "nome_exibicao": "Fruta",
+    "refeicoes": [
+     "Café da manhã",
+     "Lanche da manhã"
+    ],
+    "base": {
+     "alimento": "Mamão papaia",
+     "medida_caseira": "½ unidade pequena",
+     "gramas": 150,
+     "preparo": "",
+     "kcal": 60
+    },
+    "equivalentes": [
+     {
+      "alimento": "Banana prata",
+      "medida_caseira": "1 unidade",
+      "gramas": 65,
+      "preparo": "",
+      "kcal": 64
+     },
+     {
+      "alimento": "Melão",
+      "medida_caseira": "2 fatias médias",
+      "gramas": 200,
+      "preparo": "",
+      "kcal": 58
+     },
+     {
+      "alimento": "Morango",
+      "medida_caseira": "10 unidades",
+      "gramas": 200,
+      "preparo": "",
+      "kcal": 60
+     }
+    ]
+   },
+   {
+    "grupo": "laticinio",
+    "nome_exibicao": "Laticínio",
+    "refeicoes": [
+     "Lanche da manhã",
+     "Ceia"
+    ],
+    "base": {
+     "alimento": "Iogurte natural integral",
+     "medida_caseira": "1 pote",
+     "gramas": 170,
+     "preparo": "",
+     "kcal": 87
+    },
+    "equivalentes": [
+     {
+      "alimento": "Iogurte natural desnatado",
+      "medida_caseira": "1 pote grande",
+      "gramas": 200,
+      "preparo": "",
+      "kcal": 82
+     },
+     {
+      "alimento": "Leite desnatado",
+      "medida_caseira": "1 copo americano cheio",
+      "gramas": 250,
+      "unidade": "mL",
+      "preparo": "",
+      "kcal": 88
+     }
+    ]
+   },
+   {
+    "grupo": "proteina_principal",
+    "nome_exibicao": "Proteína",
+    "refeicoes": [
+     "Almoço",
+     "Jantar"
+    ],
+    "base": {
+     "alimento": "Peito de frango",
+     "medida_caseira": "1 filé médio",
+     "gramas": 100,
+     "preparo": "airfryer, sem óleo",
+     "kcal": 159
+    },
+    "equivalentes": [
+     {
+      "alimento": "Patinho moído",
+      "medida_caseira": "4 colheres de sopa",
+      "gramas": 90,
+      "preparo": "refogado na água, sem óleo",
+      "kcal": 162
+     },
+     {
+      "alimento": "Tilápia",
+      "medida_caseira": "1 filé grande",
+      "gramas": 120,
+      "preparo": "airfryer, sem óleo",
+      "kcal": 154
+     },
+     {
+      "alimento": "Lombo de porco",
+      "medida_caseira": "2 fatias médias",
+      "gramas": 75,
+      "preparo": "assado no forno",
+      "kcal": 158
+     }
+    ]
+   },
+   {
+    "grupo": "carboidrato_principal",
+    "nome_exibicao": "Carboidrato",
+    "refeicoes": [
+     "Almoço",
+     "Jantar"
+    ],
+    "base": {
+     "alimento": "Arroz branco cozido",
+     "medida_caseira": "4 colheres de sopa cheias",
+     "gramas": 120,
+     "preparo": "",
+     "kcal": 154
+    },
+    "equivalentes": [
+     {
+      "alimento": "Batata-doce cozida",
+      "medida_caseira": "1 unidade média",
+      "gramas": 200,
+      "preparo": "",
+      "kcal": 154
+     },
+     {
+      "alimento": "Mandioca cozida",
+      "medida_caseira": "2 pedaços médios",
+      "gramas": 120,
+      "preparo": "",
+      "kcal": 150
+     },
+     {
+      "alimento": "Macarrão cozido",
+      "medida_caseira": "1 pegador cheio",
+      "gramas": 150,
+      "preparo": "molho de tomate caseiro, sem óleo",
+      "kcal": 153
+     }
+    ]
+   },
+   {
+    "grupo": "feijoes",
+    "nome_exibicao": "Feijões e afins",
+    "refeicoes": [
+     "Almoço"
+    ],
+    "base": {
+     "alimento": "Feijão carioca cozido",
+     "medida_caseira": "1 concha média",
+     "gramas": 100,
+     "preparo": "temperos naturais",
+     "kcal": 76
+    },
+    "equivalentes": [
+     {
+      "alimento": "Feijão preto cozido",
+      "medida_caseira": "1 concha média",
+      "gramas": 100,
+      "preparo": "temperos naturais",
+      "kcal": 77
+     },
+     {
+      "alimento": "Lentilha cozida",
+      "medida_caseira": "3 colheres de sopa",
+      "gramas": 80,
+      "preparo": "",
+      "kcal": 74
+     },
+     {
+      "alimento": "Grão-de-bico cozido",
+      "medida_caseira": "3 colheres de sopa",
+      "gramas": 60,
+      "preparo": "",
+      "kcal": 78
+     }
+    ]
+   },
+   {
+    "grupo": "recheio",
+    "nome_exibicao": "Recheio",
+    "refeicoes": [
+     "Lanche da tarde (pré-treino)"
+    ],
+    "base": {
+     "alimento": "Frango desfiado",
+     "medida_caseira": "3 colheres de sopa",
+     "gramas": 50,
+     "preparo": "cozido",
+     "kcal": 82
+    },
+    "equivalentes": [
+     {
+      "alimento": "Queijo minas frescal",
+      "medida_caseira": "1 fatia média",
+      "gramas": 30,
+      "preparo": "",
+      "kcal": 79
+     },
+     {
+      "alimento": "Patinho moído",
+      "medida_caseira": "2 colheres de sopa",
+      "gramas": 40,
+      "preparo": "refogado na água, sem óleo",
+      "kcal": 80
+     }
+    ]
+   }
+  ],
+  "agua_ml_por_kg": 35,
+  "meta_agua_l": 2.8,
+  "suplementacao": [
+   {
+    "suplemento": "Creatina",
+    "dose": 3,
+    "unidade": "g",
+    "medida_caseira": "1 medida",
+    "quando": "todo dia, no horário que preferir (pode ser no almoço)",
+    "para_que": "ajudar a força e o ganho de músculo no treino",
+    "motivo_tecnico": "treino de força 3x/semana",
+    "situacao": "mantido"
+   },
+   {
+    "suplemento": "Fibra em pó (psyllium)",
+    "dose": 5,
+    "unidade": "g",
+    "medida_caseira": "1 colher de sobremesa rasa",
+    "quando": "no almoço, misturada em 1 copo de água",
+    "para_que": "ajudar o intestino a funcionar com regularidade",
+    "motivo_tecnico": "intestino preso",
+    "situacao": "ajustado"
+   }
+  ],
+  "fodmap": "nao",
+  "prazo_fase": null,
+  "reintroducao": [],
+  "orientacoes_ids": [],
+  "gerado_por": "exemplo fictício (template Souto Treinador)",
+  "gerado_em": "2026-10-20T10:00:00-03:00",
+  "relatorio_id": "REL-0000-EX"
+ },
+ "relatorio": {
+  "recapitulacao": {
+   "periodo": "de 24/08/2026 a 19/10/2026",
+   "feito": [
+    "Você mandou 8 de 8 check-ins.",
+    "Treinou em 21 das 24 sessões combinadas.",
+    "O peso de tendência foi de 82,0 kg para 79,3 kg: 3,3% a menos que o peso do início (−2,7 kg).",
+    "A cintura foi de 88 cm para 84 cm."
+   ],
+   "nao_atingido": [
+    "A água ficou perto de 1,8 litro por dia; o combinado era 2,5 litros.",
+    "A fibra em pó entrou em 5 das 8 semanas.",
+    "Os sábados ainda concentram a maior parte das refeições fora do plano."
+   ]
+  },
+  "acertos": [
+   "4 de 4 check-ins enviados no último mês.",
+   "Plano seguido em cerca de 5 de cada 7 dias.",
+   "A carga do agachamento subiu de 36 kg para 40 kg."
+  ],
+  "atencao": [
+   "Na semana da viagem (21 a 27/09), o plano ficou em 3 de 7 dias.",
+   "O jantar dos dias de treino foi a refeição mais trocada por lanche.",
+   "Nos sábados à noite, as porções passaram do combinado."
+  ],
+  "melhorar": [
+   "Deixar 2 jantares prontos no congelador para os dias de treino.",
+   "Combinar a refeição livre de sábado, com hora marcada.",
+   "Água: 1 garrafa de 1 litro até o almoço, outra até o jantar e mais 3 copos até dormir."
+  ],
+  "metas": [
+   {
+    "tipo": "comportamento",
+    "texto": "Mandar o check-in toda segunda-feira.",
+    "prazo": "2026-11-19"
+   },
+   {
+    "tipo": "comportamento",
+    "texto": "Começar cada semana com 2 jantares prontos no congelador.",
+    "prazo": "2026-11-19"
+   },
+   {
+    "tipo": "comportamento",
+    "texto": "Beber cerca de 2,8 litros de água por dia.",
+    "prazo": "2026-11-19"
+   },
+   {
+    "tipo": "comportamento",
+    "texto": "Fazer os 3 treinos da semana, com o check-in de cargas na sexta.",
+    "prazo": "2026-11-19"
+   }
+  ]
+ },
+ "evolucao": {
+  "periodo": {
+   "inicio": "2026-08-24",
+   "fim": "2026-10-19"
+  },
+  "peso_inicial_kg": 82.0,
+  "constancia": {
+   "checkins": {
+    "feitos": 8,
+    "esperados": 8
+   },
+   "treinos": {
+    "feitos": 21,
+    "planejados": 24
+   }
+  },
+  "planos": [
+   {
+    "versao": 1,
+    "inicio": "2026-08-24",
+    "fim": "2026-10-19",
+    "fase": "deficit",
+    "kcal_dia": 1650,
+    "proteina_g": 120,
+    "carboidrato_g": 180,
+    "gordura_g": 55
+   },
+   {
+    "versao": 2,
+    "inicio": "2026-10-20",
+    "fim": null,
+    "fase": "deficit",
+    "kcal_dia": 1600,
+    "proteina_g": 140,
+    "carboidrato_g": 148,
+    "gordura_g": 50
+   }
+  ],
+  "peso": [
+   {
+    "data": "2026-08-24",
+    "kg": 82.0
+   },
+   {
+    "data": "2026-08-31",
+    "kg": 81.7
+   },
+   {
+    "data": "2026-09-07",
+    "kg": 81.2
+   },
+   {
+    "data": "2026-09-14",
+    "kg": 80.9
+   },
+   {
+    "data": "2026-09-21",
+    "kg": 80.5
+   },
+   {
+    "data": "2026-09-28",
+    "kg": 80.6
+   },
+   {
+    "data": "2026-10-05",
+    "kg": 80.0
+   },
+   {
+    "data": "2026-10-12",
+    "kg": 79.6
+   },
+   {
+    "data": "2026-10-19",
+    "kg": 79.3
+   }
+  ],
+  "adesao": [
+   {
+    "semana": "2026-08-24",
+    "dias_no_plano": 5,
+    "score": 76
+   },
+   {
+    "semana": "2026-08-31",
+    "dias_no_plano": 6,
+    "score": 85
+   },
+   {
+    "semana": "2026-09-07",
+    "dias_no_plano": 5,
+    "score": 78
+   },
+   {
+    "semana": "2026-09-14",
+    "dias_no_plano": 6,
+    "score": 84
+   },
+   {
+    "semana": "2026-09-21",
+    "dias_no_plano": 3,
+    "score": 52
+   },
+   {
+    "semana": "2026-09-28",
+    "dias_no_plano": 5,
+    "score": 74
+   },
+   {
+    "semana": "2026-10-05",
+    "dias_no_plano": 6,
+    "score": 86
+   },
+   {
+    "semana": "2026-10-12",
+    "dias_no_plano": 5,
+    "score": 80
+   }
+  ],
+  "treino": {
+   "unidade": "kg",
+   "series": [
+    {
+     "nome": "Agachamento livre",
+     "pontos": [
+      {
+       "data": "2026-08-24",
+       "valor": 30
+      },
+      {
+       "data": "2026-08-31",
+       "valor": 32
+      },
+      {
+       "data": "2026-09-07",
+       "valor": 32
+      },
+      {
+       "data": "2026-09-14",
+       "valor": 34
+      },
+      {
+       "data": "2026-09-28",
+       "valor": 36
+      },
+      {
+       "data": "2026-10-05",
+       "valor": 38
+      },
+      {
+       "data": "2026-10-12",
+       "valor": 40
+      },
+      {
+       "data": "2026-10-19",
+       "valor": 40
+      }
+     ]
+    },
+    {
+     "nome": "Remada baixa",
+     "pontos": [
+      {
+       "data": "2026-08-24",
+       "valor": 25
+      },
+      {
+       "data": "2026-08-31",
+       "valor": 25
+      },
+      {
+       "data": "2026-09-07",
+       "valor": 27
+      },
+      {
+       "data": "2026-09-14",
+       "valor": 27
+      },
+      {
+       "data": "2026-09-28",
+       "valor": 30
+      },
+      {
+       "data": "2026-10-05",
+       "valor": 30
+      },
+      {
+       "data": "2026-10-12",
+       "valor": 32
+      },
+      {
+       "data": "2026-10-19",
+       "valor": 32
+      }
+     ]
+    }
+   ]
+  }
+ }
+}

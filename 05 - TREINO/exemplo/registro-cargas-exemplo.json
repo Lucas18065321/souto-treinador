@@ -1,0 +1,1530 @@
+{
+ "_sobre": "Registro de cargas FICTÍCIO (3 semanas) do aluno de exemplo, montado para disparar PROGREDIR, MANTER, REDUZIR VOLUME e (com o check-in de cansaço) DELOAD. Carga em kg total (halteres: soma dos dois).",
+ "aluno": "Rafael Exemplo (fictício)",
+ "sessoes": [
+  {
+   "semana": 1,
+   "data": "2026-11-09",
+   "dia": "A",
+   "exercicios": [
+    {
+     "nome": "Agachamento livre",
+     "series": [
+      {
+       "carga": 90,
+       "reps": 13,
+       "rir": 4
+      },
+      {
+       "carga": 90,
+       "reps": 13,
+       "rir": 3
+      },
+      {
+       "carga": 90,
+       "reps": 13,
+       "rir": 3
+      },
+      {
+       "carga": 90,
+       "reps": 13,
+       "rir": 3
+      }
+     ]
+    },
+    {
+     "nome": "Stiff com barra",
+     "series": [
+      {
+       "carga": 76,
+       "reps": 13,
+       "rir": 3
+      },
+      {
+       "carga": 76,
+       "reps": 13,
+       "rir": 3
+      },
+      {
+       "carga": 76,
+       "reps": 12,
+       "rir": 3
+      },
+      {
+       "carga": 76,
+       "reps": 12,
+       "rir": 3
+      },
+      {
+       "carga": 76,
+       "reps": 12,
+       "rir": 3
+      }
+     ]
+    },
+    {
+     "nome": "Cadeira extensora",
+     "series": [
+      {
+       "carga": 50,
+       "reps": 14,
+       "rir": 3
+      },
+      {
+       "carga": 50,
+       "reps": 13,
+       "rir": 3
+      },
+      {
+       "carga": 50,
+       "reps": 13,
+       "rir": 3
+      }
+     ]
+    },
+    {
+     "nome": "Panturrilha em pé",
+     "series": [
+      {
+       "carga": 80,
+       "reps": 14,
+       "rir": 3
+      },
+      {
+       "carga": 80,
+       "reps": 14,
+       "rir": 3
+      },
+      {
+       "carga": 80,
+       "reps": 13,
+       "rir": 3
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "semana": 1,
+   "data": "2026-11-10",
+   "dia": "B",
+   "exercicios": [
+    {
+     "nome": "Supino reto com barra",
+     "series": [
+      {
+       "carga": 66,
+       "reps": 13,
+       "rir": 4
+      },
+      {
+       "carga": 66,
+       "reps": 13,
+       "rir": 3
+      },
+      {
+       "carga": 66,
+       "reps": 12,
+       "rir": 3
+      },
+      {
+       "carga": 66,
+       "reps": 12,
+       "rir": 3
+      },
+      {
+       "carga": 66,
+       "reps": 12,
+       "rir": 3
+      }
+     ]
+    },
+    {
+     "nome": "Remada curvada com barra",
+     "series": [
+      {
+       "carga": 66,
+       "reps": 14,
+       "rir": 4
+      },
+      {
+       "carga": 66,
+       "reps": 13,
+       "rir": 3
+      },
+      {
+       "carga": 66,
+       "reps": 13,
+       "rir": 3
+      },
+      {
+       "carga": 66,
+       "reps": 12,
+       "rir": 3
+      },
+      {
+       "carga": 66,
+       "reps": 12,
+       "rir": 3
+      }
+     ]
+    },
+    {
+     "nome": "Desenvolvimento com halteres",
+     "series": [
+      {
+       "carga": 36,
+       "reps": 13,
+       "rir": 3
+      },
+      {
+       "carga": 36,
+       "reps": 13,
+       "rir": 3
+      },
+      {
+       "carga": 36,
+       "reps": 12,
+       "rir": 3
+      },
+      {
+       "carga": 36,
+       "reps": 12,
+       "rir": 3
+      },
+      {
+       "carga": 36,
+       "reps": 12,
+       "rir": 3
+      }
+     ]
+    },
+    {
+     "nome": "Rosca direta com barra",
+     "series": [
+      {
+       "carga": 30,
+       "reps": 13,
+       "rir": 3
+      },
+      {
+       "carga": 30,
+       "reps": 13,
+       "rir": 3
+      },
+      {
+       "carga": 30,
+       "reps": 12,
+       "rir": 3
+      },
+      {
+       "carga": 30,
+       "reps": 12,
+       "rir": 3
+      },
+      {
+       "carga": 30,
+       "reps": 12,
+       "rir": 3
+      },
+      {
+       "carga": 30,
+       "reps": 12,
+       "rir": 3
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "semana": 1,
+   "data": "2026-11-12",
+   "dia": "C",
+   "exercicios": [
+    {
+     "nome": "Leg press 45°",
+     "series": [
+      {
+       "carga": 190,
+       "reps": 13,
+       "rir": 3
+      },
+      {
+       "carga": 190,
+       "reps": 13,
+       "rir": 3
+      },
+      {
+       "carga": 190,
+       "reps": 13,
+       "rir": 3
+      }
+     ]
+    },
+    {
+     "nome": "Cadeira flexora",
+     "series": [
+      {
+       "carga": 40,
+       "reps": 13,
+       "rir": 3
+      },
+      {
+       "carga": 40,
+       "reps": 13,
+       "rir": 3
+      },
+      {
+       "carga": 40,
+       "reps": 12,
+       "rir": 3
+      },
+      {
+       "carga": 40,
+       "reps": 12,
+       "rir": 3
+      },
+      {
+       "carga": 40,
+       "reps": 12,
+       "rir": 3
+      }
+     ]
+    },
+    {
+     "nome": "Elevação pélvica",
+     "series": [
+      {
+       "carga": 100,
+       "reps": 13,
+       "rir": 3
+      },
+      {
+       "carga": 100,
+       "reps": 13,
+       "rir": 3
+      },
+      {
+       "carga": 100,
+       "reps": 13,
+       "rir": 3
+      },
+      {
+       "carga": 100,
+       "reps": 12,
+       "rir": 3
+      },
+      {
+       "carga": 100,
+       "reps": 12,
+       "rir": 3
+      },
+      {
+       "carga": 100,
+       "reps": 12,
+       "rir": 3
+      }
+     ]
+    },
+    {
+     "nome": "Panturrilha sentado",
+     "series": [
+      {
+       "carga": 50,
+       "reps": 14,
+       "rir": 3
+      },
+      {
+       "carga": 50,
+       "reps": 14,
+       "rir": 3
+      },
+      {
+       "carga": 50,
+       "reps": 14,
+       "rir": 3
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "semana": 1,
+   "data": "2026-11-13",
+   "dia": "D",
+   "exercicios": [
+    {
+     "nome": "Supino inclinado com halteres",
+     "series": [
+      {
+       "carga": 48,
+       "reps": 13,
+       "rir": 3
+      },
+      {
+       "carga": 48,
+       "reps": 13,
+       "rir": 3
+      },
+      {
+       "carga": 48,
+       "reps": 12,
+       "rir": 3
+      },
+      {
+       "carga": 48,
+       "reps": 12,
+       "rir": 3
+      },
+      {
+       "carga": 48,
+       "reps": 12,
+       "rir": 3
+      }
+     ]
+    },
+    {
+     "nome": "Puxada frontal",
+     "series": [
+      {
+       "carga": 60,
+       "reps": 13,
+       "rir": 3
+      },
+      {
+       "carga": 60,
+       "reps": 13,
+       "rir": 3
+      },
+      {
+       "carga": 60,
+       "reps": 13,
+       "rir": 3
+      },
+      {
+       "carga": 60,
+       "reps": 13,
+       "rir": 3
+      },
+      {
+       "carga": 60,
+       "reps": 13,
+       "rir": 3
+      }
+     ]
+    },
+    {
+     "nome": "Elevação lateral",
+     "series": [
+      {
+       "carga": 16,
+       "reps": 14,
+       "rir": 3
+      },
+      {
+       "carga": 16,
+       "reps": 14,
+       "rir": 3
+      },
+      {
+       "carga": 16,
+       "reps": 13,
+       "rir": 3
+      },
+      {
+       "carga": 16,
+       "reps": 13,
+       "rir": 3
+      },
+      {
+       "carga": 16,
+       "reps": 13,
+       "rir": 3
+      }
+     ]
+    },
+    {
+     "nome": "Tríceps na polia",
+     "series": [
+      {
+       "carga": 30,
+       "reps": 14,
+       "rir": 3
+      },
+      {
+       "carga": 30,
+       "reps": 13,
+       "rir": 3
+      },
+      {
+       "carga": 30,
+       "reps": 13,
+       "rir": 3
+      },
+      {
+       "carga": 30,
+       "reps": 13,
+       "rir": 3
+      },
+      {
+       "carga": 30,
+       "reps": 13,
+       "rir": 3
+      },
+      {
+       "carga": 30,
+       "reps": 13,
+       "rir": 3
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "semana": 2,
+   "data": "2026-11-16",
+   "dia": "A",
+   "exercicios": [
+    {
+     "nome": "Agachamento livre",
+     "series": [
+      {
+       "carga": 92,
+       "reps": 13,
+       "rir": 3
+      },
+      {
+       "carga": 92,
+       "reps": 13,
+       "rir": 2
+      },
+      {
+       "carga": 92,
+       "reps": 13,
+       "rir": 2
+      },
+      {
+       "carga": 92,
+       "reps": 13,
+       "rir": 2
+      }
+     ]
+    },
+    {
+     "nome": "Stiff com barra",
+     "series": [
+      {
+       "carga": 80,
+       "reps": 12,
+       "rir": 3
+      },
+      {
+       "carga": 80,
+       "reps": 12,
+       "rir": 2
+      },
+      {
+       "carga": 80,
+       "reps": 12,
+       "rir": 2
+      },
+      {
+       "carga": 80,
+       "reps": 11,
+       "rir": 2
+      },
+      {
+       "carga": 80,
+       "reps": 11,
+       "rir": 2
+      },
+      {
+       "carga": 80,
+       "reps": 11,
+       "rir": 2
+      }
+     ]
+    },
+    {
+     "nome": "Cadeira extensora",
+     "series": [
+      {
+       "carga": 50,
+       "reps": 13,
+       "rir": 2
+      },
+      {
+       "carga": 50,
+       "reps": 13,
+       "rir": 2
+      },
+      {
+       "carga": 50,
+       "reps": 13,
+       "rir": 2
+      }
+     ]
+    },
+    {
+     "nome": "Panturrilha em pé",
+     "series": [
+      {
+       "carga": 80,
+       "reps": 14,
+       "rir": 2
+      },
+      {
+       "carga": 80,
+       "reps": 13,
+       "rir": 2
+      },
+      {
+       "carga": 80,
+       "reps": 13,
+       "rir": 2
+      },
+      {
+       "carga": 80,
+       "reps": 13,
+       "rir": 2
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "semana": 2,
+   "data": "2026-11-17",
+   "dia": "B",
+   "exercicios": [
+    {
+     "nome": "Supino reto com barra",
+     "series": [
+      {
+       "carga": 68,
+       "reps": 12,
+       "rir": 2
+      },
+      {
+       "carga": 68,
+       "reps": 12,
+       "rir": 2
+      },
+      {
+       "carga": 68,
+       "reps": 12,
+       "rir": 2
+      },
+      {
+       "carga": 68,
+       "reps": 11,
+       "rir": 2
+      },
+      {
+       "carga": 68,
+       "reps": 11,
+       "rir": 2
+      },
+      {
+       "carga": 68,
+       "reps": 11,
+       "rir": 2
+      }
+     ]
+    },
+    {
+     "nome": "Remada curvada com barra",
+     "series": [
+      {
+       "carga": 68,
+       "reps": 12,
+       "rir": 2
+      },
+      {
+       "carga": 68,
+       "reps": 11,
+       "rir": 2
+      },
+      {
+       "carga": 68,
+       "reps": 11,
+       "rir": 1
+      },
+      {
+       "carga": 68,
+       "reps": 10,
+       "rir": 1
+      },
+      {
+       "carga": 68,
+       "reps": 10,
+       "rir": 1
+      },
+      {
+       "carga": 68,
+       "reps": 10,
+       "rir": 1
+      }
+     ]
+    },
+    {
+     "nome": "Desenvolvimento com halteres",
+     "series": [
+      {
+       "carga": 38,
+       "reps": 12,
+       "rir": 2
+      },
+      {
+       "carga": 38,
+       "reps": 12,
+       "rir": 2
+      },
+      {
+       "carga": 38,
+       "reps": 11,
+       "rir": 2
+      },
+      {
+       "carga": 38,
+       "reps": 11,
+       "rir": 2
+      },
+      {
+       "carga": 38,
+       "reps": 11,
+       "rir": 2
+      },
+      {
+       "carga": 38,
+       "reps": 11,
+       "rir": 2
+      }
+     ]
+    },
+    {
+     "nome": "Rosca direta com barra",
+     "series": [
+      {
+       "carga": 30,
+       "reps": 13,
+       "rir": 2
+      },
+      {
+       "carga": 30,
+       "reps": 13,
+       "rir": 2
+      },
+      {
+       "carga": 30,
+       "reps": 12,
+       "rir": 2
+      },
+      {
+       "carga": 30,
+       "reps": 12,
+       "rir": 2
+      },
+      {
+       "carga": 30,
+       "reps": 12,
+       "rir": 2
+      },
+      {
+       "carga": 30,
+       "reps": 12,
+       "rir": 2
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "semana": 2,
+   "data": "2026-11-19",
+   "dia": "C",
+   "exercicios": [
+    {
+     "nome": "Leg press 45°",
+     "series": [
+      {
+       "carga": 200,
+       "reps": 12,
+       "rir": 2
+      },
+      {
+       "carga": 200,
+       "reps": 12,
+       "rir": 2
+      },
+      {
+       "carga": 200,
+       "reps": 12,
+       "rir": 2
+      }
+     ]
+    },
+    {
+     "nome": "Cadeira flexora",
+     "series": [
+      {
+       "carga": 40,
+       "reps": 13,
+       "rir": 2
+      },
+      {
+       "carga": 40,
+       "reps": 13,
+       "rir": 2
+      },
+      {
+       "carga": 40,
+       "reps": 13,
+       "rir": 2
+      },
+      {
+       "carga": 40,
+       "reps": 12,
+       "rir": 2
+      },
+      {
+       "carga": 40,
+       "reps": 12,
+       "rir": 2
+      },
+      {
+       "carga": 40,
+       "reps": 12,
+       "rir": 2
+      }
+     ]
+    },
+    {
+     "nome": "Elevação pélvica",
+     "series": [
+      {
+       "carga": 100,
+       "reps": 13,
+       "rir": 2
+      },
+      {
+       "carga": 100,
+       "reps": 13,
+       "rir": 2
+      },
+      {
+       "carga": 100,
+       "reps": 13,
+       "rir": 2
+      },
+      {
+       "carga": 100,
+       "reps": 13,
+       "rir": 2
+      },
+      {
+       "carga": 100,
+       "reps": 13,
+       "rir": 2
+      },
+      {
+       "carga": 100,
+       "reps": 12,
+       "rir": 2
+      }
+     ]
+    },
+    {
+     "nome": "Panturrilha sentado",
+     "series": [
+      {
+       "carga": 50,
+       "reps": 14,
+       "rir": 2
+      },
+      {
+       "carga": 50,
+       "reps": 14,
+       "rir": 2
+      },
+      {
+       "carga": 50,
+       "reps": 13,
+       "rir": 2
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "semana": 2,
+   "data": "2026-11-20",
+   "dia": "D",
+   "exercicios": [
+    {
+     "nome": "Supino inclinado com halteres",
+     "series": [
+      {
+       "carga": 50,
+       "reps": 12,
+       "rir": 2
+      },
+      {
+       "carga": 50,
+       "reps": 12,
+       "rir": 2
+      },
+      {
+       "carga": 50,
+       "reps": 12,
+       "rir": 2
+      },
+      {
+       "carga": 50,
+       "reps": 11,
+       "rir": 2
+      },
+      {
+       "carga": 50,
+       "reps": 11,
+       "rir": 2
+      }
+     ]
+    },
+    {
+     "nome": "Puxada frontal",
+     "series": [
+      {
+       "carga": 60,
+       "reps": 13,
+       "rir": 2
+      },
+      {
+       "carga": 60,
+       "reps": 13,
+       "rir": 2
+      },
+      {
+       "carga": 60,
+       "reps": 12,
+       "rir": 2
+      },
+      {
+       "carga": 60,
+       "reps": 12,
+       "rir": 2
+      },
+      {
+       "carga": 60,
+       "reps": 12,
+       "rir": 2
+      }
+     ]
+    },
+    {
+     "nome": "Elevação lateral",
+     "series": [
+      {
+       "carga": 16,
+       "reps": 14,
+       "rir": 2
+      },
+      {
+       "carga": 16,
+       "reps": 13,
+       "rir": 2
+      },
+      {
+       "carga": 16,
+       "reps": 13,
+       "rir": 2
+      },
+      {
+       "carga": 16,
+       "reps": 13,
+       "rir": 2
+      },
+      {
+       "carga": 16,
+       "reps": 13,
+       "rir": 2
+      },
+      {
+       "carga": 16,
+       "reps": 13,
+       "rir": 2
+      }
+     ]
+    },
+    {
+     "nome": "Tríceps na polia",
+     "series": [
+      {
+       "carga": 30,
+       "reps": 13,
+       "rir": 2
+      },
+      {
+       "carga": 30,
+       "reps": 13,
+       "rir": 2
+      },
+      {
+       "carga": 30,
+       "reps": 13,
+       "rir": 2
+      },
+      {
+       "carga": 30,
+       "reps": 13,
+       "rir": 2
+      },
+      {
+       "carga": 30,
+       "reps": 12,
+       "rir": 2
+      },
+      {
+       "carga": 30,
+       "reps": 12,
+       "rir": 2
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "semana": 3,
+   "data": "2026-11-23",
+   "dia": "A",
+   "exercicios": [
+    {
+     "nome": "Agachamento livre",
+     "series": [
+      {
+       "carga": 94,
+       "reps": 12,
+       "rir": 4
+      },
+      {
+       "carga": 94,
+       "reps": 12,
+       "rir": 3
+      },
+      {
+       "carga": 94,
+       "reps": 12,
+       "rir": 3
+      },
+      {
+       "carga": 94,
+       "reps": 12,
+       "rir": 3
+      }
+     ]
+    },
+    {
+     "nome": "Stiff com barra",
+     "series": [
+      {
+       "carga": 80,
+       "reps": 12,
+       "rir": 3
+      },
+      {
+       "carga": 80,
+       "reps": 12,
+       "rir": 3
+      },
+      {
+       "carga": 80,
+       "reps": 12,
+       "rir": 2
+      },
+      {
+       "carga": 80,
+       "reps": 12,
+       "rir": 2
+      },
+      {
+       "carga": 80,
+       "reps": 11,
+       "rir": 2
+      },
+      {
+       "carga": 80,
+       "reps": 11,
+       "rir": 2
+      }
+     ]
+    },
+    {
+     "nome": "Cadeira extensora",
+     "series": [
+      {
+       "carga": 55,
+       "reps": 12,
+       "rir": 2
+      },
+      {
+       "carga": 55,
+       "reps": 12,
+       "rir": 2
+      },
+      {
+       "carga": 55,
+       "reps": 11,
+       "rir": 2
+      }
+     ]
+    },
+    {
+     "nome": "Panturrilha em pé",
+     "series": [
+      {
+       "carga": 85,
+       "reps": 12,
+       "rir": 2
+      },
+      {
+       "carga": 85,
+       "reps": 12,
+       "rir": 2
+      },
+      {
+       "carga": 85,
+       "reps": 12,
+       "rir": 2
+      },
+      {
+       "carga": 85,
+       "reps": 12,
+       "rir": 2
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "semana": 3,
+   "data": "2026-11-24",
+   "dia": "B",
+   "exercicios": [
+    {
+     "nome": "Supino reto com barra",
+     "series": [
+      {
+       "carga": 70,
+       "reps": 12,
+       "rir": 2
+      },
+      {
+       "carga": 70,
+       "reps": 12,
+       "rir": 2
+      },
+      {
+       "carga": 70,
+       "reps": 11,
+       "rir": 2
+      },
+      {
+       "carga": 70,
+       "reps": 11,
+       "rir": 2
+      },
+      {
+       "carga": 70,
+       "reps": 11,
+       "rir": 2
+      },
+      {
+       "carga": 70,
+       "reps": 11,
+       "rir": 2
+      }
+     ]
+    },
+    {
+     "nome": "Remada curvada com barra",
+     "series": [
+      {
+       "carga": 68,
+       "reps": 10,
+       "rir": 1
+      },
+      {
+       "carga": 68,
+       "reps": 10,
+       "rir": 1
+      },
+      {
+       "carga": 68,
+       "reps": 9,
+       "rir": 1
+      },
+      {
+       "carga": 68,
+       "reps": 9,
+       "rir": 1
+      },
+      {
+       "carga": 68,
+       "reps": 9,
+       "rir": 0
+      },
+      {
+       "carga": 68,
+       "reps": 8,
+       "rir": 0
+      }
+     ]
+    },
+    {
+     "nome": "Desenvolvimento com halteres",
+     "series": [
+      {
+       "carga": 38,
+       "reps": 12,
+       "rir": 2
+      },
+      {
+       "carga": 38,
+       "reps": 12,
+       "rir": 2
+      },
+      {
+       "carga": 38,
+       "reps": 12,
+       "rir": 2
+      },
+      {
+       "carga": 38,
+       "reps": 11,
+       "rir": 2
+      },
+      {
+       "carga": 38,
+       "reps": 11,
+       "rir": 2
+      },
+      {
+       "carga": 38,
+       "reps": 11,
+       "rir": 2
+      }
+     ]
+    },
+    {
+     "nome": "Rosca direta com barra",
+     "series": [
+      {
+       "carga": 32,
+       "reps": 11,
+       "rir": 2
+      },
+      {
+       "carga": 32,
+       "reps": 11,
+       "rir": 2
+      },
+      {
+       "carga": 32,
+       "reps": 11,
+       "rir": 2
+      },
+      {
+       "carga": 32,
+       "reps": 10,
+       "rir": 2
+      },
+      {
+       "carga": 32,
+       "reps": 10,
+       "rir": 2
+      },
+      {
+       "carga": 32,
+       "reps": 10,
+       "rir": 2
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "semana": 3,
+   "data": "2026-11-26",
+   "dia": "C",
+   "exercicios": [
+    {
+     "nome": "Leg press 45°",
+     "series": [
+      {
+       "carga": 210,
+       "reps": 11,
+       "rir": 2
+      },
+      {
+       "carga": 210,
+       "reps": 11,
+       "rir": 2
+      },
+      {
+       "carga": 210,
+       "reps": 11,
+       "rir": 2
+      },
+      {
+       "carga": 210,
+       "reps": 11,
+       "rir": 2
+      }
+     ]
+    },
+    {
+     "nome": "Cadeira flexora",
+     "series": [
+      {
+       "carga": 45,
+       "reps": 11,
+       "rir": 2
+      },
+      {
+       "carga": 45,
+       "reps": 11,
+       "rir": 2
+      },
+      {
+       "carga": 45,
+       "reps": 11,
+       "rir": 2
+      },
+      {
+       "carga": 45,
+       "reps": 10,
+       "rir": 2
+      },
+      {
+       "carga": 45,
+       "reps": 10,
+       "rir": 2
+      },
+      {
+       "carga": 45,
+       "reps": 10,
+       "rir": 2
+      }
+     ]
+    },
+    {
+     "nome": "Elevação pélvica",
+     "series": [
+      {
+       "carga": 110,
+       "reps": 11,
+       "rir": 2
+      },
+      {
+       "carga": 110,
+       "reps": 11,
+       "rir": 2
+      },
+      {
+       "carga": 110,
+       "reps": 11,
+       "rir": 2
+      },
+      {
+       "carga": 110,
+       "reps": 11,
+       "rir": 2
+      },
+      {
+       "carga": 110,
+       "reps": 10,
+       "rir": 2
+      },
+      {
+       "carga": 110,
+       "reps": 10,
+       "rir": 2
+      }
+     ]
+    },
+    {
+     "nome": "Panturrilha sentado",
+     "series": [
+      {
+       "carga": 55,
+       "reps": 12,
+       "rir": 2
+      },
+      {
+       "carga": 55,
+       "reps": 12,
+       "rir": 2
+      },
+      {
+       "carga": 55,
+       "reps": 12,
+       "rir": 2
+      },
+      {
+       "carga": 55,
+       "reps": 12,
+       "rir": 2
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "semana": 3,
+   "data": "2026-11-27",
+   "dia": "D",
+   "exercicios": [
+    {
+     "nome": "Supino inclinado com halteres",
+     "series": [
+      {
+       "carga": 50,
+       "reps": 12,
+       "rir": 3
+      },
+      {
+       "carga": 50,
+       "reps": 12,
+       "rir": 2
+      },
+      {
+       "carga": 50,
+       "reps": 12,
+       "rir": 2
+      },
+      {
+       "carga": 50,
+       "reps": 12,
+       "rir": 2
+      },
+      {
+       "carga": 50,
+       "reps": 11,
+       "rir": 2
+      },
+      {
+       "carga": 50,
+       "reps": 11,
+       "rir": 2
+      }
+     ]
+    },
+    {
+     "nome": "Puxada frontal",
+     "series": [
+      {
+       "carga": 65,
+       "reps": 10,
+       "rir": 2
+      },
+      {
+       "carga": 65,
+       "reps": 10,
+       "rir": 2
+      },
+      {
+       "carga": 65,
+       "reps": 10,
+       "rir": 2
+      },
+      {
+       "carga": 65,
+       "reps": 10,
+       "rir": 2
+      },
+      {
+       "carga": 65,
+       "reps": 10,
+       "rir": 2
+      },
+      {
+       "carga": 65,
+       "reps": 10,
+       "rir": 2
+      }
+     ]
+    },
+    {
+     "nome": "Elevação lateral",
+     "series": [
+      {
+       "carga": 18,
+       "reps": 12,
+       "rir": 2
+      },
+      {
+       "carga": 18,
+       "reps": 12,
+       "rir": 2
+      },
+      {
+       "carga": 18,
+       "reps": 11,
+       "rir": 2
+      },
+      {
+       "carga": 18,
+       "reps": 11,
+       "rir": 2
+      },
+      {
+       "carga": 18,
+       "reps": 11,
+       "rir": 2
+      },
+      {
+       "carga": 18,
+       "reps": 11,
+       "rir": 2
+      }
+     ]
+    },
+    {
+     "nome": "Tríceps na polia",
+     "series": [
+      {
+       "carga": 35,
+       "reps": 11,
+       "rir": 2
+      },
+      {
+       "carga": 35,
+       "reps": 11,
+       "rir": 2
+      },
+      {
+       "carga": 35,
+       "reps": 10,
+       "rir": 2
+      },
+      {
+       "carga": 35,
+       "reps": 10,
+       "rir": 2
+      },
+      {
+       "carga": 35,
+       "reps": 10,
+       "rir": 2
+      },
+      {
+       "carga": 35,
+       "reps": 10,
+       "rir": 2
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

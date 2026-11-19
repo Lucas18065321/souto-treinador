@@ -1,0 +1,98 @@
+/* Receituário de suplementação · prescritor: nutricionista RT, na marca Souto Treinador. Claro e sóbrio (a farmácia lê e imprime), na marca:
+   degradê só na faixa do topo, no selo e nos marcadores; corpo em 11 pt. */
+:root {
+  --tinta: #0B0B0E; --tinta-2: #3A3F55; --tinta-3: #646B82;
+  --linha: #DCE1ED; --linha-2: #C3CADC; --creme-2: #F3F5FA; --acento: #1F33A3;
+  --degrade: linear-gradient(100deg, #2E49CE 0%, #1F33A3 100%);
+  --serifa: 'Bricolage Grotesque', 'Segoe UI', Arial, sans-serif;
+  --texto: 'Inter Tight', 'Segoe UI', Arial, sans-serif;
+  --num: 'Bricolage Grotesque', var(--texto);
+}
+* { box-sizing: border-box; }
+html { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+body { margin: 0; font-family: var(--texto); font-size: 11pt; line-height: 1.45; color: var(--tinta); background: #fff; }
+p { margin: 0 0 2mm; }
+ul { margin: 0; padding: 0; list-style: none; }
+.rot { display: block; font-size: 8.5pt; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: var(--acento); margin-bottom: .8mm; }
+.preencher { display: inline-block; height: 5.5mm; border-bottom: .3mm solid var(--tinta-3); vertical-align: bottom; }
+
+/* topo */
+.topo { position: relative; display: grid; grid-template-columns: auto 1fr auto; gap: 5mm; align-items: center; padding: 3.5mm 0 3mm; margin-bottom: 3.5mm; border-bottom: .3mm solid var(--linha); }
+.topo::before { content: ""; position: absolute; left: 0; right: 0; top: 0; height: 1.4mm; border-radius: 1mm; background: var(--degrade); }
+.selo { width: 26mm; height: 13mm; border-radius: 2.5mm; background: var(--degrade); display: flex; align-items: center; justify-content: center; }
+.selo span { width: 21mm; height: 9mm; background: center / contain no-repeat; }
+.pr-nome { font-family: var(--serifa); font-weight: 700; font-size: 21pt; line-height: 1; }
+.pr-prof { color: var(--tinta-2); margin-top: 1mm; }
+.pr-prof b { color: var(--tinta); font-weight: 600; }
+.pr-contato, .pr-end { color: var(--tinta-3); font-size: 9.5pt; }
+.doc-tipo { text-align: right; }
+.doc-tipo b { display: block; font-family: var(--num); font-weight: 600; font-size: 13pt; letter-spacing: -.01em; }
+
+/* paciente */
+.paciente { display: grid; grid-template-columns: 1fr 1.3fr; gap: 3mm 6mm; margin-bottom: 4mm; }
+.campo.largo { grid-column: 1 / -1; }
+.campo > div { min-height: 6mm; border-bottom: .3mm solid var(--linha-2); padding-bottom: 1mm; font-weight: 500; }
+.campo .preencher { border: 0; }
+
+/* fórmula */
+.formula { border: .3mm solid var(--linha); border-radius: 3mm; padding: 3.2mm 5mm 3.2mm; margin-bottom: 3mm; break-inside: avoid; }
+.f-topo { display: flex; align-items: center; gap: 4mm; margin-bottom: 2mm; }
+.f-topo h2 { font-family: var(--serifa); font-weight: 650; font-size: 17pt; line-height: 1.05; margin: 0; }
+.f-n { flex: none; width: 9mm; height: 9mm; border-radius: 50%; background: var(--degrade); color: #fff; font-family: var(--num); font-weight: 600; display: flex; align-items: center; justify-content: center; }
+.chip { margin-left: auto; font-size: 8.5pt; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; color: var(--tinta-2); border: .3mm solid var(--linha-2); border-radius: 10mm; padding: .7mm 2.8mm; white-space: nowrap; }
+.comp { margin: 0 0 2mm; }
+.comp li { display: flex; align-items: baseline; gap: 2mm; padding: .7mm 0; }
+.comp .ativo { font-weight: 600; }
+.comp .ativo small { font-weight: 400; font-size: 9.5pt; color: var(--tinta-3); margin-left: 1.5mm; }
+.comp .pontos { flex: 1; border-bottom: .35mm dotted var(--linha-2); transform: translateY(-1mm); min-width: 6mm; }
+.comp .dose { font-family: var(--num); font-weight: 600; white-space: nowrap; font-variant-numeric: tabular-nums; }
+.comp li.exc .ativo { font-weight: 500; color: var(--tinta-2); }
+.f-linhas { display: grid; gap: 1mm; padding-top: 2mm; border-top: .3mm solid var(--linha); }
+.f-linhas p { margin: 0; display: grid; grid-template-columns: 34mm 1fr; gap: 3mm; }
+.f-linhas .rot { margin: .5mm 0 0; }
+.obs { margin: 2.5mm 0 0; padding: 2.5mm 3.5mm; background: var(--creme-2); border-radius: 2mm; color: var(--tinta-2); display: grid; grid-template-columns: 34mm 1fr; gap: 3mm; }
+.obs .rot { margin: .5mm 0 0; }
+.obs.adv { background: none; border: .3mm solid var(--linha); }
+.contra { margin-top: 2.5mm; padding: 2.5mm 3.5mm 1.5mm; border: .3mm solid var(--linha-2); border-radius: 2mm; }
+.contra ul { columns: 2; column-gap: 6mm; font-size: 9.5pt; line-height: 1.32; }
+.contra li { position: relative; padding-left: 3.5mm; margin-bottom: .8mm; break-inside: avoid; }
+.contra li::before { content: ""; position: absolute; left: 0; top: .55em; width: 1.4mm; height: 1.4mm; border-radius: 50%; background: var(--tinta-3); }
+.avisos { display: grid; grid-template-columns: 1fr 1fr; gap: 3mm; margin-top: 2mm; }
+.avisos .obs { margin: 0; display: block; font-size: 10pt; line-height: 1.35; }
+.avisos .obs .rot { margin: 0 0 .8mm; }
+
+/* orientações */
+.orient { margin-bottom: 2mm; break-inside: avoid; }
+.lista li { position: relative; padding-left: 5mm; margin-bottom: 1mm; }
+.lista li::before { content: ""; position: absolute; left: 0; top: .52em; width: 1.8mm; height: 1.8mm; border-radius: .4mm; background: var(--degrade); }
+
+/* assinatura */
+.assina { display: grid; grid-template-columns: 1fr 74mm; gap: 7mm; align-items: end; margin: 2mm 0 0; break-inside: avoid; }
+.dig { border: .3mm dashed var(--linha-2); border-radius: 3mm; padding: 2.5mm 4mm; min-height: 0; color: var(--tinta-3); font-size: 9.5pt; }
+.dig p { margin: 0; }
+.mao { text-align: center; }
+.linha-ass { height: 10mm; border-bottom: .3mm solid var(--tinta); margin-bottom: 2.5mm; }
+.mao strong { display: block; font-family: var(--serifa); font-weight: 700; font-size: 18pt; line-height: 1.1; }
+.mao span { display: block; color: var(--tinta-2); }
+.mao .rot { text-align: left; }
+.esq .ld { margin: 0 0 3mm; }
+.esq .ld .preencher { width: 70mm !important; }
+
+/* base legal e notas */
+.rodape-legal { margin-top: 3mm; padding-top: 2mm; border-top: .3mm solid var(--linha); color: var(--tinta-3); font-size: 8pt; line-height: 1.35; break-inside: avoid; }
+.legal { margin: 0 0 .6mm; }
+.notas { margin: 0; padding-left: 4mm; }
+.notas li { margin-bottom: .5mm; }
+
+@media screen {
+  body { background: #F2F4F8; }
+  .doc { max-width: 210mm; margin: 24px auto; background: #fff; padding: 14mm 16mm; border-radius: 6px; box-shadow: 0 2px 30px rgba(11,11,12,.08); }
+}
+@media screen and (max-width: 640px) {
+  .doc { margin: 0; padding: 20px 16px; border-radius: 0; }
+  .topo, .paciente, .assina { grid-template-columns: 1fr; }
+  .doc-tipo { text-align: left; }
+  .f-linhas p, .obs { grid-template-columns: 1fr; gap: 2px; }
+  .avisos { grid-template-columns: 1fr; }
+  .contra ul { columns: 1; }
+}

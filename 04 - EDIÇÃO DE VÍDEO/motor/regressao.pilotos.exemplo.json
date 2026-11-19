@@ -1,0 +1,8 @@
+{
+  "_LEIA-ME": "Copie este arquivo para %SOUTO_VIDEO_PROJETOS%\_sistema\regressao\pilotos.json e troque cada 'proj' pelo nome da pasta de um vídeo SEU já aprovado naquele formato. 'trechos' = pedaços curtos (em segundos) que mostram o que o formato tem de mais típico. Depois grave a referência UMA vez com --gravar (ver docs/guias/04-video.md, seção Regressão). Formato sem piloto ainda? Apague a chave dele: a regressão daquele formato só avisa e sai.",
+  "td2": {"proj": "2026-12-01_exemplo-tela-dividida", "edicao": "03_roteiro/edicao.json", "trechos": [["0", "5"], ["20", "24"]]},
+  "cut": {"proj": "2026-12-02_exemplo-cut", "trechos": [["0", "5"]]},
+  "mix": {"proj": "2026-12-03_exemplo-mix", "trechos": [["0", "4"]]},
+  "paper-vox": {"proj": "2026-12-04_exemplo-paper-vox", "trechos": [["0", "4"], ["15", "16.6"]]},
+  "vox": {"proj": "2026-12-05_exemplo-vox", "trechos": [["0", "3"], ["10", "12"]]}
+}

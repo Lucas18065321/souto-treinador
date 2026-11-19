@@ -1,0 +1,35 @@
+{
+ "semanas": [
+  {
+   "semana": 1,
+   "sono": 7,
+   "fadiga": 4,
+   "dor_muscular": 4,
+   "estresse": 4,
+   "esforco": 7,
+   "dor_treino": 0,
+   "lesao_nova": false
+  },
+  {
+   "semana": 2,
+   "sono": 7,
+   "fadiga": 4,
+   "dor_muscular": 4,
+   "estresse": 4,
+   "esforco": 8,
+   "dor_treino": 0,
+   "lesao_nova": false
+  },
+  {
+   "semana": 3,
+   "sono": 7,
+   "fadiga": 3,
+   "dor_muscular": 3,
+   "estresse": 4,
+   "esforco": 8,
+   "dor_treino": 1,
+   "lesao_nova": false
+  }
+ ],
+ "_sobre": "Check-in semanal FICTÍCIO (escalas 0-10: sono = qualidade, quanto maior melhor; fadiga, dor muscular e estresse, quanto maior pior; dor_treino = dor durante o treino)."
+}

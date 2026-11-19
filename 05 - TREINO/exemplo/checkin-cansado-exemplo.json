@@ -1,0 +1,36 @@
+{
+ "_sobre": "Check-in FICTÍCIO de um aluno muito cansado nas semanas 2 e 3 e com dor no ombro na semana 3: deve disparar DELOAD e o alerta de encaminhamento.",
+ "semanas": [
+  {
+   "semana": 1,
+   "sono": 7,
+   "fadiga": 4,
+   "dor_muscular": 4,
+   "estresse": 4,
+   "esforco": 7,
+   "dor_treino": 0,
+   "lesao_nova": false
+  },
+  {
+   "semana": 2,
+   "sono": 3,
+   "fadiga": 8,
+   "dor_muscular": 7,
+   "estresse": 7,
+   "esforco": 9,
+   "dor_treino": 2,
+   "lesao_nova": false
+  },
+  {
+   "semana": 3,
+   "sono": 4,
+   "fadiga": 8,
+   "dor_muscular": 7,
+   "estresse": 8,
+   "esforco": 9,
+   "dor_treino": 6,
+   "dor_local": "ombro",
+   "lesao_nova": false
+  }
+ ]
+}

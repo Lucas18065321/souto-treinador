@@ -1,0 +1,31 @@
+# Gestão da consultoria: o que NUNCA sobe para o GitHub (reforça o .gitignore da raiz)
+
+# segredos e a assinatura do RT (ficam em %USERPROFILE%\SoutoTreinador\privado\)
+privado/
+supabase.env
+*.env
+!.env.example
+assinatura-rt.png
+assinatura*.png
+assinatura*.jpg
+prescritor.privado.json
+
+# dados de alunos (ficam em %USERPROFILE%\SoutoTreinador\Alunos\)
+Alunos/
+pacote.json
+Plano alimentar v*.pdf
+Plano alimentar v*.html
+Plano v* - *.json
+Receituário - *.pdf
+Receituário - *.html
+!Agente de dieta/template/exemplo-ficticio.json
+
+# fotos de rótulo (podem mostrar algo pessoal ao fundo)
+Agente de dieta/alimentos/rotulos/
+
+# prévias e lixo
+png/
+__pycache__/
+*.pyc
+supabase/.temp/
+supabase/.branches/

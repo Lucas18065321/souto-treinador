@@ -1,0 +1,12 @@
+{
+  "_LEIA-ME": "Dados de identidade usados nos vídeos (cards de apresentação, card final, card da marca do PAPER VOX e do VOX). As CORES e a LOGO não ficam aqui: vêm de ../marca/marca-souto.json e ../marca/logo/ (um lugar só para todas as frentes). Troque os campos listados em TROCAR antes do primeiro vídeo publicado.",
+  "TROCAR": ["arroba", "registro"],
+  "nome": "Jorge Souto",
+  "nomeLinhas": ["Jorge", "Souto"],
+  "marca": "SOUTO TREINADOR",
+  "cargo": "Treinador · Educador físico",
+  "arroba": "@soutotreinador",
+  "registro": "CREF 000000-G/UF",
+  "redes": ["instagram", "youtube"],
+  "logo": "logo/souto-logo-branco.png"
+}

@@ -1,0 +1,337 @@
+/* Plano alimentar · Souto Treinador (prescrição dietética do nutricionista RT). Um CSS para as duas saídas:
+   impressão (PDF A4 em pé, rodapé nas margens da página) e tela (HTML com gráficos interativos, também no celular).
+   Cores da marca (marca/marca-souto.json): azul elétrico #2E49CE, azul royal #1F33A3, azul noite #141A3D,
+   névoa #DCE1ED e papel #F2F4F8. Degradê só em faixa e destaque. */
+
+:root {
+  --tinta: #0B0B0E;
+  --tinta-2: #3A3F55;
+  --tinta-3: #646B82;
+  --papel: #FFFFFF;
+  --creme: #F2F4F8;
+  --creme-2: #F3F5FA;
+  --linha: #DCE1ED;
+  --linha-2: #C3CADC;
+  --acento: #1F33A3;
+  --degrade: linear-gradient(100deg, #2E49CE 0%, #1F33A3 100%);
+  --degrade-v: linear-gradient(180deg, #2E49CE 0%, #1F33A3 100%);
+  --serifa: 'Bricolage Grotesque', 'Segoe UI', Arial, sans-serif;   /* títulos (troque por Saira Condensed quando a fonte oficial chegar) */
+  --texto: 'Inter Tight', 'Segoe UI', Arial, sans-serif;
+  --fonte-capa: 'Bricolage Grotesque', var(--texto);
+  --fonte-num: 'Bricolage Grotesque', var(--texto);    /* números grandes dos cards */
+  /* superfícies e gráficos (o modelo B troca só estas variáveis) */
+  --sup: #FFFFFF;
+  --sup-2: #F2F4F8;
+  --grade: #E6EAF3;
+  --trilho: #E3E8F3;
+  --c1: #5C78EE;
+  --c2: #2E49CE;
+  --c3: #1F33A3;
+  --area: .12;
+  --raio: 3mm;
+}
+
+* { box-sizing: border-box; }
+html { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+body { margin: 0; font-family: var(--texto); font-size: 11pt; line-height: 1.45; color: var(--tinta); background: var(--papel); }
+p { margin: 0 0 2.5mm; }
+ul, ol { margin: 0; padding: 0; list-style: none; }
+
+/* ---------- Capa ---------- */
+.capa {
+  page: capa; break-after: page; position: relative; overflow: hidden;
+  height: calc(297mm - .6mm); padding: 18mm 18mm 20mm;
+  display: flex; flex-direction: column; color: #fff;
+  background: linear-gradient(160deg, #2E49CE 0%, #1F33A3 52%, #141A3D 100%);
+}
+.capa-marca { position: absolute; right: -34mm; top: 40mm; width: 200mm; height: 106mm; opacity: .07;
+  background: center / contain no-repeat; }
+.capa-topo { display: flex; justify-content: space-between; align-items: flex-start; }
+.capa-logo { width: 46mm; height: 24mm; background: left center / contain no-repeat; }
+.capa-ficticio { font-size: 8pt; font-weight: 600; letter-spacing: .14em; text-transform: uppercase;
+  border: .3mm solid rgba(255,255,255,.7); border-radius: 10mm; padding: 1.2mm 3.2mm; }
+.capa-miolo { margin-top: auto; margin-bottom: auto; padding-top: 10mm; }
+.capa-sobre { font-size: 9pt; font-weight: 600; letter-spacing: .2em; text-transform: uppercase; margin-bottom: 6mm; }
+.capa h1 { font-family: var(--fonte-capa); font-weight: 800; font-size: 32pt; line-height: .98; letter-spacing: -.02em; margin: 0 0 4mm; text-transform: uppercase; }
+.capa h1 em { font-style: normal; font-weight: 300; }
+.capa-nome { font-family: var(--fonte-capa); font-size: 50pt; font-weight: 600; letter-spacing: -.03em; line-height: 1; margin-bottom: 10mm; }
+.capa-dados { display: flex; flex-wrap: wrap; gap: 0; border-top: .3mm solid rgba(255,255,255,.45); padding-top: 5mm; }
+.capa-dado { padding-right: 9mm; margin-right: 9mm; border-right: .3mm solid rgba(255,255,255,.35); }
+.capa-dado:last-child { border-right: 0; margin-right: 0; padding-right: 0; }
+.capa-dado span { display: block; font-size: 9pt; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; margin-bottom: 1mm; }
+.capa-dado b { font-size: 13pt; font-weight: 500; }
+.capa-rodape { display: flex; justify-content: space-between; align-items: flex-end; font-size: 10pt; line-height: 1.35; }
+.capa-rodape strong { display: block; font-family: var(--serifa); font-weight: 700; font-size: 18pt; line-height: 1.05; letter-spacing: -.01em; }
+.capa-rodape .arroba { font-weight: 600; letter-spacing: .02em; }
+/* rodapé da capa (a capa sangra a folha; as outras páginas usam o rodapé da margem) */
+.capa-pe { position: absolute; left: 18mm; right: 18mm; bottom: 6mm; display: flex; justify-content: space-between; align-items: flex-end; gap: 6mm;
+  font-size: 7.5pt; line-height: 1.35; color: rgba(255, 255, 255, .9); }
+.capa-pe span:last-child { text-align: right; }
+
+/* ---------- Capítulos e títulos ---------- */
+.cap { break-before: page; }
+.sec { margin-bottom: 9mm; }
+.olho { font-size: 8.5pt; font-weight: 600; letter-spacing: .18em; text-transform: uppercase; color: var(--acento); margin-bottom: 1.5mm; }
+.cabeca { break-after: avoid; break-inside: avoid; }
+.sec.inteira { break-inside: avoid; }
+h2 { font-family: var(--serifa); font-weight: 700; font-size: 27pt; line-height: 1.02; letter-spacing: -.02em; margin: 0 0 3mm; break-after: avoid; }
+h2 em { font-style: normal; color: var(--acento); }
+.barra { width: 26mm; height: 1.3mm; border-radius: 1mm; background: var(--degrade); margin: 0 0 6mm; }
+h3 { font-family: var(--serifa); font-weight: 650; font-size: 16.5pt; line-height: 1.1; margin: 0 0 3mm; break-after: avoid; }
+.guia { color: var(--tinta-2); margin: -2mm 0 5mm; }
+.rot { font-size: 8.5pt; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: var(--acento); }
+
+/* listas com marcador em degradê */
+.lista li { position: relative; padding-left: 5.5mm; margin-bottom: 2mm; }
+.lista li::before { content: ""; position: absolute; left: 0; top: .52em; width: 2mm; height: 2mm; border-radius: .4mm; background: var(--degrade); }
+.lista.neutra li::before { top: .68em; width: 2.6mm; height: .5mm; border-radius: 0; background: var(--tinta-3); }
+
+.painel { border: .3mm solid var(--linha); border-radius: 2.5mm; padding: 4.5mm 5mm; break-inside: avoid; }
+.painel.creme { background: var(--creme-2); }
+.duas { display: grid; grid-template-columns: 1fr 1fr; gap: 5mm; }
+
+/* linhas de leitura: rótulo à esquerda, texto à direita */
+.leitura { border-top: .3mm solid var(--linha); }
+.leitura-linha { display: grid; grid-template-columns: 38mm 1fr; gap: 5mm; padding: 4mm 0; border-bottom: .3mm solid var(--linha); break-inside: avoid; }
+.leitura-linha .rot { padding-top: .7mm; }
+
+/* ---------- Metas ---------- */
+.metas { counter-reset: meta; }
+.meta { display: grid; grid-template-columns: 11mm 1fr auto; gap: 4mm; align-items: center; padding: 3.2mm 0; border-bottom: .3mm solid var(--linha); break-inside: avoid; }
+.meta-n { font-family: var(--serifa); font-weight: 700; font-size: 22pt; line-height: 1; color: var(--acento); }
+.meta-tipo { font-size: 8.5pt; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; color: var(--tinta-3); text-align: right; white-space: nowrap; }
+.meta-tipo b { display: block; font-size: 10pt; letter-spacing: 0; text-transform: none; color: var(--tinta-2); font-weight: 500; margin-top: 1mm; }
+.meta-tipo .chip { margin-left: 0; }
+.combinado { margin-top: 4mm; padding: 3mm 0 3mm 5mm; border-left: 1.3mm solid; border-image: var(--degrade-v) 1; font-style: italic; color: var(--tinta-2); }
+
+/* ---------- Seu dia (quadro de horários) ---------- */
+.dia { display: grid; grid-template-columns: repeat(var(--n, 6), minmax(0, 1fr)); gap: 2mm; margin-bottom: 5mm; break-inside: avoid; }
+.dia-item { border: .3mm solid var(--linha); border-radius: 2.5mm; padding: 2.6mm 2.6mm 2.8mm; }
+.dia-hora { font-family: var(--serifa); font-weight: 700; font-size: 16pt; line-height: 1; margin-bottom: 1.2mm; }
+.dia-nome { line-height: 1.25; }
+.dia-nome { font-weight: 500; }
+.dia-item .op-det { display: block; margin-top: .6mm; }
+.dia-item.treino { background: var(--creme-2); border-style: dashed; border-color: var(--linha-2); }
+.dia-item.treino .dia-nome { color: var(--tinta-2); }
+.aviso-peso { display: flex; gap: 4mm; align-items: flex-start; background: var(--creme-2); border-radius: 2.5mm; padding: 4mm 5mm; margin-bottom: 6mm; break-inside: avoid; }
+.aviso-peso .selo { flex: none; width: 9mm; height: 9mm; border-radius: 50%; background: var(--degrade); color: #fff; font-weight: 700; font-size: 9pt; display: flex; align-items: center; justify-content: center; }
+
+/* ---------- Refeições ---------- */
+.ref { border: .3mm solid var(--linha); border-radius: 2.5mm; overflow: hidden; margin: 0 0 5mm; break-inside: avoid; background: var(--papel); }
+.ref-topo { position: relative; display: flex; align-items: baseline; gap: 4mm; padding: 3mm 4.5mm 3mm 6mm; background: var(--creme-2); }
+.ref-topo::before { content: ""; position: absolute; left: 0; top: 0; bottom: 0; width: 1.6mm; background: var(--degrade-v); }
+.ref-hora { font-family: var(--serifa); font-weight: 700; font-size: 19pt; line-height: 1; }
+.ref-nome { font-size: 13pt; font-weight: 600; letter-spacing: -.005em; }
+.ref-tag { margin-left: auto; font-size: 8.5pt; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: var(--tinta-2);
+  border: .3mm solid var(--linha-2); border-radius: 10mm; padding: .8mm 2.6mm; white-space: nowrap; }
+.grp { display: grid; grid-template-columns: 30mm 1fr; column-gap: 4mm; padding: 3mm 4.5mm 3mm 6mm; border-top: .3mm solid var(--linha); }
+.grp-rot { padding-top: .8mm; }
+.grp-rot small { display: block; margin-top: .8mm; font-size: 9pt; font-weight: 500; letter-spacing: 0; text-transform: none; color: var(--tinta-3); }
+.ops { display: grid; grid-template-columns: 1fr 1fr; gap: 2.4mm 6mm; }
+.ops.um { grid-template-columns: 1fr; }
+.op { display: grid; grid-template-columns: 3mm 1fr auto; column-gap: 1.8mm; align-items: baseline; align-content: start; }
+.op-marca { width: 2.6mm; height: 2.6mm; border-radius: 50%; border: .4mm solid var(--tinta-3); transform: translateY(-.2mm); }
+.op.base .op-marca { border: 0; background: var(--degrade); }
+.op-nome { font-weight: 500; }
+.op-g { font-weight: 700; white-space: nowrap; font-variant-numeric: tabular-nums; }
+.op-det { grid-column: 2 / 4; color: var(--tinta-2); line-height: 1.3; }
+.legenda-ops { display: flex; gap: 6mm; color: var(--tinta-2); margin: 0 0 4mm; font-size: 11pt; }
+.legenda-ops span { display: inline-flex; align-items: center; gap: 1.8mm; }
+
+/* ---------- Extras ---------- */
+.fatos { display: grid; grid-template-columns: repeat(3, 1fr); gap: 4mm; margin-bottom: 3mm; }
+.fato span { display: block; }
+.fato b { font-family: var(--fonte-num); font-weight: 600; font-size: 17pt; line-height: 1.1; letter-spacing: -.02em; }
+.agua { display: flex; align-items: baseline; gap: 5mm; }
+.agua b { font-family: var(--serifa); font-weight: 700; font-size: 40pt; line-height: 1; white-space: nowrap; }
+table.tab { width: 100%; border-collapse: collapse; }
+.tab th { text-align: left; font-size: 8.5pt; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; color: var(--acento); padding: 0 3mm 2mm 0; border-bottom: .3mm solid var(--linha-2); }
+.tab td { vertical-align: top; padding: 3mm 3mm 3mm 0; border-bottom: .3mm solid var(--linha); }
+.tab tr { break-inside: avoid; }
+.tab td:first-child { font-weight: 600; }
+.tab-sup { table-layout: fixed; }
+.tab td:first-child .chip { display: block; width: max-content; margin: 1.2mm 0 0; }
+.chip { display: inline-block; font-size: 8pt; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: var(--tinta-2);
+  border: .3mm solid var(--linha-2); border-radius: 10mm; padding: .3mm 2mm; margin-left: 1.5mm; vertical-align: .15em; }
+
+/* ---------- Como montei seu plano ---------- */
+.conta { display: flex; align-items: stretch; gap: 1.6mm; margin-bottom: 3mm; }
+.conta-item { flex: 1; background: var(--creme-2); border-radius: 2.5mm; padding: 3.2mm 3mm; line-height: 1.3; }
+.conta-item .rot { display: block; min-height: 2.6em; }   /* rótulos de 1 ou 2 linhas: os números ficam na mesma altura */
+.conta-item b { display: block; font-family: var(--fonte-num); font-weight: 600; font-size: 19pt; line-height: 1.05; letter-spacing: -.02em; margin: .6mm 0 1mm; white-space: nowrap; }
+/* degradê mais fechado da marca: texto branco com contraste de leitura */
+.conta-item.fim { background: linear-gradient(100deg, #2E49CE 0%, #1F33A3 100%); color: #fff; }
+.conta-item.fim .rot { color: #fff; }
+.conta-op { align-self: center; font-family: var(--fonte-num); font-weight: 500; font-size: 18pt; color: var(--tinta-2); }
+.explica p { color: var(--tinta-2); margin-bottom: 1.5mm; }
+.macro-barra { display: flex; height: 10mm; border-radius: 2mm; overflow: hidden; margin: 1mm 0 4mm;
+  background: linear-gradient(100deg, #2E49CE 0%, #1F33A3 60%, #141A3D 100%); }
+.macro-barra span { display: flex; align-items: center; justify-content: center; color: #fff; font-weight: 600; font-size: 10.5pt; white-space: nowrap; }
+.macro-barra span + span { border-left: .7mm solid var(--papel); }
+.macros { display: grid; grid-template-columns: var(--cols, repeat(3, 1fr)); gap: 0; }
+.macro { padding-right: 4mm; }
+.macro span { display: block; }
+.macro b { display: block; font-family: var(--fonte-num); font-weight: 600; font-size: 21pt; line-height: 1.05; letter-spacing: -.02em; margin: 1mm 0; }
+.macro .macro-faz { color: var(--tinta-2); margin-top: 1mm; }
+.agua-fibra.duas { grid-template-columns: 2.3fr 1fr; }
+.agua-fibra .painel { padding: 4mm 5mm 3mm; }
+.num-calc { display: block; font-family: var(--fonte-num); font-weight: 600; font-size: 24pt; line-height: 1.05; letter-spacing: -.02em; margin: 1mm 0 1.5mm; }
+.agua-fibra .guia { margin: 0 0 1mm; }
+.agua-calc { display: flex; gap: 7mm; align-items: center; }
+.agua-calc > b { font-family: var(--fonte-num); font-weight: 600; font-size: 32pt; line-height: 1; letter-spacing: -.02em; white-space: nowrap; }
+.agua-calc p { margin-bottom: 1mm; }
+sup { font-size: .62em; font-weight: 700; color: var(--acento); margin-left: .4mm; line-height: 0; }
+.notas { list-style: decimal; margin-top: 2mm; padding: 2.5mm 0 0 4.5mm; border-top: .3mm solid var(--linha); font-size: 8pt; line-height: 1.3; color: var(--tinta-3); break-inside: avoid; }
+.notas li { margin-bottom: .6mm; }
+.sec:has(+ .notas) { margin-bottom: 3mm; }
+/* a página do cálculo cabe numa folha com as notas */
+.calc .sec { margin-bottom: 5mm; }
+.calc h3 { margin-bottom: 2mm; }
+.calc .explica p { margin-bottom: 1mm; }
+.calc .macro-barra { margin: 1mm 0 3mm; }
+.calc .guia { margin-bottom: 4mm; }
+
+/* ---------- Fechamento ---------- */
+.alarme { position: relative; border: .3mm solid var(--linha-2); border-radius: 2.5mm; padding: 6mm 5mm 4.5mm; overflow: hidden; break-inside: avoid; }
+.alarme::before { content: ""; position: absolute; left: 0; right: 0; top: 0; height: 1.6mm; background: var(--degrade); }
+.alarme .acao { font-weight: 700; font-size: 12pt; margin: 0 0 2mm; }
+.assinaturas { margin-top: 10mm; display: grid; grid-template-columns: 1fr 1.25fr; gap: 8mm; align-items: end; break-inside: avoid; }
+.assinatura-bloco { text-align: center; }
+.assinatura-selo { width: 30mm; height: 12mm; margin: 0 auto 3mm; border-radius: 2.5mm; background: var(--degrade); display: flex; align-items: center; justify-content: center; }
+.assinatura-selo span { width: 24mm; height: 8mm; background: center / contain no-repeat; }
+.assinatura-papel { font-size: 8pt; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: var(--acento); margin-bottom: 2mm; }
+.assinatura-img { height: 22mm; display: flex; align-items: flex-end; justify-content: center; margin-bottom: 1mm; }
+.assinatura-img img { max-height: 22mm; max-width: 70mm; object-fit: contain; }
+.assinatura-falta { height: 22mm; display: flex; align-items: flex-end; justify-content: center; margin-bottom: 1mm;
+  font-size: 9pt; color: var(--tinta-3); font-style: italic; }
+.assinatura-linha { border-top: .3mm solid var(--tinta); padding-top: 2.5mm; }
+.assinatura-bloco strong { display: block; font-family: var(--serifa); font-weight: 700; font-size: 15pt; line-height: 1.15; }
+.assinatura-bloco span { display: block; color: var(--tinta-2); }
+.bloco-rt { border: .3mm solid var(--linha-2); border-radius: 2.5mm; padding: 4mm 5mm 4mm; }
+.nota-rt { margin-top: 6mm; font-size: 8.5pt; color: var(--tinta-3); break-inside: avoid; }
+
+/* ---------- Evolução: cards ---------- */
+.card { background: var(--sup); border: .3mm solid var(--linha); border-radius: var(--raio); padding: 4mm 5mm 3.5mm; margin-bottom: 4mm; break-inside: avoid; }
+.card-topo { display: flex; justify-content: space-between; align-items: center; gap: 4mm; }
+.card-topo h3 { margin: 0; }
+.card .guia { margin: 1.5mm 0 3mm; }
+.pilula { flex: none; font-size: 9pt; font-weight: 600; color: var(--tinta-2); background: var(--sup-2); border: .3mm solid var(--linha);
+  border-radius: 10mm; padding: .7mm 2.8mm; white-space: nowrap; }
+.card svg { display: block; width: 100%; height: auto; overflow: visible; }
+/* número grande sólido: texto em degradê com a fonte da capa trava leitores de PDF (testado no do Windows) */
+.num-grande { display: block; font-family: var(--fonte-num); font-weight: 600; font-size: 25pt; line-height: 1.05; letter-spacing: -.02em;
+  color: var(--tinta); margin: 1.5mm 0 .6mm; }
+.num-grande small { font-family: var(--texto); font-size: 11pt; font-weight: 500; letter-spacing: 0; color: var(--tinta-3); }
+.num-sub { display: block; color: var(--tinta-2); }
+.numeros-evol { display: grid; grid-template-columns: repeat(var(--n, 4), 1fr); gap: 3mm; margin-bottom: 5mm; break-inside: avoid; }
+.num-card { display: flex; flex-direction: column; background: var(--sup); border: .3mm solid var(--linha); border-radius: var(--raio); padding: 3.5mm 4mm 3.8mm; }
+.num-barra { height: 1.5mm; border-radius: 1mm; background: var(--trilho); margin-top: auto; overflow: hidden; }
+.num-card .num-sub { margin-bottom: 2.5mm; }
+.num-barra span { display: block; height: 100%; border-radius: 1mm; background: var(--degrade); }
+/* peças do SVG: só classes, para o tema trocar as cores */
+.card svg text { font-family: var(--texto); }
+.g-tx { fill: var(--tinta-3); font-size: 12px; }
+.g-tx-forte { fill: var(--tinta); font-size: 12.5px; font-weight: 600; }
+.g-grade { stroke: var(--grade); stroke-width: 1; }
+.g-faixa { fill: var(--sup-2); }
+.g-marca { stroke: var(--tinta-3); stroke-width: 1; stroke-dasharray: 3 3; }
+.g-pilula { fill: var(--sup); stroke: var(--linha-2); stroke-width: 1; }
+.g-pilula-tx { fill: var(--tinta-2); font-size: 10.5px; font-weight: 600; }
+.g-pt { fill: var(--c3); stroke: var(--sup); stroke-width: 2; }
+.g-pt-forte { fill: var(--c3); stroke: var(--sup); stroke-width: 3; }
+.g-etiqueta { fill: var(--tinta); }
+.g-etiqueta-tx { fill: var(--sup); font-size: 11.5px; font-weight: 600; }
+.g-off { fill: var(--trilho); }
+.g-trilho { stroke: var(--trilho); }
+.g-c1 { stop-color: var(--c1); } .g-c2 { stop-color: var(--c2); } .g-c3 { stop-color: var(--c3); }
+.g-area { fill: var(--c1); fill-opacity: var(--area); }
+/* régua de 5% e 10% */
+.regua { margin-top: 3mm; padding-top: 3mm; border-top: .3mm solid var(--linha); }
+.regua-trilho { position: relative; height: .7mm; border-radius: 1mm; background: var(--linha-2); margin: 3mm 2mm 7.5mm; }
+.regua-ponto { position: absolute; top: 50%; width: 4.6mm; height: 4.6mm; border-radius: 50%; background: var(--sup); border: 1.1mm solid var(--c3); transform: translate(-50%, -50%); }
+.regua-marca { position: absolute; top: 4mm; transform: translateX(-50%); font-size: 9pt; font-weight: 600; color: var(--tinta-3); }
+.regua-marca i { position: absolute; left: 50%; top: -4.9mm; width: .3mm; height: 2.8mm; background: var(--tinta-3); }
+.regua-leg { color: var(--tinta-2); margin: 0; }
+.regua-leg b { color: var(--tinta); font-weight: 600; }
+/* dias no plano */
+.adesao-corpo { display: grid; grid-template-columns: 1fr 42mm; gap: 6mm; align-items: center; }
+.anel-bloco { text-align: center; }
+.anel-caixa { position: relative; width: 34mm; margin: 0 auto; }
+.anel { display: block; width: 100%; height: auto; }
+.anel-centro { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; }
+.anel-centro b { font-family: var(--fonte-num); font-weight: 600; font-size: 21pt; line-height: 1; color: var(--tinta); }
+.anel-centro span { font-size: 9pt; color: var(--tinta-3); }
+.anel-leg { color: var(--tinta-2); margin: 2.5mm 0 0; line-height: 1.3; }
+/* treino e intestino */
+.bloco-evol { margin-bottom: 5mm; break-inside: avoid; }
+.bloco-evol > .guia { margin: -1.5mm 0 3mm; }
+.minis { display: grid; grid-template-columns: 1fr 1fr; gap: 3.5mm; }
+.card.mini { margin-bottom: 0; padding: 3.5mm 4.5mm 2.5mm; }
+.card.mini svg { margin-top: 2mm; }
+.nota-graf { color: var(--tinta-3); font-size: 9pt; margin-top: 1mm; }
+
+/* dica do gráfico (só na tela) */
+.dica { position: fixed; z-index: 50; pointer-events: none; display: none; max-width: 270px; background: var(--tinta); color: var(--papel);
+  font-size: 12.5px; line-height: 1.4; padding: 9px 11px; border-radius: 7px; box-shadow: 0 6px 22px rgba(0,0,0,.25); }
+.dica b { font-weight: 600; }
+.dica .dica-plano { margin-top: 5px; padding-top: 5px; border-top: 1px solid currentColor; opacity: .82; }
+.alvo { cursor: pointer; }
+
+.rodape-tela { display: none; }
+
+/* ---------- Impressão ---------- */
+@media print {
+  .dica, .rodape-tela, .so-tela { display: none !important; }
+  .doc { padding: 0; }
+}
+
+/* ---------- Tela (HTML) ---------- */
+@media screen {
+  body { background: var(--creme); }
+  .doc { max-width: 210mm; margin: 24px auto; background: var(--papel); box-shadow: 0 2px 30px rgba(11,11,12,.08); border-radius: 6px; overflow: hidden; }
+  .capa { height: auto; min-height: 250mm; }
+  .capa-pe { display: none; }
+  .cap, .corpo-tela { padding: 14mm 16mm 4mm; }
+  .cap { border-top: 1px solid var(--linha); }
+  .rodape-tela { display: block; padding: 6mm 16mm 10mm; font-size: 9pt; color: var(--tinta-3); border-top: 1px solid var(--linha); }
+}
+@media screen and (max-width: 640px) {
+  body { font-size: 15px; }
+  .doc { margin: 0; border-radius: 0; }
+  .capa { min-height: 92vh; padding: 28px 18px 22px; }
+  .capa h1 { font-size: 30px; }
+  .capa-nome { font-size: 42px; }
+  .capa-dado { padding-right: 14px; margin-right: 14px; margin-bottom: 10px; }
+  .cap, .corpo-tela { padding: 28px 16px 8px; }
+  h2 { font-size: 32px; }
+  .duas, .fatos { grid-template-columns: 1fr; }
+  .leitura-linha, .grp { grid-template-columns: 1fr; row-gap: 6px; }
+  .grp { padding-left: 16px; }
+  .ops { grid-template-columns: 1fr; }
+  .dia { grid-template-columns: repeat(2, 1fr); }
+  .dia-item .op-det { font-size: 13px; }
+  .meta { grid-template-columns: 34px 1fr; }
+  .meta-tipo { grid-column: 2; text-align: left; }
+  .tab thead { display: none; }
+  .tab tr { display: block; border-bottom: 1px solid var(--linha); padding: 8px 0; }
+  .tab td { display: block; border: 0; padding: 2px 0; }
+  .rodape-tela { padding: 18px 16px 28px; }
+  .conta { flex-direction: column; }
+  .conta-op { align-self: flex-start; padding-left: 12px; font-size: 22px; line-height: 1; }
+  .macros { grid-template-columns: 1fr; }
+  .agua-calc { flex-direction: column; align-items: flex-start; gap: 8px; }
+  .numeros-evol { grid-template-columns: 1fr 1fr; }
+  .card:not(.mini) svg .g-tx { font-size: 22px; }   /* no celular o SVG encolhe: letra maior e metade das datas */
+  .card:not(.mini) svg .g-tx-forte { font-size: 22px; }
+  .card svg .x-alt, .card:not(.mini) svg .y-min { display: none; }
+  .card:not(.mini) svg .g-pilula, .card:not(.mini) svg .g-pilula-tx, .card svg .g-etiqueta, .card svg .g-etiqueta-tx { display: none; }  /* pequenos demais no celular: a dica mostra o plano e o valor */
+  .tab-sup { table-layout: auto; }
+  .tab-sup colgroup { display: none; }
+  .tab-sup td:not(:first-child)::before { content: attr(data-rot); display: block; font-size: 11px; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; color: var(--acento); margin-top: 6px; }
+  .conta-op { align-self: center; font-size: 26px; }
+  .agua-fibra.duas { grid-template-columns: 1fr; }
+  .conta-item .rot { min-height: 0; }
+  .macro-barra span { font-size: 12px; }
+  .adesao-corpo, .minis { grid-template-columns: 1fr; }
+  .card-topo { flex-wrap: wrap; }
+}

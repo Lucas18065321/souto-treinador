@@ -1,0 +1,19 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "ilha",
+      "runtimeExecutable": "node",
+      "runtimeArgs": ["04 - EDIÇÃO DE VÍDEO/motor/scripts/ilha.mjs"],
+      "port": 3123,
+      "url": "http://127.0.0.1:3123"
+    },
+    {
+      "name": "editor-carrossel",
+      "runtimeExecutable": "python",
+      "runtimeArgs": ["03 - CARROSSÉIS E ARTE/Gerador/editor.py"],
+      "port": 8765,
+      "url": "http://localhost:8765"
+    }
+  ]
+}
